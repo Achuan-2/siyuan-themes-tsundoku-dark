@@ -1,5 +1,6 @@
 # 思源主题: mixture(dark)
 本主题主要基于Simple One Dark，借鉴Pure Dark和Lavender进行修改
+![preview](preview.png)
 
 ## v0.1.0
 - 标题样式更改

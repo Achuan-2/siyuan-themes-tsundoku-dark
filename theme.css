@@ -13,7 +13,9 @@
     --b3-theme-on-background: #c9d1d9;
     --b3-theme-on-surface: #9aa0a6;
     --b3-theme-on-error: #fff;
-    --b3-font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family: 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
+        'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
+        'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
     --b3-font-family-code: 'Jetbrains Mono', mononoki, Consolas, 'Liberation Mono', Menlo, Courier,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol',
         'Android Emoji', 'EmojiSymbols';
@@ -21,7 +23,7 @@
     --b3-text-border-color: rgb(170, 178, 180);
     --b3-table-border-color: rgba(255, 255, 255, 0.1);
     --b3-scroll-color: rgb(65, 71, 84);
-    --b3-list-hover: rgba(230, 230, 230, 0.05);
+    --b3-list-hover: #2c313a;
     --b3-table-th-color: rgb(31, 35, 40);
     --b3-table-trn-color: rgb(40, 45, 52);
     --b3-table-tr2n-color: rgb(35, 40, 46);
@@ -92,23 +94,23 @@
     --b3-vditor-inline-mark-background: #32593c;
     --b3-vditor-inline-mark-color: #e8eaed;
     --b3-vditor-inline-tag-color: #9aa0a6;
-    --b3-vditor-inline-blockref-color: #61afef
+    --b3-vditor-inline-blockref-color: #61afef;
 }
 .language-graphviz polygon {
-    fill: var(--b3-theme-on-surface)
+    fill: var(--b3-theme-on-surface);
 }
 .vditor-toolbar {
     background-color: var(--b3-theme-background) !important;
-    box-shadow: var(--b3-toolbar-shadow)
+    box-shadow: var(--b3-toolbar-shadow);
 }
 .item--focus {
-    background-color: var(--b3-theme-background) !important
+    background-color: var(--b3-theme-background) !important;
 }
 .vditor-ir__marker--info {
-    color: var(--b3-vditor-inline-blockref-color) !important
+    color: var(--b3-vditor-inline-blockref-color) !important;
 }
 .MathJax svg {
-    font-size: 0.8em !important
+    font-size: 0.8em !important;
 }
 .vditor ul ol,
 .vditor ol ol,
@@ -116,70 +118,70 @@
 .vditor ol ul {
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     margin-left: -0.9em !important;
-    padding-left: 2.5em !important
+    padding-left: 2.5em !important;
 }
 .hljs-comment {
     font-style: normal !important;
-    font-family: var(--b3-font-family-code)
+    font-family: var(--b3-font-family-code);
 }
 .vditor-ir__marker--pre code {
     color: rgb(171, 178, 165);
-    background-color: var(--b3-text-emphasize-color) !important
+    background-color: var(--b3-text-emphasize-color) !important;
 }
 .vditor-ir__marker--script {
-    font-family: var(--b3-font-family-code)
+    font-family: var(--b3-font-family-code);
 }
 blockquote {
     border-left: 0.25em solid var(--b3-text-border-color) !important;
     background-color: var(--b3-vditor-code-background) !important;
     padding-left: 15px !important;
-    box-shadow: var(--b3-card-shadow)
+    box-shadow: var(--b3-card-shadow);
 }
 .vditor-reset .hljs,
 .vditor-reset blockquote,
 .vditor-reset table {
     margin-top: 20px !important;
-    margin-bottom: 20px !important
+    margin-bottom: 20px !important;
 }
 .vditor-reset table {
-    box-shadow: var(--b3-card-shadow)
+    box-shadow: var(--b3-card-shadow);
 }
 .vditor-reset table thead tr {
-    background-color: var(--b3-table-th-color) !important
+    background-color: var(--b3-table-th-color) !important;
 }
 .vditor-reset table tbody tr:nth-child(2n + 1) {
-    background-color: var(--b3-table-trn-color) !important
+    background-color: var(--b3-table-trn-color) !important;
 }
 .vditor-reset table tbody tr:nth-child(2n) {
-    background-color: var(--b3-table-tr2n-color) !important
+    background-color: var(--b3-table-tr2n-color) !important;
 }
 .vditor-reset table tr th {
     border-left: 1px solid var(--b3-table-border-color);
-    border-right: 1px solid var(--b3-table-border-color)
+    border-right: 1px solid var(--b3-table-border-color);
 }
 .vditor-reset table tr td {
     border-left: 1px solid var(--b3-table-border-color);
-    border-right: 1px solid var(--b3-table-border-color)
+    border-right: 1px solid var(--b3-table-border-color);
 }
 .vditor-reset table tr th:first-child,
 .vditor-reset table tr td:first-child {
-    border-left-width: 0px
+    border-left-width: 0px;
 }
 .vditor-reset table tr th:last-child,
 .vditor-reset table tr td:last-child {
-    border-right-width: 0px
+    border-right-width: 0px;
 }
 .block__popover,
 .vditor-ir div[data-type='block-ref-embed'] > div[data-render],
 .vditor-ir div[data-type='block-query-embed'] > div[data-render] {
-    box-shadow: var(--b3-card-shadow)
+    box-shadow: var(--b3-card-shadow);
 }
 .vditor-ir
     div[data-type='block-query-embed']
     > div[data-render]
     > .fn__flex-column:not(:last-child)
     > .fn__flex-1 {
-    border-bottom: 1px solid var(--b3-text-emphasize-color) !important
+    border-bottom: 1px solid var(--b3-text-emphasize-color) !important;
 }
 .vditor-ir__menu span {
     padding: 0 4px;
@@ -190,7 +192,7 @@ blockquote {
     background-color: var(--b3-text-emphasize-color);
     color: var(--b3-theme-on-surface);
     font-size: 10px;
-    line-height: 15px
+    line-height: 15px;
 }
 .vditor-reset > h1,
 .vditor-reset > h2,
@@ -202,14 +204,57 @@ blockquote {
 .vditor-reset > blockquote,
 .vditor-reset > .hjls,
 .vditor-reset > table {
-    margin-left: 5px
+    margin-left: 5px;
 }
 .vditor-counter {
-    background-color: var(--b3-text-emphasize-color)
+    background-color: var(--b3-text-emphasize-color);
 }
+
+div[data-type='navigation'] .b3-list-item--focus,
+.vditor-reset .b3-list-item--focus {
+    background-color: #2c313a !important;
+}
+.block__icons {
+    box-shadow: var(--b3-toolbar-shadow);
+    background-color: var(--b3-theme-surface);
+}
+
+/* 超链接hover鼠标样式改变 */
+.vditor-ir__link:hover {
+    cursor: pointer;
+    color: rgb(104, 189, 196);
+}
+/* 分割线显示 */
+.vditor-reset hr {
+    background-color: #abb2bf;
+}
+/* 行内代码块 */
+.vditor-reset code:not(.hljs) {
+    padding: 0.2em 0.5em;
+    margin: 6px;
+    font-size: 85%;
+    border-radius: 5px;
+    font-family: var(--b3-font-family-code);
+    word-break: break-word;
+    background-size: 20px 20px;
+    white-space: pre-wrap;
+    background-color: rgb(6 83 93);
+    box-shadow: 0px 0px 5px rgb(21 194 216) inset;
+}
+/* 代码块样式 */
+.hljs {
+    line-height: 24px;
+    background-color: #1a1e1f !important;
+    box-shadow: 0px 0px 10px rgb(0 0 0);
+}
+
+/* 复选框Start */
+/* 复选框与文字的距离 */
 .vditor-task input[type='checkbox'] {
-    margin-right: 0.5em
+    margin-right: 0.5em;
 }
+
+/* 复选框样式 */
 .vditor-task input[type='checkbox']:before {
     content: '';
     display: inline-block;
@@ -223,162 +268,131 @@ blockquote {
     background-color: hsl(197, 9%, 52%);
     margin-top: -0.3rem;
     margin-left: -0.1rem;
-    box-shadow: var(--b3-card-shadow)
+    box-shadow: var(--b3-card-shadow);
 }
+
+/* 复选框未选中，鼠标悬停 */
 .vditor-task input[type='checkbox']:not([disabled]):not(:checked):hover:before {
     content: '\2713';
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.2rem;
-    color: hsl(0, 0%, 8%)
+    color: hsl(192, 3%, 66%);
 }
+
+/* 复选框选中 */
 .vditor-task input[type='checkbox']:checked:before {
     content: '\2713';
     font-size: 0.9rem;
     line-height: 1.2rem;
     color: rgb(220, 220, 220);
-    background-color: hsl(197, 44%, 41%)
+    background-color: hsl(197, 44%, 41%);
 }
-div[data-type='navigation'] .b3-list-item--focus,
-.vditor-reset .b3-list-item--focus {
-    background-color: #2c313a !important
-}
-.block__icons {
-    box-shadow: var(--b3-toolbar-shadow);
-    background-color: var(--b3-theme-surface)
-}
-
-
-
-/* 目录 */
-.vditor-ir__link:hover {
-    cursor: pointer;
-    color: rgb(104, 189, 196)
-}
-/* 分割线 */
-.vditor-reset hr {
-    background-color: #abb2bf
-}
-/* 行内代码块 */
-.vditor-reset code:not(.hljs) {
-    padding: 0.2em 0.5em;
-    margin: 6px;
-    font-size: 85%;
-    border-radius: 5px;
-    font-family: var(--b3-font-family-code);
-    word-break: break-word;
-    background-size: 20px 20px;
-    white-space: pre-wrap;
-    background-color: rgb(6 83 93);
-    box-shadow: 0px 0px 5px rgb(21 194 216) inset
-}
-/* 代码块样式 */
-.hljs {
-    line-height: 24px;
-    background-color: #1a1e1f !important;
-    box-shadow: 0px 0px 10px rgb(0 0 0)
+/* 复选框选中 ，鼠标悬停*/
+.vditor-task input[type='checkbox']:checked:hover:before {
+    content: '\2713';
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    color: rgb(220, 220, 220);
+    background-color: hsl(197, 44%, 41%);
 }
 /* 完成事项下划线 */
 .vditor-task--done {
     text-decoration: line-through;
-    color: #3d7179
+    color: #3d7179;
 }
+/* 复选框 End */
+
+
 /* 标题样式 */
 .vditor-reset h1 {
     border-bottom: 1px solid var(--b3-text-border-color) !important;
     font-size: 26px;
-    color: #F5F7FA
+    color: #f5f7fa;
 }
 .vditor-reset h2 {
     border-bottom: 1px dashed var(--b3-text-border-color) !important;
     font-size: 24.8px;
-    color: #5BE7C4
+    color: #5be7c4;
 }
 .vditor-reset h3 {
     font-size: 20px;
-    color: #00ddff
+    color: #00ddff;
 }
 .vditor-reset h4 {
     font-size: 18px;
-    color: #7A57D1
+    color: #7a57d1;
 }
 .vditor-reset h5 {
     font-size: 16px;
-    color: #00818A
+    color: #00818a;
 }
 .vditor-reset h6 {
     font-size: 16px;
-    color: #1F6ED4
+    color: #1f6ed4;
 }
 .vditor-reset h1,
 .vditor-reset h2 {
-    border-bottom: 1px solid var(--b3-text-border-color) !important
+    border-bottom: 1px solid var(--b3-text-border-color) !important;
 }
-.block__popover,
-.vditor-ir div[data-type="block-ref-embed"] > div[data-render],
-.vditor-ir div[data-type="block-query-embed"] > div[data-render] {
-    box-shadow: var(--b3-card-shadow)
-}
-.vditor-ir
-  div[data-type="block-query-embed"]
-  > div[data-render]
-  > .fn__flex-column:not(:last-child)
-  > .fn__flex-1 {
-    border-bottom: 1px solid var(--b3-text-emphasize-color) !important
-}
-div[data-type="navigation"] .b3-list-item--focus,
-.vditor-reset .b3-list-item--focus {
-    background-color: #2c313a !important
-}
-.vditor-reset span[data-type="tag"] {
-    display: inline-block;
-    font-size: .8em;
-    line-height: 1em;
-    background-color: var(--b3-theme-primary-light);
-    border-radius: 4px;
-    padding: 4px 6px;
-    margin: 0 4px;
-    cursor: pointer;
-    white-space: nowrap
-}
-.vditor ul > li:not(.vditor-task) {
-    list-style-type: disc
-}
+
+/* 标题样式End */
+
+
+/* <kbd>样式 */
 .vditor-reset kbd {
     display: inline-block;
     padding: 2px 4px;
-    font: 75% Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font: 75% Consolas, 'Liberation Mono', Menlo, Courier, monospace;
     line-height: 1;
     color: var(--b3-theme-on-surface);
     vertical-align: middle;
     background-color: #282c34;
     border: solid 1px rgb(97 112 144);
     border-radius: 3px;
-    box-shadow: 0 1px 0px rgb(155 173 210 / 20%), 0 0 0 2px #314144 inset
+    box-shadow: 0 1px 0px rgb(155 173 210 / 20%), 0 0 0 2px #314144 inset;
 }
 
 /* 高亮部分 */
-.b3-list-item.b3-list-item--big:hover, .b3-list-item.b3-list-item--big.b3-list-item--focus, .b3-list-item.b3-list-item--hide-action:hover span:nth-child(2), .b3-list--background .b3-list-item--focus:hover span:nth-child(2), .b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(2), .b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(3), .b3-list-item:hover .b3-list-item__text, .b3-list-item.b3-list-item--focus span:nth-child(2), .vditor-counter.b3-tooltips.b3-tooltips__w, .b3-list__header span:hover, .b3-dialog__container svg:hover, .b3-snackbar__close.fn__a:hover, .vditor-toolbar .vditor-toolbar__item button:hover svg, #toolbar div:hover, .ft__primary:hover, .block__icon.b3-tooltips.b3-tooltips__sw:hover {
-    color:#e34f8c;
+.b3-list-item.b3-list-item--big:hover,
+.b3-list-item.b3-list-item--big.b3-list-item--focus,
+.b3-list-item.b3-list-item--hide-action:hover span:nth-child(2),
+.b3-list--background .b3-list-item--focus:hover span:nth-child(2),
+.b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(2),
+.b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(3),
+.b3-list-item:hover .b3-list-item__text,
+.b3-list-item.b3-list-item--focus span:nth-child(2),
+.vditor-counter.b3-tooltips.b3-tooltips__w,
+.b3-list__header span:hover,
+.b3-dialog__container svg:hover,
+.b3-snackbar__close.fn__a:hover,
+.vditor-toolbar .vditor-toolbar__item button:hover svg,
+#toolbar div:hover,
+.ft__primary:hover,
+.block__icon.b3-tooltips.b3-tooltips__sw:hover {
+    color: #e34f8c;
+    background-color: #2c313a !important;
 }
 
 /* focus高亮样式 */
 /* 文件树选中的部分 */
 .b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(2) {
-    font-weight:800;
-    font-size:16px;
+    font-weight: 800;
+    font-size: 16px;
+    background-color: #2c313a !important;
 }
 /* 选中的标签页 */
-.b3-list-item.b3-list-item--focus span:nth-child(2){
-    font-weight:800;
-    font-size:16px;
+.b3-list-item.b3-list-item--focus span:nth-child(2) {
+    font-weight: 800;
+    font-size: 16px;
 }
 /* 选中的大纲 */
 .item--focus {
     background-color: #2c313a !important;
-    color:#e34f8c;
+    color: #e34f8c;
     font-weight: 800;
     font-size: 16px;
 }
+/* end */
 
 /* 标签样式 */
 .vditor-reset span[data-type='tag'] {
@@ -390,7 +404,7 @@ div[data-type="navigation"] .b3-list-item--focus,
     padding: 4px 6px;
     margin: 0 4px;
     cursor: pointer;
-    white-space: nowrap
+    white-space: nowrap;
 }
 .vditor-ir__tag {
     text-decoration: none;
@@ -401,3 +415,4 @@ div[data-type="navigation"] .b3-list-item--focus,
 .vditor-ir__node .vditor-ir__marker--tag {
     color: #fff;
 }
+/* 标签样式end */
