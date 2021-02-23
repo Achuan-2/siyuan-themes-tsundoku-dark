@@ -1,4 +1,5 @@
 :root {
+        /* 主色 */
     --b3-theme-primary: #4285f4;
     --b3-theme-primary-light: rgba(66, 133, 244, 0.54);
     --b3-theme-primary-lighter: rgba(66, 133, 244, 0.38);
@@ -8,28 +9,43 @@
     --b3-theme-surface: #21252b;
     --b3-theme-error: #d23f31;
     --b3-text-emphasize-color: rgb(58, 63, 75);
+
+    /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
     --b3-theme-on-background: #c9d1d9;
     --b3-theme-on-surface: #9aa0a6;
     --b3-theme-on-error: #fff;
+    /* 字体 */
     --b3-font-family: 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
         'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
         'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
     --b3-font-family-code: 'Jetbrains Mono', mononoki, Consolas, 'Liberation Mono', Menlo, Courier,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol',
         'Android Emoji', 'EmojiSymbols';
+
+     /* 线条 */
     --b3-border-color: rgb(40, 44, 52);
+
+    /* 滚动条 */
+    --b3-scroll-color: rgb(65, 71, 84);
+
+    /* 列表 */
+    --b3-list-hover: #2c313a;
+
+    /* 页签 */
+    --b3-tab-background: #21252b;
+    --b3-tab-background-hover: #323842;
+
+    /* 提示 */
+    --b3-tooltips-color: rgba(70, 72, 76, 0.86);
     --b3-text-border-color: rgb(170, 178, 180);
     --b3-table-border-color: rgba(255, 255, 255, 0.1);
-    --b3-scroll-color: rgb(65, 71, 84);
-    --b3-list-hover: #2c313a;
     --b3-table-th-color: rgb(31, 35, 40);
     --b3-table-trn-color: rgb(40, 45, 52);
     --b3-table-tr2n-color: rgb(35, 40, 46);
-    --b3-tab-background: #21252b;
-    --b3-tab-background-hover: #323842;
-    --b3-tooltips-color: rgba(70, 72, 76, 0.86);
+
+    /* 卡片背景 */
     --b3-card-error-color: rgb(250, 179, 174);
     --b3-card-error-background: rgb(24, 6, 5);
     --b3-card-warning-color: rgb(255, 213, 153);
@@ -38,16 +54,24 @@
     --b3-card-info-background: rgb(3, 14, 24);
     --b3-card-success-color: rgb(183, 223, 185);
     --b3-card-success-background: rgb(7, 17, 7);
+
+    /* 动画效果 */
     --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
+
+    /* 阴影 */
     --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
         0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
     --b3-toolbar-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     --b3-card-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+
+    /* diff */
     --b3-diff-add: #133a1c;
     --b3-diff-add-surface: #28853e;
     --b3-diff-del: #440c10;
     --b3-diff-del-surface: #b1202d;
+
+    /* 图表颜色 */
     --b3-graph-p-point: #076f7e;
     --b3-graph-heading-point: #9876aa;
     --b3-graph-math-point: #80ffa5;
@@ -69,12 +93,18 @@
     --b3-graph-asset-line: #037457;
     --b3-graph-hl-point: #f3a92f;
     --b3-graph-hl-line: #4285f4;
+
+    /* 编辑器工具栏高度 */
     --b3-vditor-toolbar-height: 29px;
     --b3-vditor-toolbar-height-space: 6px;
+
+    /* 编辑器搜索颜色 */
     --b3-vditor-search-background: #32593c;
     --b3-vditor-search-border-color: #486a51;
     --b3-vditor-search-current-background: #204282;
     --b3-vditor-code-background: rgb(29, 31, 35);
+
+    /* 即时渲染标记符颜色 */
     --b3-vditor-mark-heading-color: #9876aa;
     --b3-vditor-mark-title-color: #808080;
     --b3-vditor-mark-em-color: #cc7832;
@@ -87,6 +117,8 @@
     --b3-vditor-mark-paren-color: #6a8759;
     --b3-vditor-mark-block-color: #9876aa;
     --b3-vditor-mark-tag-color: #cc7832;
+
+    /* 即时渲染行内元素颜色 */
     --b3-vditor-inline-strong-color: #e8eaed;
     --b3-vditor-inline-em-color: #e8eaed;
     --b3-vditor-inline-s-color: #e8eaed;
@@ -131,8 +163,9 @@
 .vditor-ir__marker--script {
     font-family: var(--b3-font-family-code);
 }
+/* 注释块修改 */
 blockquote {
-    border-left: 0.25em solid var(--b3-text-border-color) !important;
+    border-left: 0.25em solid rgb(59 107 119) !important;
     background-color: var(--b3-vditor-code-background) !important;
     padding-left: 15px !important;
     box-shadow: var(--b3-card-shadow);
@@ -224,6 +257,11 @@ div[data-type='navigation'] .b3-list-item--focus,
     cursor: pointer;
     color: rgb(104, 189, 196);
 }
+/* 超链接样式 */
+.vditor-ir__link {
+    color: #1d99ec;
+    text-decoration: underline;
+}
 /* 分割线显示 */
 .vditor-reset hr {
     background-color: #abb2bf;
@@ -233,13 +271,13 @@ div[data-type='navigation'] .b3-list-item--focus,
     padding: 0.2em 0.5em;
     margin: 6px;
     font-size: 85%;
-    border-radius: 5px;
+    border-radius: 8px;
     font-family: var(--b3-font-family-code);
     word-break: break-word;
     background-size: 20px 20px;
     white-space: pre-wrap;
-    background-color: rgb(6 83 93);
-    box-shadow: 0px 0px 5px rgb(21 194 216) inset;
+    background-color: rgb(44 79 84);
+    box-shadow: rgb(8 121 136) 1px 0px 5px 1px inset;
 }
 /* 代码块样式 */
 .hljs {
@@ -312,27 +350,29 @@ div[data-type='navigation'] .b3-list-item--focus,
 .vditor-reset h2 {
     border-bottom: 1px dashed var(--b3-text-border-color) !important;
     font-size: 24.8px;
-    color: #5be7c4;
+    color:#2cffa7b8;
+    
 }
+
 .vditor-reset h3 {
     font-size: 20px;
-    color: #00ddff;
+    color: #00ddffcc;
+    line-height: 20px;
+    border-left: 6px solid #00ddffcc;
+    text-align: justify;
+    padding: 5px 0 5px 7px;
 }
 .vditor-reset h4 {
     font-size: 18px;
-    color: #7a57d1;
+    color: #f5f7fa;
 }
 .vditor-reset h5 {
     font-size: 16px;
-    color: #00818a;
+    color: #f5f7fa;
 }
 .vditor-reset h6 {
     font-size: 16px;
-    color: #1f6ed4;
-}
-.vditor-reset h1,
-.vditor-reset h2 {
-    border-bottom: 1px solid var(--b3-text-border-color) !important;
+    color: #f5f7fa;
 }
 
 /* 标题样式End */
@@ -416,3 +456,14 @@ div[data-type='navigation'] .b3-list-item--focus,
     color: #fff;
 }
 /* 标签样式end */
+
+/* Markdown图表样式 */
+.vditor-reset .language-flowchart,.vditor-reset .language-plantuml{
+    text-align: center;
+    background-color: #585a5c;
+}
+.vditor-reset .language-mermaid,.vditor-reset .language-graphviz {
+    text-align: center;
+    background-color: #282c34;
+}
+
