@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'Alibaba puhuiti';
+    font-style: normal;
+    src: url('fonts/alibaba-puhuiti-regular.ttf');
+}
+@font-face {
+    font-family: 'FiraCode';
+    font-style: normal;
+    src: url('fonts/FiraCode-Regular.ttf');
+}
+
 :root {
-        /* 主色 */
+    /* 主色 */
     --b3-theme-primary: #4285f4;
     --b3-theme-primary-light: rgba(66, 133, 244, 0.54);
     --b3-theme-primary-lighter: rgba(66, 133, 244, 0.38);
@@ -17,14 +28,14 @@
     --b3-theme-on-surface: #9aa0a6;
     --b3-theme-on-error: #fff;
     /* 字体 */
-    --b3-font-family: 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
-        'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
-        'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
-    --b3-font-family-code: 'Jetbrains Mono', mononoki, Consolas, 'Liberation Mono', Menlo, Courier,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol',
+    --b3-font-family: 'Alibaba puhuiti', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans',
+        'Hiragino Sans GB', 'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
+    --b3-font-family-code: 'FiraCode', 'Jetbrains Mono', mononoki, Consolas, 'Liberation Mono',
+        Menlo, Courier, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol',
         'Android Emoji', 'EmojiSymbols';
 
-     /* 线条 */
+    /* 线条 */
     --b3-border-color: rgb(40, 44, 52);
 
     /* 滚动条 */
@@ -41,7 +52,7 @@
     --b3-tooltips-color: rgba(70, 72, 76, 0.86);
     --b3-text-border-color: rgb(170, 178, 180);
     --b3-table-border-color: rgba(255, 255, 255, 0.1);
-    --b3-table-th-color: rgb(31, 35, 40);
+    --b3-table-th-color: rgb(14, 31, 37);
     --b3-table-trn-color: rgb(40, 45, 52);
     --b3-table-tr2n-color: rgb(35, 40, 46);
 
@@ -163,10 +174,11 @@
 .vditor-ir__marker--script {
     font-family: var(--b3-font-family-code);
 }
-/* 注释块修改 */
+/* 引用块修改 */
 blockquote {
-    border-left: 0.25em solid rgb(59 107 119) !important;
-    background-color: var(--b3-vditor-code-background) !important;
+    border-left: 0.25em solid rgb(36 138 125) !important;
+    border-radius: 5px;
+    background-color: rgb(67 138 106 / 10%) !important;
     padding-left: 15px !important;
     box-shadow: var(--b3-card-shadow);
 }
@@ -251,11 +263,22 @@ div[data-type='navigation'] .b3-list-item--focus,
     box-shadow: var(--b3-toolbar-shadow);
     background-color: var(--b3-theme-surface);
 }
-
+/* 块引用 */
+.vditor-ir__blockref {
+    color: #f58484;
+    border: 1px;
+    border-bottom: 1px dashed var(--b3-text-border-color) !important;
+}
 /* 超链接hover鼠标样式改变 */
 .vditor-ir__link:hover {
     cursor: pointer;
     color: rgb(104, 189, 196);
+}
+
+/* 超链接hover鼠标样式改变 */
+.vditor-ir__link:hover {
+    cursor: pointer;
+    color: rgb(184, 93, 57);
 }
 /* 超链接样式 */
 .vditor-ir__link {
@@ -340,7 +363,6 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 /* 复选框 End */
 
-
 /* 标题样式 */
 .vditor-reset h1 {
     border-bottom: 1px solid var(--b3-text-border-color) !important;
@@ -348,20 +370,29 @@ div[data-type='navigation'] .b3-list-item--focus,
     color: #f5f7fa;
 }
 .vditor-reset h2 {
-    border-bottom: 1px dashed var(--b3-text-border-color) !important;
+    /* text-align: center; */
+    border-bottom: 1px solid var(--b3-text-border-color) !important;
     font-size: 24.8px;
-    color:#2cffa7b8;
-    
+    color: #c9cbcf;
 }
-
+/* .vditor-reset h2:after {
+    content: '';
+    display: block;
+    margin: 0.2em auto 0;
+    width: 100px;
+    height: 2px;
+    border-bottom: 2px solid #c9cbcf;
+} */
 .vditor-reset h3 {
     font-size: 20px;
-    color: #00ddffcc;
+    color: #c9cbcf;
     line-height: 20px;
     border-left: 6px solid #00ddffcc;
+    /* border-bottom: 1px solid var(--b3-text-border-color) !important; */
     text-align: justify;
     padding: 5px 0 5px 7px;
 }
+
 .vditor-reset h4 {
     font-size: 18px;
     color: #f5f7fa;
@@ -376,7 +407,6 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 
 /* 标题样式End */
-
 
 /* <kbd>样式 */
 .vditor-reset kbd {
@@ -420,19 +450,39 @@ div[data-type='navigation'] .b3-list-item--focus,
     font-size: 16px;
     background-color: #2c313a !important;
 }
+
 /* 选中的标签页 */
 .b3-list-item.b3-list-item--focus span:nth-child(2) {
     font-weight: 800;
     font-size: 16px;
 }
-/* 选中的大纲 */
 .item--focus {
-    background-color: #2c313a !important;
+    background-color: #282c34 !important;
     color: #e34f8c;
     font-weight: 800;
     font-size: 16px;
 }
+
 /* end */
+
+/* 去掉标题栏的文件图标 */
+.layout-tab-bar .item__graphic {
+    margin-right: 8px;
+    height: 14px;
+    width: 14px;
+    display: none;
+}
+/* 标签页样式 */
+.layout-tab-bar .item {
+    padding: 5px 12px;
+    border: 0px;
+    border-left: 1px solid #1f1818;
+    border-radius: 6px;
+}
+/* 去掉foucs的标签页下边框 */
+.layout__wnd--active .layout-tab-bar .item--focus {
+    border-color: #282c34;
+}
 
 /* 标签样式 */
 .vditor-reset span[data-type='tag'] {
@@ -458,12 +508,24 @@ div[data-type='navigation'] .b3-list-item--focus,
 /* 标签样式end */
 
 /* Markdown图表样式 */
-.vditor-reset .language-flowchart,.vditor-reset .language-plantuml{
+.vditor-reset .language-flowchart
+{
     text-align: center;
     background-color: #585a5c;
 }
-.vditor-reset .language-mermaid,.vditor-reset .language-graphviz {
+.vditor-reset .language-plantuml {
+    text-align: center;
+}
+.vditor-reset .language-mermaid,
+.vditor-reset .language-graphviz {
     text-align: center;
     background-color: #282c34;
 }
 
+/* 图片样式 */
+.vditor-reset img {
+    max-width: 100%;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 30%);
+    border-radius: 5px;
+}
