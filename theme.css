@@ -478,10 +478,11 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 /* 标签页样式 */
 .layout-tab-bar .item {
-    padding: 5px 12px;
+    padding: 5px 4px 5px 14px;
     border: 0px;
+    border-right: 1px solid #1f1818;
     border-left: 1px solid #1f1818;
-    border-radius: 6px;
+    border-radius: 7px 7px 0px 0px;
 }
 /* 去掉foucs的标签页下边框 */
 .layout__wnd--active .layout-tab-bar .item--focus {
@@ -531,4 +532,10 @@ div[data-type='navigation'] .b3-list-item--focus,
     cursor: pointer;
     box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 30%);
     border-radius: 5px;
+}
+/* 文件树页签工具栏样式 */
+.block__icons {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);   
+    background-color: var(--b3-theme-surface);
+
 }
