@@ -8,7 +8,11 @@
     font-style: normal;
     src: url('fonts/FiraCode-Regular.ttf');
 }
-
+@font-face {
+    font-family: 'GlowSansSC';
+    font-style: normal;
+    src: url('fonts/GlowSansSC-Normal-Regular.otf');
+}
 :root {
     /* 主色 */
     --b3-theme-primary: #4285f4;
@@ -177,9 +181,9 @@
 }
 /* 引用块修改 */
 blockquote {
-    border-left: 0.25em solid rgb(36 138 125) !important;
+    border-left: 0.25em solid rgb(36, 126, 138) !important;
     border-radius: 5px;
-    background-color: #2b363a !important;
+    background-color: rgba(66, 185, 185, 0.1) !important;
     padding-left: 15px !important;
     box-shadow: var(--b3-card-shadow);
 }
@@ -269,24 +273,21 @@ div[data-type='navigation'] .b3-list-item--focus,
 .vditor-ir__blockref {
     color: #f58484;
     border: 1px;
-    border-bottom: 1px dashed var(--b3-text-border-color) !important;
-}
-/* 超链接hover鼠标样式改变 */
-.vditor-ir__link:hover {
-    cursor: pointer;
-    color: rgb(104, 189, 196);
+    border-bottom: 1px dashed #f58484 !important;
 }
 
 /* 超链接hover鼠标样式改变 */
 .vditor-ir__link:hover {
     cursor: pointer;
     color: rgb(184, 93, 57);
+    text-decoration: underline;
 }
 /* 超链接样式 */
 .vditor-ir__link {
     color: #1d99ec;
-    text-decoration: underline;
+    text-decoration: none;
 }
+
 /* 分割线显示 */
 .vditor-reset hr {
     background-color: #abb2bf;
@@ -535,7 +536,6 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 /* 文件树页签工具栏样式 */
 .block__icons {
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);   
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     background-color: var(--b3-theme-surface);
-
 }
