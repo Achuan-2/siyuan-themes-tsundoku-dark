@@ -1,6 +1,10 @@
 # 思源主题: mixture(dark)
 本主题主要基于[Atom One Dark](https://github.com/zqhjl/Siyuan-Atom-OneDark)，借鉴Pure Dark和Lavender等其他主题进行修改
 ![preview](preview.png)
+
+## v0.1.5
+- 修复从edge复制的超链接，形如[思源笔记更新日志(ld246.com)](https://ld246.com/tag/siyuan-announcement)，分多块高亮的问题
+  
 ## v0.1.4
 - 仿照Lavender设置界面动效，更改设置的关闭按钮颜色和hover背景
 - 仿照Passion设置选中项的圆角

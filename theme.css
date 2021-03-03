@@ -278,9 +278,9 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 
 /* 超链接hover鼠标样式改变 */
-.vditor-ir__link:hover {
-    cursor: pointer;
-    color: rgb(184, 93, 57);
+.vditor-ir__node:hover .vditor-ir__link {
+      cursor: pointer;
+    color: rgb(184, 57, 135);
     text-decoration: underline;
 }
 /* 超链接样式 */
