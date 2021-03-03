@@ -1,7 +1,9 @@
 # 思源主题: mixture(dark)
 本主题主要基于[Atom One Dark](https://github.com/zqhjl/Siyuan-Atom-OneDark)，借鉴Pure Dark和Lavender等其他主题进行修改
 ![preview](preview.png)
-
+## v0.1.4
+- 仿照Lavender设置界面动效，更改设置的关闭按钮颜色和hover背景
+- 仿照Passion设置选中项的圆角
 ## v0.1.3
 - 更改字体：主字体为阿里巴巴普惠体，代码字体为Fira Code
 - 更改标题，统一色系为天蓝色
