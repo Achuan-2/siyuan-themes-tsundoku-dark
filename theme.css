@@ -294,7 +294,7 @@ div[data-type='navigation'] .b3-list-item--focus,
     background-color: #abb2bf;
 }
 /* 行内代码块 */
-.vditor-reset code:not(.hljs) {
+.vditor-reset code:not(.hljs):not([data-type="math-inline"]) {
     padding: 0.2em 0.5em;
     margin: 6px;
     font-size: 85%;
@@ -313,7 +313,7 @@ div[data-type='navigation'] .b3-list-item--focus,
     box-shadow: 0px 0px 10px rgb(0 0 0);
 }
 
-/* 复选框Start */
+/* 复选框（待办事项）Start */
 /* 复选框与文字的距离 */
 .vditor-task input[type='checkbox'] {
     margin-right: 0.5em;
@@ -360,10 +360,36 @@ div[data-type='navigation'] .b3-list-item--focus,
     color: rgb(220, 220, 220);
     background-color: hsl(197, 44%, 41%);
 }
-/* 完成事项下划线 */
+/* 完成的代办事项下划线 */
 .vditor-task--done {
-    text-decoration: line-through;
-    color: #3d7179;
+    /* text-decoration: line-through; */
+    color: #3d7179 !important;
+}
+.vditor-task--done strong {
+    /* 加粗样式调整 */
+    color: #4b8088 !important;
+}
+.vditor-task--done .vditor-ir__node em{
+    /* 斜体调整 */
+    color: #3d7179 !important;
+}
+.vditor-task--done .vditor-ir__node s{
+    /* 删除线调整 */
+    color: #3d7179 !important;
+}
+.vditor-task--done .vditor-ir__node .vditor-ir__link {
+    /* 超链接调整 */
+    color: #4b8088 !important;
+    text-decoration: underline;
+}
+.vditor-task--done .vditor-ir__node .vditor-ir__link:hover {
+    /* 超链接调整 */
+    color: rgb(184, 57, 135) !important;
+    text-decoration: underline;
+}
+.vditor-task--done .vditor-ir__node img {
+    background-color: rgba(236, 0, 0, 0.6);
+    filter: opacity(60%);
 }
 /* 复选框 End */
 
@@ -397,7 +423,10 @@ div[data-type='navigation'] .b3-list-item--focus,
     /* border-bottom: 1px solid var(--b3-text-border-color) !important; */
     text-align: justify;
     padding: 5px 0 5px 7px;
+    margin-top: 23px;
+    margin-bottom: 5px;
 }
+
 
 .vditor-reset h4 {
     font-size: 18px;
@@ -583,5 +612,15 @@ body {
 @keyframes show {
     0% {
         transform: translateZ(-100px) rotateX(120deg) translateY(-100px);
+    }
+}
+.b3-dialog__container:before-close{
+    animation: close 0.5s ease;
+    animation-fill-mode: forwards;
+    transform-style: preserve-3d;
+}
+@keyframes close {
+    0% {
+        transform: translateZ(-200px) rotateX(120deg) translateY(-200px);
     }
 }
