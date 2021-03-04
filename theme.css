@@ -442,7 +442,7 @@ span[data-type='code'] > code {
     text-align: center;
     /* border-bottom: 1px solid var(--b3-text-border-color) !important; */
     font-size: 26px;
-    color: #c5e0e4;
+    color: #dfe8e9;
 }
 .vditor-reset h1:after {
     content: '';
