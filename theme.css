@@ -58,7 +58,7 @@
     /* 表格 */
     --b3-table-border-color: rgba(255, 255, 255, 0.1);
     --b3-table-th-color: rgb(14, 31, 37);
-    --b3-table-trn-color: rgb(40, 45, 52);
+    --b3-table-trn-color: #282c34;
     --b3-table-tr2n-color: rgb(35, 40, 46);
 
     /* 卡片背景 */
@@ -183,17 +183,18 @@
 blockquote {
     border-left: 0.25em solid rgb(36, 126, 138) !important;
     border-radius: 5px;
-    background-color: rgba(66, 185, 185, 0.1) !important;
+    background-color: rgba(66, 185, 185, 0.048) !important;
     padding-left: 15px !important;
-    box-shadow: var(--b3-card-shadow);
+    /* box-shadow: var(--b3-card-shadow); */
     color: #27a0dacc;
 }
 .vditor-reset .hljs,
 .vditor-reset blockquote,
 .vditor-reset table {
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
 }
+
 /* 表格 */
 .vditor-reset table {
     box-shadow: var(--b3-card-shadow);
@@ -276,10 +277,13 @@ div[data-type='navigation'] .b3-list-item--focus,
     border: 1px;
     border-bottom: 1px dashed #f58484 !important;
 }
-
+.vditor-ir__blockref:hover{
+    color: #ff398b;
+    border-bottom: 1px dashed #ff398b !important;
+}
 /* 超链接hover鼠标样式改变 */
 .vditor-ir__node:hover .vditor-ir__link {
-      cursor: pointer;
+    cursor: pointer;
     color: rgb(184, 57, 135);
     text-decoration: underline;
 }
@@ -294,23 +298,39 @@ div[data-type='navigation'] .b3-list-item--focus,
     background-color: #abb2bf;
 }
 /* 行内代码块 */
-.vditor-reset code:not(.hljs):not([data-type="math-inline"]) {
+.vditor-reset code:not(.hljs):not([data-type='math-inline']) {
     padding: 0.2em 0.5em;
-    margin: 6px;
+    margin: 0px 6px;
     font-size: 85%;
     border-radius: 8px;
     font-family: var(--b3-font-family-code);
     word-break: break-word;
     background-size: 20px 20px;
     white-space: pre-wrap;
-    background-color: rgb(44 79 84);
-    box-shadow: rgb(8 121 136) 1px 0px 5px 1px inset;
+    background-color: #2c4f5480;
+    /* box-shadow: #087988 1px 0px 5px 1px inset; */
 }
+span[data-type='code'] > code {
+    box-shadow: #08798880 1px 0px 5px 1px inset;
+}
+/* 行内公式块样式*/
+.vditor-reset code[data-type='math-inline'] {
+    color: rgb(103, 191, 231);
+    background-color: #2c4f54;
+}
+/* 代码编辑区 */
+.vditor-ir__marker--pre code {
+    margin-left: 20px 20px !important;
+    padding-left: 20px 20px !important;
+    background-color: #1a1e1f8c !important;
+    /* box-shadow: 0px 0px 10px rgb(0,0,0); */
+}
+
 /* 代码块样式 */
 .hljs {
     line-height: 24px;
     background-color: #1a1e1f !important;
-    box-shadow: 0px 0px 10px rgb(0 0 0);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 /* 复选框（待办事项）Start */
@@ -363,17 +383,17 @@ div[data-type='navigation'] .b3-list-item--focus,
 /* 完成的代办事项下划线 */
 .vditor-task--done {
     /* text-decoration: line-through; */
-    color: #3d7179 !important;
+    color: #3d71799c !important;
 }
 .vditor-task--done strong {
     /* 加粗样式调整 */
     color: #4b8088 !important;
 }
-.vditor-task--done .vditor-ir__node em{
+.vditor-task--done .vditor-ir__node em {
     /* 斜体调整 */
     color: #3d7179 !important;
 }
-.vditor-task--done .vditor-ir__node s{
+.vditor-task--done .vditor-ir__node s {
     /* 删除线调整 */
     color: #3d7179 !important;
 }
@@ -398,7 +418,7 @@ div[data-type='navigation'] .b3-list-item--focus,
     text-align: center;
     /* border-bottom: 1px solid var(--b3-text-border-color) !important; */
     font-size: 26px;
-    color: #aff6ff;
+    color: #c5e0e4;
 }
 .vditor-reset h1:after {
     content: '';
@@ -412,7 +432,7 @@ div[data-type='navigation'] .b3-list-item--focus,
     /* text-align: center; */
     border-bottom: 1px solid var(--b3-text-border-color) !important;
     font-size: 24.8px;
-    color: #66d9e8;
+    color: #63cfde;
 }
 
 .vditor-reset h3 {
@@ -426,7 +446,6 @@ div[data-type='navigation'] .b3-list-item--focus,
     margin-top: 23px;
     margin-bottom: 5px;
 }
-
 
 .vditor-reset h4 {
     font-size: 18px;
@@ -614,7 +633,7 @@ body {
         transform: translateZ(-100px) rotateX(120deg) translateY(-100px);
     }
 }
-.b3-dialog__container:before-close{
+.b3-dialog__container:before-close {
     animation: close 0.5s ease;
     animation-fill-mode: forwards;
     transform-style: preserve-3d;
