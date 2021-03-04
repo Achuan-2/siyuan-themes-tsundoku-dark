@@ -313,27 +313,51 @@ div[data-type='navigation'] .b3-list-item--focus,
 span[data-type='code'] > code {
     box-shadow: #08798880 1px 0px 5px 1px inset;
 }
-/* 行内公式块样式*/
+/* ❗行内公式块样式*/
 .vditor-reset code[data-type='math-inline'] {
     color: rgb(103, 191, 231);
     background-color: #2c4f54;
 }
-/* 代码编辑区 */
+/* 行内公式字体大小 */
+[data-type="inline-math"] .katex{
+    font: normal 17px KaTeX_Main,Times New Roman,serif !important;
+}
+/* 公式块字体大小 */
+[data-type="math-block"] .katex {
+    font: normal 20px KaTeX_Main,Times New Roman,serif !important;
+}
+
+/* ❗代码块样式 */
+/* 代码编辑区样式 */
 .vditor-ir__marker--pre code {
-    margin-left: 20px 20px !important;
-    padding-left: 20px 20px !important;
     background-color: #1a1e1f8c !important;
     /* box-shadow: 0px 0px 10px rgb(0,0,0); */
 }
-
-/* 代码块样式 */
+/* 代码内容块样式 */
 .hljs {
     line-height: 24px;
     background-color: #1a1e1f !important;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    padding-left: 2em !important; 
+}
+/* 缩进代码编辑区和公式块 */
+.vditor-reset code:not(.hljs):not([data-type='math-inline']):not([data-newline='1'])  { 
+    padding-left: 2em;
 }
 
-/* 复选框（待办事项）Start */
+/* 考虑显示行号时的缩进 */
+.vditor-linenumber {
+    padding-left: 4em !important;
+    position: relative;
+}
+/* 考虑到设置里的行内代码 */
+.b3-label__text code {
+    padding: 0.2em 0.5em !important;
+}
+
+
+
+/* ❗复选框（待办事项）Start */
 /* 复选框与文字的距离 */
 .vditor-task input[type='checkbox'] {
     margin-right: 0.5em;
@@ -413,7 +437,7 @@ span[data-type='code'] > code {
 }
 /* 复选框 End */
 
-/* 标题样式 */
+/* ❗标题样式 */
 .vditor-reset h1 {
     text-align: center;
     /* border-bottom: 1px solid var(--b3-text-border-color) !important; */
@@ -476,7 +500,7 @@ span[data-type='code'] > code {
     box-shadow: 0 1px 0px rgb(155 173 210 / 20%), 0 0 0 2px #314144 inset;
 }
 
-/* 高亮部分 */
+/* ❗focus高亮部分 */
 .b3-list-item.b3-list-item--big:hover,
 .b3-list-item.b3-list-item--big.b3-list-item--focus,
 .b3-list-item.b3-list-item--hide-action:hover span:nth-child(2),
@@ -497,7 +521,7 @@ span[data-type='code'] > code {
     background-color: #2c313a !important;
 }
 
-/* focus高亮样式 */
+
 /* 文件树选中的部分 */
 .b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(2) {
     font-weight: 800;
@@ -519,9 +543,6 @@ span[data-type='code'] > code {
 .b3-list--background .b3-list-item--focus .b3-list-item__text {
     color: #e34f8c;
 }
-
-/* end */
-
 /* 选中项的圆角 */
 .b3-list-item {
     line-height: 30px;
@@ -558,13 +579,17 @@ span[data-type='code'] > code {
     border-right: 1px solid #1f1818;
     border-left: 1px solid #1f1818;
     border-radius: 7px 7px 0px 0px;
+    margin: 1px;
 }
 /* 去掉foucs的标签页下边框 */
 .layout__wnd--active .layout-tab-bar .item--focus {
     border-color: #282c34;
 }
+/* end */
 
-/* 标签样式 */
+
+
+/* ❗标签样式 */
 .vditor-reset span[data-type='tag'] {
     display: inline-block;
     font-size: 0.8em;
