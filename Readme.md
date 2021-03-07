@@ -1,5 +1,5 @@
 # 思源主题: mixture(dark)
-![preview](.\preview.png)
+![preview](preview.png)
 
 本主题基于[Atom One Dark](https://github.com/zqhjl/Siyuan-Atom-OneDark)修改，并借鉴了Pure Dark和Lavender等其他主题。
 主题主颜色为青色，主字体为**思源黑体**，代码字体为**Fira Code**，亮色主题见[Mixture Light](https://github.com/Achuan-2/siyuan-themes-mixture-light)
@@ -37,6 +37,7 @@
 - 修改标签样式，圆角增大
 - 针对MathJax行内公式和公式块大小进行优化（之前只设置KaTex的）
 - 初步对主题css即时渲染行内元素样式的颜色代码进行优化，部分使用变量
+- 标签页margin-left改为margin-right
 
 ## v0.1.8/2021-3-4
 

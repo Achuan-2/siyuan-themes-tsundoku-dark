@@ -588,7 +588,7 @@ span[data-type='code'] > code {
     border-right: 1px solid #1f1818;
     border-left: 1px solid #1f1818;
     border-radius: 7px 7px 0px 0px;
-    margin-left: 2px;
+    margin-right: 2px;
 }
 /* 去掉foucs的标签页下边框 */
 .layout__wnd--active .layout-tab-bar .item--focus {
@@ -727,12 +727,10 @@ div[data-type='block-render'] .ft__secondary {
 /*代码语言显示*/
 /* 仿照Blue_Topaz主题 */
 code:before {
-    display: block;
     position: absolute;
     color: #7b8085 !important;
     display: inline-block;
     cursor: pointer;
-    /* line-height: 0%; */
     right: 40px;
     top: 0.45em;
     z-index: 0;
