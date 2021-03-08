@@ -73,9 +73,9 @@
     /* 阴影 */
     --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
         0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.4);
-    --b3-toolbar-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    --b3-card-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    --b3-dialog-shadow: 5px 11px 15px 5px rgba(0, 0, 0, 0.4);
+    --b3-toolbar-shadow: 5px 3px 5px rgba(174, 194, 197, 0.3);
+    --b3-card-shadow: 0px 0px 10px rgba(1, 19, 19, 0.7);
 
     /* diff */
     --b3-diff-add: #133a1c;
@@ -145,10 +145,7 @@
 .language-graphviz polygon {
     fill: var(--b3-theme-on-surface);
 }
-.vditor-toolbar {
-    background-color: var(--b3-theme-background) !important;
-    box-shadow: var(--b3-toolbar-shadow);
-}
+
 .item--focus {
     background-color: var(--b3-theme-background) !important;
 }
@@ -179,7 +176,10 @@
 }
 /* 引用块修改 */
 blockquote {
-    border-left: 0.25em solid rgb(36, 126, 138) !important;
+    /* 原来颜色 */
+    /* border-left: 0.25em solid rgb(36, 126, 138) !important; */
+    border-left: 0.25em solid #4c7378 !important;
+
     border-radius: 0.31em;
     background-color: rgba(66, 185, 185, 0.048) !important;
     padding-left: 1em !important;
@@ -288,7 +288,7 @@ div[data-type='navigation'] .b3-list-item--focus,
 /* 超链接样式 */
 .vditor-ir__link {
     color: var(--b3-vditor-inline-link-color);
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 /* 分割线显示 */
@@ -318,17 +318,17 @@ span[data-type='code'] > code {
 }
 /* 行内公式字体大小 */
 [data-type='inline-math'] .katex {
-    font: normal 1.062em KaTeX_Main, Times New Roman, serif !important;
+    font: normal 1em KaTeX_Main, Times New Roman, serif !important;
 }
 [data-type='inline-math'] .MathJax {
-    font: normal 1.25em KaTeX_Main, Times New Roman, serif !important;
+    font: normal 1em KaTeX_Main, Times New Roman, serif !important;
 }
 /* 公式块字体大小 */
 [data-type='math-block'] .katex {
-    font: normal 1.25em KaTeX_Main, Times New Roman, serif !important;
+    font: normal 1.1em KaTeX_Main, Times New Roman, serif !important;
 }
 [data-type='math-block'] .MathJax {
-    font-size: 1.5em !important;
+    font-size: 1.1em !important;
 }
 
 /* ❗代码块样式 */
@@ -347,6 +347,13 @@ span[data-type='code'] > code {
 }
 /* 缩进代码编辑区和公式块 */
 .vditor-reset code:not(.hljs):not([data-type='math-inline']):not([data-newline='1']) {
+    padding-left: 2em;
+}
+/* 暂时先把预览模式的code都去掉，发现v1.1的预览模式都没有加类 */
+.vditor-preview .vditor-reset code {
+    padding-left: 0.5em;
+}
+.vditor-preview .vditor-preview .hljs {
     padding-left: 2em;
 }
 
@@ -444,26 +451,27 @@ span[data-type='code'] > code {
     text-decoration: underline;
 }
 /* 对完成的待办事项内容全部调整透明度 */
-.vditor-task--done{
+.vditor-task--done {
     opacity: 0.5;
 }
 /* 复选框 End */
 
 /* ❗标题样式 */
 .vditor-reset h1 {
+    /* 如果需要左侧对齐，直接把下面一行注释*/
     text-align: center;
     /* border-bottom: 1px solid var(--b3-text-border-color) !important; */
-    font-size: 1.625em;
-    color: #dfe8e9;
+    font-size: 1.7em;
+    color: #97dfe9;
 }
-.vditor-reset h1:after {
+/* .vditor-reset h1:after {
     content: '';
     display: block;
     margin: 0.2em auto 0;
     width: 4em;
     height: 2px;
     border-bottom: 2px solid #c9cbcf;
-}
+} */
 .vditor-reset h2 {
     /* text-align: center; */
     border-bottom: 1px solid var(--b3-text-border-color) !important;
@@ -475,7 +483,7 @@ span[data-type='code'] > code {
     font-size: 1.25em;
     color: #15aabf;
     line-height: 20px;
-    border-left: 6px solid #15aabf;
+    border-left: 4px solid #15aabf;
     /* border-bottom: 1px solid var(--b3-text-border-color) !important; */
     text-align: justify;
     padding: 5px 0 5px 7px;
@@ -530,14 +538,14 @@ span[data-type='code'] > code {
 .ft__primary:hover,
 .block__icon.b3-tooltips.b3-tooltips__sw:hover {
     color: #e34f8c;
-    background-color: #2c313a !important;
+    background-color: var(--b3-menu-hover) !important;
 }
 
 /* 文件树选中的部分 */
 .b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(2) {
     font-weight: 800;
     font-size: 15px;
-    background-color: #2c313a !important;
+    background-color: var(--b3-menu-hover) !important;
 }
 /* 减小文件树列表间距 */
 .b3-list-item {
@@ -606,13 +614,13 @@ span[data-type='code'] > code {
     /* background: linear-gradient(90deg, rgba(0,0,0,0.001), var(--b3-theme-surface)); */
     pointer-events: none;
 }
+/* end */
+
 /* 文件树页签工具栏样式 */
 .block__icons {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     background-color: var(--b3-theme-surface);
 }
-/* end */
-
 /* 文件树列表样式 */
 .b3-list-item {
     line-height: 30px;
@@ -631,6 +639,7 @@ span[data-type='code'] > code {
 .b3-list--background .b3-list-item--focus {
     border-radius: 0px 10px 10px 0px;
     border: 1px solid #21252b;
+    border-left: 0px solid #21252b;
 }
 
 /* ❗标签样式 */
@@ -804,4 +813,21 @@ code[class~='language-git']::before {
 
 code[class~='language-txt']::before {
     content: 'TXT';
+}
+/* 调整列表间距 */
+.vditor-reset li p {
+    margin-bottom: 2px;
+}
+/* 块引用悬浮动画 */
+.block__popover.block__popover--move.block__popover--open {
+    animation: showBlock .4s ease;
+}
+@keyframes showBlock {
+    0% {
+        border-radius: 50%;
+        transform: rotateY(80deg);
+    }
+    100% {
+        border-radius: 0;
+    }
 }
