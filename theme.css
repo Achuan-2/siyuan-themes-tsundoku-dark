@@ -551,14 +551,7 @@ span[data-type='code'] > code {
 .b3-list-item {
     line-height: 30px;
     padding: 0px 16px;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    position: relative;
-    background-color: transparent;
-    text-align: left;
-    border: 0px;
-    border-radius: 0 15px 15px 0;
+    border-radius: 10px 10px 10px 10px;
 }
 
 /* 按斜杆弹出的菜单 */
@@ -620,20 +613,6 @@ span[data-type='code'] > code {
 .block__icons {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     background-color: var(--b3-theme-surface);
-}
-/* 文件树列表样式 */
-.b3-list-item {
-    line-height: 30px;
-    padding: 2px 16px;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    position: relative;
-    background-color: transparent;
-    text-align: left;
-    border: 0px;
-    /* 选中项的圆角 */
-    border-radius: 10px 10px 10px 10px;
 }
 
 .b3-list--background .b3-list-item--focus {
