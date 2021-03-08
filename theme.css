@@ -43,7 +43,8 @@
 
     /* 列表 */
     --b3-list-hover: #2c313a;
-
+    /* 文件树高亮颜色 */
+    --b3-menu-hover: #2c313a;
     /* 页签 */
     --b3-tab-background: #21252b;
     --b3-tab-background-hover: #323842;
@@ -139,6 +140,7 @@
     --b3-vditor-inline-mark-background: #4f747e;
     --b3-vditor-inline-mark-color: #cdd1d6;
     --b3-vditor-inline-tag-color: #e34f8c;
+    /* 块引用 */
     --b3-vditor-inline-blockref-color: #f58484;
     --b3-vditor-inline-blockref-hover-color: #ff398b;
 }
@@ -149,20 +151,15 @@
 .item--focus {
     background-color: var(--b3-theme-background) !important;
 }
+/* 代码编辑区的代码语言*/
 .vditor-ir__marker--info {
-    color: var(--b3-vditor-inline-blockref-color) !important;
+    color: #636566 !important;
 }
-.MathJax svg {
-    font-size: 0.8em !important;
+/* sql查询块 */
+span[data-type='block-query-embed-script'] {
+    color: #636566 !important;
 }
-.vditor ul ol,
-.vditor ol ol,
-.vditor ul ul,
-.vditor ol ul {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    margin-left: -0.9em !important;
-    padding-left: 2.5em !important;
-}
+
 .hljs-comment {
     font-style: normal !important;
     font-family: var(--b3-font-family-code);
@@ -298,7 +295,7 @@ div[data-type='navigation'] .b3-list-item--focus,
 /* 行内代码块 */
 .vditor-reset code:not(.hljs):not([data-type='math-inline']) {
     padding: 0.2em 0.5em;
-    margin: 0px 6px;
+    margin: 0px 2px;
     font-size: 85%;
     border-radius: 0.5em;
     font-family: var(--b3-font-family-code);
@@ -325,10 +322,10 @@ span[data-type='code'] > code {
 }
 /* 公式块字体大小 */
 [data-type='math-block'] .katex {
-    font: normal 1.1em KaTeX_Main, Times New Roman, serif !important;
+    font: normal 1.15em KaTeX_Main, Times New Roman, serif !important;
 }
 [data-type='math-block'] .MathJax {
-    font-size: 1.1em !important;
+    font-size: 1.11em !important;
 }
 
 /* ❗代码块样式 */
@@ -366,6 +363,15 @@ span[data-type='code'] > code {
 .b3-label__text code {
     padding: 0.2em 0.5em !important;
 }
+/* 列表加框线 */
+.vditor ul ol,
+.vditor ol ol,
+.vditor ul ul,
+.vditor ol ul {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: -0.85em !important;
+    padding-left: 2.5em !important;
+}
 
 /* ❗复选框（待办事项）Start */
 
@@ -374,11 +380,12 @@ span[data-type='code'] > code {
     text-align: center;
     vertical-align: middle;
     top: 0em;
-    right: 0.1em;
-    font-size: 1em;
+    right: -0.1em;
+    margin-right: 0.6em;
     width: 1em;
     height: 1em;
     border-radius: 0.17em;
+    font-size: 1em;
 }
 
 .vditor-task input[type='checkbox']:before {
@@ -422,6 +429,7 @@ span[data-type='code'] > code {
     color: #d3ddd7;
     background-color: #3b7c97;
 }
+
 /* 完成的待办事项 */
 .vditor-task--done {
     /* 完成的待办事项删除线 */
@@ -538,28 +546,83 @@ span[data-type='code'] > code {
 .ft__primary:hover,
 .block__icon.b3-tooltips.b3-tooltips__sw:hover {
     color: #e34f8c;
-    background-color: var(--b3-menu-hover) !important;
+    background-color: var(--b3-menu-hover);
+}
+/* .b3-list-item:hover悬浮的样式 */
+.b3-list-item:hover {
+    color: #e34f8c;
+    background-color: var(--b3-menu-hover);
+}
+/* 文件树选中,图标也改变 */
+.b3-list-item--focus {
+    color: #e34f8c;
+    background-color: #fff !important;
 }
 
+/* 文件树选中的外围 */
+div[data-type='navigation'] .b3-list-item--focus,
+.vditor-reset .b3-list-item--focus {
+    background-color: var(--b3-menu-hover) !important;
+}
 /* 文件树选中的部分 */
 .b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(2) {
     font-weight: 800;
     font-size: 15px;
     background-color: var(--b3-menu-hover) !important;
 }
-/* 减小文件树列表间距 */
-.b3-list-item {
-    line-height: 30px;
-    padding: 0px 16px;
-    border-radius: 10px 10px 10px 10px;
+/* 设置列表选中取消背景色 */
+.b3-dialog__container .b3-list--background .b3-list-item--focus {
+    background-color: transparent !important;
 }
-
+/* 设置列表悬空去掉背景色 */
+.b3-dialog__container .b3-list-item:hover {
+    background-color: transparent;
+}
+/* 设置界面的选中增强 */
+.b3-list-item.b3-list-item--big:hover,
+.b3-list-item.b3-list-item--big.b3-list-item--focus {
+    font-size: 1.05em;
+    font-weight: bold;
+}
+/* 面板列表项 选中状态*/
+.b3-dialog__container .b3-list-item.b3-list-item--focus span:nth-child(2) {
+    background-color: transparent;
+}
+.b3-dialog__container .b3-list--background .b3-list-item--focus[data-type='search-item'] {
+    background-color: var(--b3-menu-hover) !important;
+}
+/* 面板列表项 悬浮文字项 */
+.b3-dialog__container .b3-list-item:hover .b3-list-item__text {
+    background-color: transparent;
+}
 /* 按斜杆弹出的菜单 */
 .b3-list--background .b3-list-item--focus {
     background-color: #2c313a !important;
 }
 .b3-list--background .b3-list-item--focus .b3-list-item__text {
     color: #e34f8c;
+}
+/* hover取消背景 */
+.layout-tab-container .b3-list--background button:hover {
+    background-color: transparent;
+}
+/* hover文字取消背景 */
+.layout-tab-container .b3-list--background .b3-list-item:hover span[class='b3-list-item__text'] {
+    background-color: transparent;
+}
+/* 弹出菜单后面的符号 */
+.layout-tab-container .b3-list--background .b3-list-item:hover span[class='b3-list-item__meta'] {
+    color: #e34f8c;
+}
+/* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ */
+
+/* 减小文件树列表间距 */
+.layout-tab-container .b3-list-item {
+    line-height: 30px;
+    padding: 0px 16px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 /* 去掉标题栏的文件图标 */
@@ -591,7 +654,7 @@ span[data-type='code'] > code {
 .layout__wnd--active .layout-tab-bar .item--focus {
     border-color: #1f1818;
     /* 更改多窗口标签页当前页面底框高亮颜色 */
-    border-bottom: 2px solid #bc5982;
+    border-bottom: 2px solid #131212;
 }
 /* 调整选中标签页文字最大宽度 */
 .item--focus .item__text {
@@ -607,6 +670,7 @@ span[data-type='code'] > code {
     /* background: linear-gradient(90deg, rgba(0,0,0,0.001), var(--b3-theme-surface)); */
     pointer-events: none;
 }
+
 /* end */
 
 /* 文件树页签工具栏样式 */
@@ -667,9 +731,20 @@ span[data-type='code'] > code {
 
 /* 设置的关闭按钮 */
 
+.b3-dialog__container .b3-dialog__close {
+    /* color: #505964; */
+    font-size: 50%;
+    cursor: pointer;
+    background: #00ddff00;
+    border-radius: 16px;
+    padding: 4px;
+    margin-left: 22px;
+    height: 13px;
+    width: 13px;
+}
 .b3-dialog__container svg:hover {
     color: #e34f8c;
-    background-color: #00ddff00 !important;
+    background: #282c34;
 }
 /* 仿照Lavender设置/搜索界面启动动效 */
 /* .b3-dialog {
@@ -796,10 +871,11 @@ code[class~='language-txt']::before {
 /* 调整列表间距 */
 .vditor-reset li p {
     margin-bottom: 2px;
+    /* line-height: 150%; */
 }
 /* 块引用悬浮动画 */
 .block__popover.block__popover--move.block__popover--open {
-    animation: showBlock .4s ease;
+    animation: showBlock 0.4s ease;
 }
 @keyframes showBlock {
     0% {
@@ -809,4 +885,15 @@ code[class~='language-txt']::before {
     100% {
         border-radius: 0;
     }
+}
+
+div[data-type='block-render'] {
+    margin-top: 5px;
+}
+.b3-dialog__container .b3-list-item--focus {
+    background-color: transparent;
+}
+/* 标题过长后尾部的白色阴影去除 */
+.layout-tab-bar .item__text::after {
+    background: transparent !important;
 }
