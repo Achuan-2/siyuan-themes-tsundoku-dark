@@ -143,7 +143,7 @@
     --b3-vditor-inline-tag-text-color: #cedbd9d0;
     /* 块引用 */
     --b3-vditor-inline-blockref-color: #f58484;
-    --b3-vditor-inline-blockref-hover-color: #ff398b;
+    --b3-vditor-inline-blockref-hover-color: #ff398cd0;
 }
 .language-graphviz polygon {
     fill: var(--b3-theme-on-surface);
@@ -275,7 +275,7 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 .vditor-ir__blockref:hover {
     color: var(--b3-vditor-inline-blockref-hover-color);
-    border-bottom: 1px dashed var(--b3-vditor-inline-blockref-hover-color) !important;
+    border-bottom: 1px dashed var(--b3-vditor-inline-blockref-hover-color);
 }
 /* 块引用悬浮动画 */
 .block__popover.block__popover--move.block__popover--open {
@@ -297,6 +297,8 @@ div[data-type='block-render'] {
 /* 块嵌入颜色与块引用区分 */
 div[data-type="block-ref-embed"] .vditor-ir__blockref {
     color: var(--b3-vditor-inline-blockref-hover-color);
+    border-bottom: 1px dashed var(--b3-vditor-inline-blockref-hover-color) !important;
+    cursor:auto;
 }
 /* 超链接hover鼠标样式改变 */
 .vditor-ir__node .vditor-ir__link:hover {
@@ -933,19 +935,19 @@ iframe {
 }
 .vditor-toolbar:not(.vditor-toolbar--hide):hover .vditor-toolbar__item,
 .vditor-toolbar:not(.vditor-toolbar--hide):hover .vditor-toolbar__divider {
-    animation: showToolbar 0.1s ease-in-out;
-    transition: opacity 400ms ease 1s;
+    animation: showToolbar 0.5s ease-in-out;
     opacity: 1;
+    transition: opacity 0.5s ease 0s;
 }
 @keyframes showToolbar {
     0% {
-        transform: rotateY(80deg);
+        /* transform: translateY(5px); */
     }
     100% {
-        opacity: 1;
+        /* opacity: 1; */
+        transform: translateY(0px);
     }
 }
-
 /* 块命名样式 */
 .vditor-ir--tip *[tip]:not([fold="1"]):before {
     font-weight: normal;
