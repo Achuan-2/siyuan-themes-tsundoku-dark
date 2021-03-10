@@ -139,7 +139,8 @@
     --b3-vditor-inline-link-hover-color: #fa60a0;
     --b3-vditor-inline-mark-background: #4f747e;
     --b3-vditor-inline-mark-color: #cdd1d6;
-    --b3-vditor-inline-tag-color: #e34f8c;
+    --b3-vditor-inline-tag-color: #be5583;
+    --b3-vditor-inline-tag-text-color: #cedbd9d0;
     /* 块引用 */
     --b3-vditor-inline-blockref-color: #f58484;
     --b3-vditor-inline-blockref-hover-color: #ff398b;
@@ -242,7 +243,7 @@ blockquote {
     font-size: 10px;
     line-height: 15px;
 }
-.vditor-reset > h1,
+/* .vditor-reset > h1,
 .vditor-reset > h2,
 .vditor-reset > h3,
 .vditor-reset > h4,
@@ -253,7 +254,7 @@ blockquote {
 .vditor-reset > .hjls,
 .vditor-reset > table {
     margin-left: 5px;
-}
+} */
 .vditor-counter {
     background-color: var(--b3-text-emphasize-color);
 }
@@ -276,8 +277,29 @@ div[data-type='navigation'] .b3-list-item--focus,
     color: var(--b3-vditor-inline-blockref-hover-color);
     border-bottom: 1px dashed var(--b3-vditor-inline-blockref-hover-color) !important;
 }
+/* 块引用悬浮动画 */
+.block__popover.block__popover--move.block__popover--open {
+    animation: showBlock 0.4s ease;
+}
+@keyframes showBlock {
+    0% {
+        border-radius: 50%;
+        transform: rotateY(80deg);
+    }
+    100% {
+        border-radius: 0;
+    }
+}
+
+div[data-type='block-render'] {
+    margin-top: 5px;
+}
+/* 块嵌入颜色与块引用区分 */
+div[data-type="block-ref-embed"] .vditor-ir__blockref {
+    color: var(--b3-vditor-inline-blockref-hover-color);
+}
 /* 超链接hover鼠标样式改变 */
-.vditor-ir__node:hover .vditor-ir__link {
+.vditor-ir__node .vditor-ir__link:hover {
     cursor: pointer;
     color: var(--b3-vditor-inline-link-hover-color);
     text-decoration: underline;
@@ -343,9 +365,10 @@ span[data-type='code'] > code {
     padding-left: 2em !important;
 }
 /* 缩进代码编辑区和公式块 */
-.vditor-reset code:not(.hljs):not([data-type='math-inline']):not([data-newline='1']) {
+/* 暂时取消 */
+/* .vditor-reset code:not(.hljs):not([data-type='math-inline']):not([data-newline='1']) {
     padding-left: 2em;
-}
+} */
 /* 暂时先把预览模式的code都去掉，发现v1.1的预览模式都没有加类 */
 .vditor-preview .vditor-reset code {
     padding-left: 0.5em;
@@ -487,16 +510,23 @@ span[data-type='code'] > code {
     color: #63cfde;
 }
 
+
 .vditor-reset h3 {
+    position: relative;
     font-size: 1.25em;
     color: #15aabf;
-    line-height: 20px;
-    border-left: 4px solid #15aabf;
-    /* border-bottom: 1px solid var(--b3-text-border-color) !important; */
+    line-height: 1.25em;
     text-align: justify;
-    padding: 5px 0 5px 7px;
-    margin-top: 23px;
-    margin-bottom: 5px;
+    padding-left: 7px;
+}
+.vditor-reset h3:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left:-4px;
+    bottom:0px;
+    height: 1.5em;
+    border-left: 4px solid #15aabf;
 }
 
 .vditor-reset h4 {
@@ -692,18 +722,21 @@ div[data-type='navigation'] .b3-list-item--focus,
     background-color: var(--b3-vditor-inline-tag-color);
     border-radius: 0.625em;
     cursor: pointer;
-    padding: 0em 0.375em;
-    margin: 0em 0.25em;
+    padding: 0em 0.375em 0.08em;
+    margin: 0em 0.25em ;
     white-space: nowrap;
     transform: translateY(-2px);
+    vertical-align: middle;
 }
 .vditor-ir__tag {
     text-decoration: none;
-    color: #fff;
+    color: var(--b3-vditor-inline-tag-text-color);
+    vertical-align: middle;
 }
 /* 标签出现的#字 */
 .vditor-ir__node .vditor-ir__marker--tag {
-    color: #fff;
+    color: var(--b3-vditor-inline-tag-text-color);
+    vertical-align: middle;
 }
 /* 标签样式end */
 
@@ -865,35 +898,75 @@ code[class~='language-git']::before {
     content: 'GIT';
 }
 
-code[class~='language-txt']::before {
-    content: 'TXT';
+code[class~='language-plaintext']::before {
+    content: 'TEXT';
+}
+code[class~='language-markdown']::before {
+    content: 'MARKDOWN';
 }
 /* 调整列表间距 */
 .vditor-reset li p {
     margin-bottom: 2px;
     /* line-height: 150%; */
 }
-/* 块引用悬浮动画 */
-.block__popover.block__popover--move.block__popover--open {
-    animation: showBlock 0.4s ease;
-}
-@keyframes showBlock {
-    0% {
-        border-radius: 50%;
-        transform: rotateY(80deg);
-    }
-    100% {
-        border-radius: 0;
-    }
-}
 
-div[data-type='block-render'] {
-    margin-top: 5px;
-}
-.b3-dialog__container .b3-list-item--focus {
+/* .b3-dialog__container .b3-list-item--focus {
     background-color: transparent;
-}
+} */
 /* 标题过长后尾部的白色阴影去除 */
 .layout-tab-bar .item__text::after {
     background: transparent !important;
+}
+
+span[data-type="html-inline"] code {
+    padding-left: 0em !important;
+}
+iframe {
+    height:500px
+}
+
+/* 工具栏隐藏动画效果 */
+.vditor-toolbar__item,
+.vditor-toolbar__divider {
+    transition: opacity 1s ease 10s;
+    opacity: 0;
+}
+.vditor-toolbar:not(.vditor-toolbar--hide):hover .vditor-toolbar__item,
+.vditor-toolbar:not(.vditor-toolbar--hide):hover .vditor-toolbar__divider {
+    animation: showToolbar 0.1s ease-in-out;
+    transition: opacity 400ms ease 1s;
+    opacity: 1;
+}
+@keyframes showToolbar {
+    0% {
+        transform: rotateY(80deg);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 块命名样式 */
+.vditor-ir--tip *[tip]:not([fold="1"]):before {
+    font-weight: normal;
+    background-color: #110e0e !important;
+    padding: 4px 5px 4px 5px !important;
+    font-style: italic;
+    margin: -1em 1em 0 0;
+    border-radius: 4px;
+}
+
+.vditor-ir--tip *[tip]:not([fold="1"]) {
+    box-shadow: -3px 0 0px 0px #282c34,3px 0 0px 0px #282c34,-4px 1px 0px 0px #a5caee67,4px -1px 0px 0px #a5caee67;
+    /* padding-bottom: 10px; */
+}
+/* 对标题的块命名单独调整 */
+.vditor-reset h1::before,.vditor-reset h2::before,.vditor-reset h3::before,.vditor-reset h4::before,.vditor-reset h5::before,.vditor-reset h6::before{
+    margin: -2.9em 1em 0 0 !important;
+}
+/* 文件树中区别文件数和引用数 */
+li[data-type="navigation-file"] .counter {
+    color: #ba6e6e;
+    font-weight: 800;
+
 }
