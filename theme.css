@@ -269,14 +269,15 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 /* 块引用 */
 .vditor-ir__blockref {
-    color: var(--b3-vditor-inline-blockref-color);
+    color: var(--b3-vditor-inline-blockref-color); /*更改颜色*/
     padding-bottom: 0.1em;
-    border-bottom: 1px dashed var(--b3-vditor-inline-blockref-color) !important;
+    border-bottom: 1px dashed var(--b3-vditor-inline-blockref-color) !important; /*下划线可以去掉*/
 }
 .vditor-ir__blockref:hover {
-    color: var(--b3-vditor-inline-blockref-hover-color);
-    border-bottom: 1px dashed var(--b3-vditor-inline-blockref-hover-color);
+    color: var(--b3-vditor-inline-blockref-hover-color);/*更改鼠标悬浮的颜色*/
+    border-bottom: 1px dashed var(--b3-vditor-inline-blockref-hover-color);/*下划线可以去掉*/
 }
+
 /* 块引用悬浮动画 */
 .block__popover.block__popover--move.block__popover--open {
     animation: showBlock 0.4s ease;
@@ -295,10 +296,10 @@ div[data-type='block-render'] {
     margin-top: 5px;
 }
 /* 块嵌入颜色与块引用区分 */
-div[data-type="block-ref-embed"] .vditor-ir__blockref {
+div[data-type='block-ref-embed'] .vditor-ir__blockref {
     color: var(--b3-vditor-inline-blockref-hover-color);
     border-bottom: 1px dashed var(--b3-vditor-inline-blockref-hover-color) !important;
-    cursor:auto;
+    cursor: auto;
 }
 /* 超链接hover鼠标样式改变 */
 .vditor-ir__node .vditor-ir__link:hover {
@@ -497,6 +498,7 @@ span[data-type='code'] > code {
     font-size: 1.7em;
     color: #97dfe9;
 }
+/* h1短下划线 */
 /* .vditor-reset h1:after {
     content: '';
     display: block;
@@ -512,23 +514,17 @@ span[data-type='code'] > code {
     color: #63cfde;
 }
 
-
 .vditor-reset h3 {
     position: relative;
     font-size: 1.25em;
     color: #15aabf;
     line-height: 1.25em;
-    text-align: justify;
-    padding-left: 7px;
-}
-.vditor-reset h3:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left:-4px;
-    bottom:0px;
-    height: 1.5em;
     border-left: 4px solid #15aabf;
+    text-align: justify;
+    padding: 5px 0px 0px 7px;
+    margin-top: 19px;
+    /* margin-bottom: 10px; */
+    padding-left: 7px;
 }
 
 .vditor-reset h4 {
@@ -725,7 +721,7 @@ div[data-type='navigation'] .b3-list-item--focus,
     border-radius: 0.625em;
     cursor: pointer;
     padding: 0em 0.375em 0.08em;
-    margin: 0em 0.25em ;
+    margin: 0em 0.25em;
     white-space: nowrap;
     transform: translateY(-2px);
     vertical-align: middle;
@@ -920,11 +916,11 @@ code[class~='language-markdown']::before {
     background: transparent !important;
 }
 
-span[data-type="html-inline"] code {
+span[data-type='html-inline'] code {
     padding-left: 0em !important;
 }
 iframe {
-    height:500px
+    height: 500px;
 }
 
 /* 工具栏隐藏动画效果 */
@@ -949,7 +945,7 @@ iframe {
     }
 }
 /* 块命名样式 */
-.vditor-ir--tip *[tip]:not([fold="1"]):before {
+.vditor-ir--tip *[tip]:not([fold='1']):before {
     font-weight: normal;
     background-color: #110e0e !important;
     padding: 4px 5px 4px 5px !important;
@@ -958,17 +954,50 @@ iframe {
     border-radius: 4px;
 }
 
-.vditor-ir--tip *[tip]:not([fold="1"]) {
-    box-shadow: -3px 0 0px 0px #282c34,3px 0 0px 0px #282c34,-4px 1px 0px 0px #a5caee67,4px -1px 0px 0px #a5caee67;
+.vditor-ir--tip *[tip]:not([fold='1']) {
+    box-shadow: -3px 0 0px 0px #282c34, 3px 0 0px 0px #282c34, -4px 1px 0px 0px #a5caee67,
+        4px -1px 0px 0px #a5caee67;
     /* padding-bottom: 10px; */
 }
 /* 对标题的块命名单独调整 */
-.vditor-reset h1::before,.vditor-reset h2::before,.vditor-reset h3::before,.vditor-reset h4::before,.vditor-reset h5::before,.vditor-reset h6::before{
+.vditor-reset h1::before,
+.vditor-reset h2::before,
+.vditor-reset h4::before,
+.vditor-reset h5::before,
+.vditor-reset h6::before {
     margin: -2.9em 1em 0 0 !important;
 }
+/* .vditor-reset h3::before {
+
+} */
 /* 文件树中区别文件数和引用数 */
-li[data-type="navigation-file"] .counter {
+li[data-type='navigation-file'] .counter {
     color: #ba6e6e;
     font-weight: 800;
+}
 
+/* 隐藏br */
+.vditor-ir__br {
+    transition: opacity 0.5s ease 1s;
+    opacity: 0;
+}
+.vditor-ir__br:hover {
+    transition: opacity 400ms ease 0s;
+    opacity: 1;
+}
+/* 对表格的块命名单独处理 */
+table:before {
+    content: none !important;
+}
+
+table:after{
+    content: attr(tip);
+    font-size: 12px;
+    float: left;
+    font-weight: normal;
+    /* background-color: #e4efef!important; */
+    padding: 4px 5px 4px 5px !important;
+    font-style: italic;
+    margin: 0em 0em 0 0;
+    border-radius: 4px;
 }
