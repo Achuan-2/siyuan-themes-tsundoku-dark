@@ -146,8 +146,8 @@
     --b3-vditor-inline-blockref-hover-color: #ff398ccc;
     /* --b3-vditor-inline-blockref-color: #f58484;
     --b3-vditor-inline-blockref-hover-color: #ff398cd0; */
-    --b3-menu-highlight-color:#80acd8;
-    --b3-menu-highlight-focus-color:#618cb6;
+    --b3-menu-highlight-color:#5cdbd3cc;
+    --b3-menu-highlight-focus-color:#13c2c2f1;
 }
 .language-graphviz polygon {
     fill: var(--b3-theme-on-surface);
@@ -599,9 +599,13 @@ span[data-type='code'] > code {
     background-color: transparent;
     
 }
+.b3-list-item.b3-list-item--hide-action.b3-list-item--focus span:nth-child(3) {
+    color: var(--b3-menu-highlight-focus-color) !important;
+}
 /* 文件树选中,图标也改变 */
 .b3-list-item--focus {
-    color: var(--b3-menu-highlight-focus-color);
+    color: var(--b3-menu-highlight-focus-color) !important;
+    font-weight: bold;
     background-color: var(--b3-menu-hover) !important;
 }
 
@@ -632,6 +636,7 @@ div[data-type='navigation'] .b3-list-item--focus,
 .b3-list-item.b3-list-item--big.b3-list-item--focus {
     font-size: 1.05em;
     font-weight: bold;
+    color: var(--b3-menu-highlight-focus-color);
 }
 /* 面板列表项 选中状态*/
 .b3-dialog__container .b3-list-item.b3-list-item--focus span:nth-child(2) {
@@ -691,11 +696,11 @@ div[data-type='navigation'] .b3-list-item--focus,
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
     background-color: #282c34 !important;
-    color: #618cb680;
+    color: #13c2c279;
     
     font-weight: 800;
     font-size: 15px;
-    border-bottom: 2px solid #0478ec13;
+    border-bottom: 2px solid #47707c75;
     /* opacity: .5; */
     
 }
@@ -704,7 +709,7 @@ div[data-type='navigation'] .b3-list-item--focus,
     color: var(--b3-menu-highlight-focus-color);
     border-color: #1f1818;
     /* 更改多窗口标签页当前页面底框高亮颜色 */
-    border-bottom: 2px solid #0478ec54;
+    border-bottom: 2px solid #55909dd3;
     /* opacity: 1; */
 }
 /* 调整选中标签页文字最大宽度 */
@@ -1148,5 +1153,17 @@ table:after{
 
 /*分窗口的边框（线）  */
 .layout__resize::after {
-    background-color: #171a1f;
+    background-color: #171f1f;
+}
+
+.dock {
+
+    background-color: #18191aa9;
+}
+.toolbar {
+    background-color: #18191aa9;
+}
+.block__icons {
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 2px;
+    background-color: #1a1c1d6c;
 }
