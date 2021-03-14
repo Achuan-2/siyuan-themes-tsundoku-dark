@@ -365,6 +365,10 @@ span[data-type='code'] > code {
 [data-type='math-block'] .MathJax {
     font-size: 1.11em !important;
 }
+/* 公式换行调大距离 */
+.katex .katex-html > .newline {
+    padding-bottom: 0.5em;
+}
 
 /* ❗代码块样式 */
 /* 代码编辑区样式 */
