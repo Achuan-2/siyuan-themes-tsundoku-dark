@@ -377,9 +377,10 @@ span[data-type='code'] > code {
 .vditor-ir__preview .hljs {
     position: relative;
     line-height: 1.5em;
-    background-color: #1a1e1f !important;
+    background-color: #1d2122 !important;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     padding-left: 2em !important;
+    background-image: none;
 }
 /* 缩进代码编辑区和公式块 */
 /* 暂时取消 */
