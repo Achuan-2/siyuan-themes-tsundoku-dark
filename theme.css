@@ -17,7 +17,7 @@
     --b3-theme-primary-lightest: rgba(66, 133, 244, 0.12);
     --b3-theme-secondary: #f3a92f;
     --b3-theme-background: #222d38;
-    --b3-theme-surface: #192028;
+    --b3-theme-surface: #222d38;
     --b3-theme-error: #d23f31;
     --b3-text-emphasize-color: rgb(58, 63, 75);
 
@@ -47,7 +47,7 @@
         'Android Emoji', 'EmojiSymbols';
 
     /* 线条 */
-    --b3-border-color: #192028;
+    --b3-border-color: #1d262f;
 
     /* 滚动条、滑块 */
     --b3-scroll-color: #2f3d49c0;
@@ -751,7 +751,7 @@ div[data-type='navigation'] .b3-list-item--focus,
     border-radius: 7px 7px 0px 0px;
     margin-right: 2px;
     transition: all 0.2s ease-in-out;
-    background-color: var(--b3-tab-background);
+    background-color: #222d38;
 }
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
@@ -1245,25 +1245,19 @@ table:after {
 /* --------------------------------------------------------------------- */
 /* 多窗口区别样式 */
 
-.fn__flex-column .vditor-ir {
-    /* 多窗口非活动窗口变暗 */
-    /* opacity:0.75; */
-    /* filter:grayscale(50%); */
-    background-color: #1c2730;
-    transition: background-color 0.8s linear;
-}
-.layout__wnd--active .vditor-ir{
-    /* 当前编辑窗口保持主背景色 */
-    /* opacity:1; */
-    /* filter:grayscale(0%); */
-    background-color: #222d38;
-    /* background-color: var(--b3-theme-background); */
-}
 /* 鼠标停留的窗口都恢复主背景色 */
 /* .vditor-ir:hover{
     background-color: var(--b3-theme-background);
 } */
-
+.fn__flex-column .vditor-ir {
+    /* 多窗口非活动窗口变暗 */
+    background-color: #1c2730;
+    transition: background-color 0.5s linear;
+}
+.layout__wnd--active .vditor-ir{
+    /* 当前编辑窗口保持主背景色 */
+    background-color: #222d38;
+}
 /* 滚动条隐藏 */
 .vditor-content::after {
     /* 非当前编辑窗口滑块用另一种颜色用伪元素遮住 */
@@ -1274,7 +1268,7 @@ table:after {
     top: 0;
     bottom: 0;
     background-color: #1c2730;
-    transition: background-color 0.8s linear;
+    transition: background-color 0.5s linear;
 }
 .layout__wnd--active .vditor-content::after {
     /* 当前编辑窗口用主背景颜色伪元素遮住 */
@@ -1284,15 +1278,14 @@ table:after {
     right: 0;
     top: 0;
     bottom: 0;
-    /* background-color: #f0f3f5; */
-    transition: background-color 0.3s linear;
-    background-color: #222d38;
+    transition: background-color 0.5s linear;
+    background-color: var(--b3-theme-background);
 }
 .vditor-content:hover::after {
     /* 悬浮的时候隐藏 */
     background-color: transparent;
-    animation: showScrollBar 0.3s linear;
-    animation-fill-mode: forwards;
+    z-index: -100;
+    transition: all 0.5s linear;
 }
 div[data-type='wnd'] .layout-tab-container .file-tree .fn__flex-1::before {
     content: '';
@@ -1307,11 +1300,8 @@ div[data-type='wnd'] .layout-tab-container .file-tree .fn__flex-1::before {
 }
 div[data-type='wnd'] .layout-tab-container:hover .file-tree .fn__flex-1::before {
     background-color: transparent;
-    animation: showScrollBar 0.3s linear;
-    animation-fill-mode: forwards;
+    z-index: -100;
+    transition: z-index 0.5s linear;
 }
-@keyframes showScrollBar {
-    100% {
-        z-index: -1;
-    }
-}
+
+/* ----------------------------------End----------------------------------- */
