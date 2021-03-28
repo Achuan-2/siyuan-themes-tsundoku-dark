@@ -16,7 +16,7 @@
     --b3-theme-primary-lighter: rgba(66, 133, 244, 0.38);
     --b3-theme-primary-lightest: rgba(66, 133, 244, 0.12);
     --b3-theme-secondary: #f3a92f;
-    --b3-theme-background: #1d2833;
+    --b3-theme-background: #16212c;
     --b3-theme-surface: #1d2833;
     --b3-theme-error: #d23f31;
     --b3-text-emphasize-color: rgb(58, 63, 75);
@@ -28,16 +28,32 @@
     --b3-theme-on-surface: #9aa0a6;
     --b3-theme-on-error: #fff;
     /* 自定义文字 */
-    --b3-font-color1: #f5539e;
-    --b3-font-color2: #944194;
-    --b3-font-color3: #65b84d;
-    --b3-font-color4: #f5822e;
-    --b3-font-background1: rgba(217, 211, 215, 0.5);
-    --b3-font-background2: rgba(255, 193, 153, 0.5);
-    --b3-font-background3: rgba(189, 201, 255, 0.5);
-    --b3-font-background4: rgba(239, 218, 251, 0.5);
-    --b3-font-background5: rgba(234, 202, 220, 0.5);
-    --b3-font-background6: rgba(253, 198, 200, 0.5);
+    --b3-font-color1: var(--b3-card-error-color);
+    --b3-font-color2: var(--b3-card-warning-color);
+    --b3-font-color3: var(--b3-card-info-color);
+    --b3-font-color4: var(--b3-card-success-color);
+    --b3-font-color5: var(--b3-theme-on-surface);
+    --b3-font-color6: var(--b3-theme-primary);
+    --b3-font-color7: var(--b3-theme-secondary);
+    --b3-font-color8: var(--b3-theme-error);
+    --b3-font-color9: #f5539e;
+    --b3-font-color10: #944194;
+    --b3-font-color11: #65b84d;
+    --b3-font-color12: #f5822e;
+    --b3-font-color13: var(--b3-theme-background);
+    --b3-font-background1: var(--b3-card-error-background);
+    --b3-font-background2: var(--b3-card-warning-background);
+    --b3-font-background3: var(--b3-card-info-background);
+    --b3-font-background4: var(--b3-card-success-background);
+    --b3-font-background5: var(--b3-theme-surface);
+    --b3-font-background6: var(--b3-theme-primary-light);
+    --b3-font-background7: rgba(217, 211, 215, 0.5);
+    --b3-font-background8: rgba(255, 193, 153, 0.5);
+    --b3-font-background9: rgba(189, 201, 255, 0.5);
+    --b3-font-background10: rgba(239, 218, 251, 0.5);
+    --b3-font-background11: rgba(234, 202, 220, 0.5);
+    --b3-font-background12: rgba(253, 198, 200, 0.5);
+    --b3-font-background13: var(--b3-theme-on-background);
     /* 字体 */
     --b3-font-family: 'SourceHan', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
         'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
@@ -57,7 +73,7 @@
     /* 文件树高亮颜色 */
     --b3-menu-hover: #293241;
     /* 页签 */
-    --b3-tab-background:#222d38;
+    --b3-tab-background: #222d38;
     --b3-tab-background-hover: #1e697360;
 
     /* 提示 */
@@ -155,24 +171,41 @@
     /* 块引用 */
     --b3-vditor-inline-blockref-color: #f58484cc;
     --b3-vditor-inline-blockref-hover-color: #ff398ccc;
-    /* --b3-vditor-inline-blockref-color: #f58484;
-    --b3-vditor-inline-blockref-hover-color: #ff398cd0; */
+    /* 高亮 */
     --b3-menu-highlight-color: #13c2c2f1;
     --b3-menu-highlight-focus-color: #13c2c2f1;
 }
+
+/* Markdown图表样式 */
 .language-graphviz polygon {
     fill: var(--b3-theme-on-surface);
 }
-
-.item--focus {
-    background-color: var(--b3-theme-background) !important;
+.vditor-reset .language-flowchart {
+    text-align: center;
+    background-color: #a5b3c7;
+}
+.vditor-reset .language-plantuml {
+    text-align: center;
+}
+.vditor-reset .language-mermaid,
+.vditor-reset .language-graphviz {
+    text-align: center;
+    background-color: var(--b3-theme-background);
 }
 
 /* sql查询块 */
 span[data-type='block-query-embed-script'] {
     color: #636566 !important;
 }
-
+/* 列表加框线 */
+.vditor ul ol,
+.vditor ol ol,
+.vditor ul ul,
+.vditor ol ul {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: -0.85em !important;
+    padding-left: 2.5em !important;
+}
 .hljs-comment {
     font-style: normal !important;
     font-family: var(--b3-font-family-code);
@@ -238,19 +271,6 @@ blockquote {
     box-shadow: var(--b3-card-shadow);
 }
 
-
-/* .vditor-reset > h1,
-.vditor-reset > h2,
-.vditor-reset > h3,
-.vditor-reset > h4,
-.vditor-reset > h5,
-.vditor-reset > h6,
-.vditor-reset > p,
-.vditor-reset > blockquote,
-.vditor-reset > .hjls,
-.vditor-reset > table {
-    margin-left: 5px;
-} */
 .vditor-counter {
     background-color: var(--b3-text-emphasize-color);
 }
@@ -265,11 +285,12 @@ div[data-type='navigation'] .b3-list-item--focus,
     padding-bottom: 0.1em;
     border-bottom: 1px dashed var(--b3-vditor-inline-blockref-color); /*下划线可以去掉*/
 }
-.vditor-ir__blockref:hover,div[data-type='block-ref-embed'] .vditor-ir__blockref[data-type="ref-text-tpl-render-result"],div[data-type="block-render"] .vditor-ir__blockref[data-type="ref-text-tpl-render-result"]:hover {
+.vditor-ir__blockref:hover,
+div[data-type='block-ref-embed'] .vditor-ir__blockref[data-type='ref-text-tpl-render-result'],
+div[data-type='block-render'] .vditor-ir__blockref[data-type='ref-text-tpl-render-result']:hover {
     color: var(--b3-vditor-inline-blockref-hover-color); /*更改鼠标悬浮的颜色*/
     border-bottom: 1px dashed var(--b3-vditor-inline-blockref-hover-color); /*下划线可以去掉*/
 }
-
 
 /* 块引用悬浮动画 */
 .block__popover.block__popover--move.block__popover--open {
@@ -288,7 +309,7 @@ div[data-type='block-render'] {
     margin-top: 5px;
 }
 /* 块嵌入颜色与块引用区分 */
-div[data-type="block-render"] .vditor-ir__blockref[data-type="ref-text-tpl-render-result"]{
+div[data-type='block-render'] .vditor-ir__blockref[data-type='ref-text-tpl-render-result'] {
     color: var(--b3-vditor-inline-blockref-color); /*更改颜色*/
     padding-bottom: 0.1em;
     border-bottom: 1px dashed var(--b3-vditor-inline-blockref-color); /*下划线可以去掉*/
@@ -337,7 +358,7 @@ li[data-type='navigation-file'] .counter {
     line-height: 15px;
 }
 /* 超链接样式 */
-.vditor-ir__node .vditor-ir__link{
+.vditor-ir__node .vditor-ir__link {
     color: var(--b3-vditor-inline-link-color);
     text-decoration: underline;
 }
@@ -348,13 +369,13 @@ li[data-type='navigation-file'] .counter {
     color: var(--b3-vditor-inline-link-hover-color);
     text-decoration: underline;
 } */
-span[data-type="a"]:hover code{
+span[data-type='a']:hover code {
     cursor: pointer;
-    color: var(--b3-vditor-inline-link-hover-color) !important; 
+    color: var(--b3-vditor-inline-link-hover-color) !important;
 }
-span[data-type="a"]:hover .vditor-ir__link{
+span[data-type='a']:hover .vditor-ir__link {
     cursor: pointer;
-    color: var(--b3-vditor-inline-link-hover-color) !important; 
+    color: var(--b3-vditor-inline-link-hover-color) !important;
     text-decoration: underline;
 }
 
@@ -412,30 +433,28 @@ span[data-type='code'] > code {
     font-size: 1.1em;
 }
 /* 修复1.1.3后公式块与正文间距变大的问题 */
-.vditor-reset mjx-container[jax="SVG"][display="true"], .vditor-reset .katex-display {
+.vditor-reset mjx-container[jax='SVG'][display='true'],
+.vditor-reset .katex-display {
     padding: 0em 0;
     margin: 0;
 }
-/* ❗代码块样式 */
+
+/* --------------------------代码块样式------------------------------------------- */
 /* 代码编辑区样式 */
 .vditor-ir__marker--pre code {
     background-color: #111e24 !important;
     /* box-shadow: 0px 0px 10px rgb(0,0,0); */
 }
 /* 代码内容块样式 */
-.vditor-ir__preview .hljs {
+.hljs {
     position: relative;
-    line-height: 1.5em;
+    line-height: 1.56em;
     background-color: #1f2228 !important;
     box-shadow: 0px 0px 7px rgb(0, 0, 0);
     padding-left: 2em !important;
-    background-image: none;
+    background-image: none !important;
 }
-/* 缩进代码编辑区和公式块 */
-/* 暂时取消 */
-/* .vditor-reset code:not(.hljs):not([data-type='math-inline']):not([data-newline='1']) {
-    padding-left: 2em;
-} */
+
 /* 暂时先把预览模式的code都去掉，发现v1.1的预览模式都没有加类 */
 .vditor-preview .vditor-reset code {
     padding-left: 0.5em;
@@ -449,22 +468,119 @@ span[data-type='code'] > code {
     padding-left: 4em !important;
     position: relative;
 }
-/* 考虑到设置里的行内代码 */
-.b3-label__text code {
-    padding: 0.2em 0.5em !important;
+
+/* 代码编辑区的代码语言字体颜色*/
+.vditor-ir__marker--info {
+    color: #636566 !important;
 }
-/* 列表加框线 */
-.vditor ul ol,
-.vditor ol ol,
-.vditor ul ul,
-.vditor ol ul {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    margin-left: -0.85em !important;
-    padding-left: 2.5em !important;
+/* 仿照Blue_Topaz主题，渲染块显示所用代码语言 */
+.hljs:before {
+    position: absolute;
+    display: inline-block;
+    right: 40px;
+    top: 0.45em;
+    color: #7b8085 !important;
+    cursor: pointer;
+    z-index: 0;
+    font-weight: 600;
+    padding: 1px 0px;
 }
 
-/* ❗复选框（待办事项）Start */
+code[class~='language-js']:before {
+    content: 'JS';
+}
 
+code[class~='language-javascript']:before {
+    content: 'JS';
+}
+code[class~='language-c']:before {
+    content: 'C';
+}
+code[class~='language-cpp']::before {
+    content: 'C++';
+}
+
+code[class~='language-java']::before {
+    content: 'JAVA';
+}
+
+code[class~='language-python']:before {
+    content: 'PYTHON';
+}
+code[class~='language-Python']:before {
+    content: 'PYTHON';
+}
+
+code[class~='language-nginx']:before {
+    content: 'NGINX';
+}
+code[class~='language-html']::before {
+    content: 'HTML';
+}
+code[class~='language-css']:before {
+    content: 'CSS';
+}
+code[class~='language-json']:before {
+    content: 'JSON';
+}
+code[class~='language-go']:before {
+    content: 'GO';
+}
+code[class~='language-php']:before {
+    content: 'PHP';
+}
+code[class~='language-shell']:before {
+    content: 'SHELL';
+}
+code[class~='language-bash']:before {
+    content: 'BASH';
+}
+
+code[class~='language-flow']:before {
+    content: 'FLOW';
+}
+
+code[class~='language-sequence']:before {
+    content: 'SEQUENCE';
+}
+
+code[class~='language-sql']:before {
+    content: 'SQL';
+}
+
+code[class~='language-yaml']::before {
+    content: 'YAML';
+}
+
+code[class~='language-ini']::before {
+    content: 'INI';
+}
+
+code[class~='language-xml']::before {
+    content: 'XML';
+}
+
+code[class~='language-git']::before {
+    content: 'GIT';
+}
+
+code[class~='language-plaintext']::before {
+    content: 'TEXT';
+}
+code[class~='language-markdown']::before {
+    content: 'MARKDOWN';
+}
+code[class~='language-matlab']::before {
+    content: 'MATLAB';
+}
+code[class~='language-r']::before {
+    content: 'R';
+}
+/* --------------------------------------------------------------------- */
+
+/* ---------------------复选框（待办事项）Start------------------------------------------------ */
+
+/* 默认复选框样式 */
 .vditor-task input[type='checkbox'] {
     position: relative;
     text-align: center;
@@ -477,7 +593,7 @@ span[data-type='code'] > code {
     border-radius: 0.17em;
     font-size: 1em;
 }
-
+/* 自定义样式 */
 .vditor-task input[type='checkbox']:before {
     content: '';
     position: absolute;
@@ -554,6 +670,7 @@ span[data-type='code'] > code {
 /* ---------------------------复选框 End ------------------------------------------ */
 
 /* -------------------------------标题样式-------------------------------------- */
+
 .vditor-reset h1 {
     /* 如果需要左侧对齐，直接把下面一行注释*/
     text-align: center;
@@ -575,6 +692,7 @@ span[data-type='code'] > code {
     border-bottom: 1px solid var(--b3-text-border-color) !important;
     font-size: 1.55em;
     color: #63cfde;
+    padding: 0.3em 0px !important;
 }
 
 .vditor-reset h3 {
@@ -698,17 +816,17 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 
 /* 面板列表项 悬浮文字项 */
-.b3-dialog__container .b3-list-item:hover{
+.b3-dialog__container .b3-list-item:hover {
     background-color: transparent;
     color: var(--b3-menu-highlight-color);
 }
-.b3-dialog__container .b3-list-item:hover mark{
+.b3-dialog__container .b3-list-item:hover mark {
     color: var(--b3-menu-highlight-color);
 }
-.b3-dialog__container .b3-list-item--focus mark{
+.b3-dialog__container .b3-list-item--focus mark {
     color: var(--b3-menu-highlight-color);
 }
-.b3-dialog__container .b3-list-item--focus:hover mark{
+.b3-dialog__container .b3-list-item--focus:hover mark {
     color: var(--b3-menu-highlight-focus-color);
 }
 .b3-dialog__container .b3-list--background .b3-list-item[data-type='search-item']:hover {
@@ -716,7 +834,7 @@ div[data-type='navigation'] .b3-list-item--focus,
 }
 /* 按斜杆弹出的菜单 */
 .b3-list--background .b3-list-item--focus {
-    background-color: var(--b3-menu-hover)  !important;
+    background-color: var(--b3-menu-hover) !important;
     color: var(--b3-menu-highlight-color);
 }
 .b3-list--background .b3-list-item--focus .b3-list-item__text {
@@ -807,7 +925,8 @@ div[data-type='navigation'] .b3-list-item--focus,
     display: none;
 }
 /* 工具栏高亮 */
-.vditor-toolbar__item.b3-menu__item--current, .vditor-toolbar__item:hover:not(.b3-menu__item--disabled) {
+.vditor-toolbar__item.b3-menu__item--current,
+.vditor-toolbar__item:hover:not(.b3-menu__item--disabled) {
     color: var(--b3-theme-on-primary);
     background-color: #1faab480;
 }
@@ -819,13 +938,11 @@ div[data-type='navigation'] .b3-list-item--focus,
     flex-wrap: wrap;
 }
 .vditor-toolbar {
-
     background-color: #1c2832;
 }
 /* end */
 
 /* 文件树页签工具栏样式 */
-
 
 .b3-list--background .b3-list-item--focus {
     border-radius: 0px 15px 15px 0px;
@@ -875,20 +992,6 @@ div[data-type='navigation'] .b3-list-item--focus,
     vertical-align: middle;
 }
 /* 标签样式end */
-
-/* Markdown图表样式 */
-.vditor-reset .language-flowchart {
-    text-align: center;
-    background-color: #a5b3c7;
-}
-.vditor-reset .language-plantuml {
-    text-align: center;
-}
-.vditor-reset .language-mermaid,
-.vditor-reset .language-graphviz {
-    text-align: center;
-    background-color: var(--b3-theme-background);
-}
 
 /* 图片样式 */
 .vditor-reset img {
@@ -956,114 +1059,6 @@ div[data-type='block-render'] .ft__secondary {
     color: #f57070;
 }
 
-/*代码语言显示*/
-/* 代码编辑区的代码语言*/
-.vditor-ir__marker--info {
-    color: #636566 !important;
-}
-/* 仿照Blue_Topaz主题 */
-code:before {
-    position: absolute;
-    color: #7b8085 !important;
-    display: inline-block;
-    cursor: pointer;
-    right: 40px;
-    top: 0.45em;
-    z-index: 0;
-    font-weight: 600;
-    padding: 1px 0px;
-}
-
-code[class~='language-js']:before {
-    content: 'JS';
-}
-
-code[class~='language-javascript']:before {
-    content: 'JS';
-}
-code[class~='language-c']:before {
-    content: 'C';
-}
-code[class~='language-cpp']::before {
-    content: 'C++';
-}
-
-code[class~='language-java']::before {
-    content: 'JAVA';
-}
-
-code[class~='language-python']:before {
-    content: 'PYTHON';
-}
-code[class~='language-Python']:before {
-    content: 'PYTHON';
-}
-
-code[class~='language-nginx']:before {
-    content: 'NGINX';
-}
-code[class~='language-html']::before {
-    content: 'HTML';
-}
-code[class~='language-css']:before {
-    content: 'CSS';
-}
-code[class~='language-json']:before {
-    content: 'JSON';
-}
-code[class~='language-go']:before {
-    content: 'GO';
-}
-code[class~='language-php']:before {
-    content: 'PHP';
-}
-code[class~='language-shell']:before {
-    content: 'SHELL';
-}
-code[class~='language-bash']:before {
-    content: 'BASH';
-}
-
-code[class~='language-flow']:before {
-    content: 'FLOW';
-}
-
-code[class~='language-sequence']:before {
-    content: 'SEQUENCE';
-}
-
-code[class~='language-sql']:before {
-    content: 'SQL';
-}
-
-code[class~='language-yaml']::before {
-    content: 'YAML';
-}
-
-code[class~='language-ini']::before {
-    content: 'INI';
-}
-
-code[class~='language-xml']::before {
-    content: 'XML';
-}
-
-code[class~='language-git']::before {
-    content: 'GIT';
-}
-
-code[class~='language-plaintext']::before {
-    content: 'TEXT';
-}
-code[class~='language-markdown']::before {
-    content: 'MARKDOWN';
-}
-code[class~='language-matlab']::before {
-    content: 'MATLAB';
-}
-code[class~='language-r']::before {
-    content: 'R';
-}
 /* --------------------------------------------------------------------- */
 /* 调整列表间距 */
 .vditor-reset li p {
@@ -1110,7 +1105,7 @@ iframe {
 
 /* --------------------------块命名------------------------------------------- */
 /* 块命名样式 */
-.vditor-ir--tip *[tip]:not([fold="1"]):not(.vditor-ir__node--expand):before  {
+.vditor-ir--tip *[tip]:not([fold='1']):not(.vditor-ir__node--expand):before {
     font-weight: normal;
     background-color: #243338;
     padding: 4px 5px 4px 5px !important;
@@ -1118,8 +1113,9 @@ iframe {
     margin: -1em 1em 0 0;
     border-radius: 4px;
 }
-.vditor-ir--tip *[tip]:not([fold="1"]):not(.vditor-ir__node--expand) {
-    box-shadow: -3px 0 0px 0px var(--b3-theme-background),3px 0 0px 0px var(--b3-theme-background),-4px 1px 0px 0px #30444b94,4px -1px 0px 0px #30444b94;
+.vditor-ir--tip *[tip]:not([fold='1']):not(.vditor-ir__node--expand) {
+    box-shadow: -3px 0 0px 0px var(--b3-theme-background), 3px 0 0px 0px var(--b3-theme-background),
+        -4px 1px 0px 0px #30444b94, 4px -1px 0px 0px #30444b94;
 }
 /* .vditor-ir--tip *[tip]:not([fold='1']) {
     box-shadow: -3px 0 0px 0px #282c34, 3px 0 0px 0px #282c34, -4px 1px 0px 0px #00ace6,
@@ -1153,13 +1149,13 @@ table:after {
     border-radius: 4px;
 }
 /*对代码块的命名单独处理 */
-.vditor-ir--tip table[tip]:not([fold="1"]):before, .vditor-ir--tip [data-type="code-block"][tip]:not([fold="1"]):before {
+.vditor-ir--tip table[tip]:not([fold='1']):before,
+.vditor-ir--tip [data-type='code-block'][tip]:not([fold='1']):before {
     position: absolute;
     right: 0;
     z-index: 1;
     top: -8px;
-    background-color: #1f2228; 
-
+    background-color: #1f2228;
 }
 /* --------------------------------------------------------------------- */
 
@@ -1199,33 +1195,6 @@ table:after {
     box-shadow: 7px 7px 12px #0a0a0a;
     transition: all 0.2s ease-in-out;
 }
-/* quiet的添加的横线效果 */
-/* .b3-dialog__container div[data-name="bazaar"] .b3-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 20%;
-    height: 100%;
-    background: transparent;
-    transform: skew(-45deg);
-    z-index: 2;
-}
-.b3-dialog__container div[data-name="bazaar"] .b3-card:hover::after {
-    animation: focusCard .5s ease-in-out;
-    animation-fill-mode: forwards;
-}
-@keyframes focusCard {
-    0% {
-        box-shadow: 0 0 20px #ffffff20;
-        background-color: #ffffff20;
-        filter: blur(20px)
-    }
-    100% {
-        transform: skew(-45deg) translateX(400px);
-    }
-} */
-
-
 
 /*分窗口的边框（线）  */
 .layout__resize::after {
@@ -1264,12 +1233,12 @@ table:after {
 } */
 .fn__flex-column .vditor-ir {
     /* 多窗口非活动窗口变暗 */
-    background-color: #1c2730;
+    background-color: #131d27;
     transition: background-color 0.5s linear;
 }
-.layout__wnd--active .vditor-ir{
+.layout__wnd--active .vditor-ir {
     /* 当前编辑窗口保持主背景色 */
-    background-color: #1d2833;
+    background-color: var(--b3-theme-background);
 }
 /* 滚动条隐藏 */
 .vditor-content::after {
@@ -1280,7 +1249,7 @@ table:after {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: #1c2730;
+    background-color: #131d27;
     transition: background-color 0.5s linear;
 }
 .layout__wnd--active .vditor-content::after {
@@ -1318,3 +1287,6 @@ div[data-type='wnd'] .layout-tab-container:hover .file-tree .fn__flex-1::before 
 }
 
 /* ----------------------------------End----------------------------------- */
+audio {
+    width: 800px !important;
+}
