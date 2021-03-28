@@ -16,7 +16,7 @@
     --b3-theme-primary-lighter: rgba(66, 133, 244, 0.38);
     --b3-theme-primary-lightest: rgba(66, 133, 244, 0.12);
     --b3-theme-secondary: #f3a92f;
-    --b3-theme-background: #16212c;
+    --b3-theme-background: #1d2833;
     --b3-theme-surface: #1d2833;
     --b3-theme-error: #d23f31;
     --b3-text-emphasize-color: rgb(58, 63, 75);
@@ -1233,7 +1233,7 @@ table:after {
 } */
 .fn__flex-column .vditor-ir {
     /* 多窗口非活动窗口变暗 */
-    background-color: #131d27;
+    background-color: #1c2730;
     transition: background-color 0.5s linear;
 }
 .layout__wnd--active .vditor-ir {
@@ -1249,7 +1249,7 @@ table:after {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: #131d27;
+    background-color: #1c2730;
     transition: background-color 0.5s linear;
 }
 .layout__wnd--active .vditor-content::after {
