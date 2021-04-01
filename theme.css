@@ -9,6 +9,11 @@
     font-style: normal;
     src: url('fonts/FiraCode-Regular.ttf');
 }
+@font-face {
+    font-family: 'Segoe UI Emoji' !important;
+    font-style: normal;
+    src: url('fonts/seguiemj.ttf');
+}
 :root {
     /* 主色 */
     --b3-theme-primary: #4285f4;
@@ -448,7 +453,6 @@ span[data-type='code'] > code {
 /* 代码内容块样式 */
 .hljs {
     position: relative;
-    line-height: 1.56em;
     background-color: #131d26 !important;
     box-shadow: 0px 0px 7px rgb(0, 0, 0);
     padding-left: 2em !important;
@@ -574,6 +578,9 @@ code[class~='language-matlab']::before {
     content: 'MATLAB';
 }
 code[class~='language-r']::before {
+    content: 'R';
+}
+code[class~='language-R']::before {
     content: 'R';
 }
 /* --------------------------------------------------------------------- */
@@ -1124,13 +1131,11 @@ iframe {
 /* 对标题的块命名单独调整 */
 .vditor-reset h1::before,
 .vditor-reset h2::before,
+.vditor-reset h3::before,
 .vditor-reset h4::before,
 .vditor-reset h5::before,
 .vditor-reset h6::before {
-    margin: -2.9em 1em 0 0 !important;
-}
-.vditor-reset h3::before {
-    margin: -1.3em 1em 0 0 !important;
+    margin: -1.5em 1em 0 0 !important;
 }
 
 /* 对表格的块命名单独处理 */
@@ -1287,6 +1292,12 @@ div[data-type='wnd'] .layout-tab-container:hover .file-tree .fn__flex-1::before 
 }
 
 /* ----------------------------------End----------------------------------- */
+/* 音频长度增加 */
 audio {
     width: 800px !important;
+}
+
+/* 调整引用中的加粗样式 */
+.vditor-reset blockquote strong {
+    color: inherit !important;
 }
