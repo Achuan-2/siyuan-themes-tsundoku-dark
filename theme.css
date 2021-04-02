@@ -10,7 +10,7 @@
     src: url('fonts/FiraCode-Regular.ttf');
 }
 @font-face {
-    font-family: 'Segoe UI Emoji' !important;
+    font-family: 'Win10 Emoji';
     font-style: normal;
     src: url('fonts/seguiemj.ttf');
 }
@@ -62,7 +62,7 @@
     /* 字体 */
     --b3-font-family: 'SourceHan', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
         'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
-        'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
+        'Win10 Emoji','Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
     --b3-font-family-code: 'FiraCode', 'Jetbrains Mono', mononoki, Consolas, 'Liberation Mono',
         Menlo, Courier, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol',
         'Android Emoji', 'EmojiSymbols';
@@ -450,17 +450,17 @@ span[data-type='code'] > code {
     background-color: #111e24 !important;
 }
 /* 代码内容块样式 */
-.vditor-reset pre>code  {
+.vditor-reset pre > code {
     /* position: relative; */
     position: relative;
     display: block;
     background-color: #131d26 !important;
     color: #d6d8da !important;
     padding-left: 2em;
-    padding-top: 32px  !important;
+    padding-top: 32px !important;
     background-image: none !important;
 }
-.vditor-ir div[data-type="code-block"] pre::before {
+.vditor-ir div[data-type='code-block'] pre::before {
     content: ' ';
     background: #fc625d;
     box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
@@ -475,12 +475,11 @@ span[data-type='code'] > code {
 
 .vditor-copy {
     display: block !important;
-
 }
-.vditor-copy span{
+.vditor-copy span {
     opacity: 0;
 }
-.vditor-copy span:hover{
+.vditor-copy span:hover {
     opacity: 1;
     transition: all 0.3s linear;
 }
@@ -498,10 +497,10 @@ span[data-type='code'] > code {
 }
 
 /* 考虑显示行号时的缩进 */
-.vditor-linenumber{
+.vditor-linenumber {
     padding-left: 4em !important;
 }
-.vditor-linenumber__rows{
+.vditor-linenumber__rows {
     padding-top: 25.3px !important;
 }
 /* 代码编辑区的代码语言字体颜色*/
@@ -510,17 +509,16 @@ span[data-type='code'] > code {
 }
 /* 仿照Blue_Topaz主题，渲染块显示所用代码语言 */
 .hljs:before {
-    float:right;
+    float: right;
     position: sticky;
-    left:622px;
-    margin-right:50px;
+    left: 622px;
+    margin-right: 50px;
     margin-top: -2em;
     color: #7b8085 !important;
     cursor: pointer;
     font-weight: 600;
     z-index: 1;
 }
-
 
 code[class~='language-js']:before {
     content: 'JS';

@@ -23,6 +23,15 @@
 - 由于个人习惯一级标题作为文章标题索所以默认为居中，可能对习惯把一级标题作为正文标题的童鞋不太友好，可以搜索`标题样式`，将h1`.vditor-reset h1 {text-align: center;...}`中的`text-align: center;`改为`/* text-align: center; */`以注释
 
 ---
+
+## v0.3.6/2021-4-2
+
+尝试修复手机端 emoji 设置失效问题
+
+目前的手机端样式
+
+![image.png](https://b3logfile.com/siyuan/1610205759005/assets/image-20210402185216-m81xbq4.png)
+
 ## v0.3.5/2021-4-1
 
 - 安卓端字体使用微软 emoji 字体 Segoe UI Emoji，保证样式统一
