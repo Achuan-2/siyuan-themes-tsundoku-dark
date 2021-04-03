@@ -2,7 +2,7 @@
     /* 思源黑体 */
     font-family: 'SourceHan';
     font-style: normal;
-    src: url('fonts/SourceHanSansCN-Regular.otf');
+    src: url('fonts/NotoSansSC-Regular.otf');
 }
 @font-face {
     font-family: 'FiraCode';
@@ -202,13 +202,18 @@
 span[data-type='block-query-embed-script'] {
     color: #636566 !important;
 }
-/* 列表加框线 */
+/* 列表样式 */
+.vditor-ir ul > li:not(.vditor-task) {
+    list-style-type: disc;
+}
+
 .vditor ul ol,
 .vditor ol ol,
 .vditor ul ul,
 .vditor ol ul {
+    /* 加框线 */
     border-left: 1px solid rgba(255, 255, 255, 0.2);
-    margin-left: -0.85em !important;
+    margin-left: -0.93em !important;
     padding-left: 2.5em !important;
 }
 .hljs-comment {
@@ -450,8 +455,7 @@ span[data-type='code'] > code {
     background-color: #111e24 !important;
 }
 /* 代码内容块样式 */
-.vditor-reset pre > code {
-    /* position: relative; */
+.vditor-reset pre > .hljs {
     position: relative;
     display: block;
     background-color: #131d26 !important;
@@ -916,12 +920,12 @@ div[data-type='navigation'] .b3-list-item--focus,
     border-left: 2px solid #011616;
     border-radius: 7px 7px 0px 0px;
     margin-right: 2px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease;
     background-color: #222d38;
 }
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
-    background-color: #1d2832 !important;
+    background-color: #19232c !important;
     color: #13c2c279;
     font-weight: 600;
     font-size: 15px;
@@ -975,7 +979,7 @@ div[data-type='navigation'] .b3-list-item--focus,
     flex-wrap: wrap;
 }
 .vditor-toolbar {
-    background-color: #1c2832;
+    background-color: #19232c;
 }
 /* end */
 
@@ -1114,31 +1118,20 @@ div[data-type='block-render'] .ft__secondary {
 span[data-type='html-inline'] code {
     padding-left: 0em !important;
 }
-iframe {
-    height: 500px;
-}
+
 
 /* 工具栏隐藏动画效果 */
-.vditor-toolbar__item,
+/* .vditor-toolbar__item,
 .vditor-toolbar__divider {
     transition: opacity 1s ease 10s;
     opacity: 0;
 }
 .vditor-toolbar:not(.vditor-toolbar--hide):hover .vditor-toolbar__item,
 .vditor-toolbar:not(.vditor-toolbar--hide):hover .vditor-toolbar__divider {
-    animation: showToolbar 0.5s ease-in-out;
     opacity: 1;
     transition: opacity 0.5s ease 0s;
-}
-@keyframes showToolbar {
-    0% {
-        /* transform: translateY(5px); */
-    }
-    100% {
-        /* opacity: 1; */
-        transform: translateY(0px);
-    }
-}
+} */
+
 
 /* --------------------------块命名------------------------------------------- */
 /* 块命名样式 */
@@ -1326,7 +1319,9 @@ div[data-type='wnd'] .layout-tab-container:hover .file-tree .fn__flex-1::before 
 audio {
     width: 800px !important;
 }
-
+iframe {
+    height: 500px;
+}
 /* 调整引用中的加粗样式 */
 .vditor-reset blockquote strong {
     color: inherit !important;
