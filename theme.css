@@ -23,7 +23,7 @@
     --b3-theme-secondary: #f3a92f;
     --b3-theme-background: #1d2833;
     --b3-theme-surface: #1d2833;
-    --b3-theme-error: #d23f31;
+    --b3-theme-error: #ee1c009f;
     --b3-text-emphasize-color: rgb(58, 63, 75);
 
     /* 文字颜色 */
@@ -203,7 +203,7 @@ span[data-type='block-query-embed-script'] {
     color: #636566 !important;
 }
 /* 列表样式 */
-.vditor-ir ul > li:not(.vditor-task) {
+.vditor-reset ul > li:not(.vditor-task) {
     list-style-type: disc;
 }
 
@@ -418,15 +418,29 @@ span[data-type='code'] > code {
 [data-type='inline-math'] .katex {
     font: normal 1em KaTeX_Main, Times New Roman, serif !important;
 }
-[data-type='inline-math'] .MathJax {
+.vditor-preview .language-math .katex {
     font: normal 1em KaTeX_Main, Times New Roman, serif !important;
 }
+[data-type='inline-math'] .MathJax {
+    font-size: 1em !important;
+}
+
 /* 公式块字体大小 */
 [data-type='math-block'] .katex {
-    font: normal 1.15em KaTeX_Main, Times New Roman, serif !important;
+    font: normal 1em KaTeX_Main, Times New Roman, serif !important;
+}
+.vditor-preview .language-math > .katex-display {
+    font: normal 1em KaTeX_Main, Times New Roman, serif !important;
 }
 [data-type='math-block'] .MathJax {
     font-size: 1.11em !important;
+}
+
+/* 修复1.1.3后公式块与正文间距变大的问题 */
+.vditor-reset mjx-container[jax='SVG'][display='true'],
+.vditor-reset .katex-display {
+    padding: 0em 0;
+    margin: 0;
 }
 /* 公式换行调大距离 */
 .katex .katex-html > .newline {
@@ -440,13 +454,7 @@ span[data-type='code'] > code {
 }
 .minner .mfrac {
     /* 公式块分式字体调整 */
-    font-size: 1.1em;
-}
-/* 修复1.1.3后公式块与正文间距变大的问题 */
-.vditor-reset mjx-container[jax='SVG'][display='true'],
-.vditor-reset .katex-display {
-    padding: 0em 0;
-    margin: 0;
+    font-size: 1.1em !important;
 }
 
 /* --------------------------代码块样式------------------------------------------- */
@@ -464,18 +472,6 @@ span[data-type='code'] > code {
     padding-top: 32px !important;
     background-image: none !important;
 }
-.vditor-ir div[data-type='code-block'] pre::before {
-    content: ' ';
-    background: #fc625d;
-    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
-    border-radius: 50%;
-    margin-top: 10px;
-    position: absolute;
-    margin-left: 15px;
-    height: 12px;
-    width: 12px;
-    z-index: 1;
-}
 
 .vditor-copy {
     display: block !important;
@@ -483,11 +479,19 @@ span[data-type='code'] > code {
 .vditor-copy span {
     opacity: 0;
 }
-.vditor-copy span:hover {
+pre:hover .vditor-copy span {
     opacity: 1;
     transition: all 0.3s linear;
 }
-.vditor-copy::before {
+.vditor-copy span:hover::before {
+    transform: rotate(90deg) translateX(-11.5px) translateY(-4px);
+    border-left-color: #07889d;
+}
+.vditor-copy span:hover::after {
+    transform: translateX(27px) translateY(-16px);
+    background-color: #07889d;
+}
+.vditor-preview .vditor-copy::before {
     content: ' ';
     background: #fc625d;
     box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
@@ -495,6 +499,18 @@ span[data-type='code'] > code {
     margin-top: 10px;
     position: absolute;
     left: 15px;
+    height: 12px;
+    width: 12px;
+    z-index: 1;
+}
+.vditor-ir div[data-type='code-block'] pre::before {
+    content: '';
+    background: #fc625d;
+    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+    border-radius: 50%;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 15px;
     height: 12px;
     width: 12px;
     z-index: 1;
@@ -1342,4 +1358,13 @@ iframe {
 /* 调整引用中的加粗样式 */
 .vditor-reset blockquote strong {
     color: inherit !important;
+}
+
+/* 更改提示背景 */
+
+.b3-tooltips__s::before, .b3-tooltips__se::before, .b3-tooltips__sw::before {
+    border-bottom-color: #07899d9f;
+}
+.b3-tooltips::after {
+    background: #07899d9f;
 }
