@@ -605,6 +605,7 @@ div [data-close='false'] {
     color: #7b8085 !important;
     cursor: pointer;
     font-weight: 600;
+    font-size: 15px;
     z-index: 1;
 }
 
@@ -710,7 +711,7 @@ div [data-close='false'] {
     position: relative;
     text-align: center;
     vertical-align: middle;
-    top: 0em;
+    top: -0.1em;
     right: -0.1em;
     margin-right: 0.6em;
     width: 1em;
@@ -769,6 +770,7 @@ div [data-close='false'] {
     /* 字体颜色 */
     color: #398b979c !important;
 }
+
 .vditor-task--done strong {
     /* 加粗样式调整 */
     color: #3f6e75 !important;
@@ -787,11 +789,11 @@ div [data-close='false'] {
 /* 对完成的待办事项内容全部调整透明度 */
 .vditor-task--done {
     opacity: 0.5;
-    transition: all 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
 }
+
 .vditor-task--done:hover {
     opacity: 1;
-    transition: all 0.4s ease-in-out;
 }
 /* ---------------------------复选框 End ------------------------------------------ */
 
