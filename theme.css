@@ -147,9 +147,9 @@
     --b3-protyle-code-background: #1d4650;
 
     /* 所见即所得行内元素颜色 */
-    --b3-protyle-inline-strong-color: #202124;
-    --b3-protyle-inline-em-color: #202124;
-    --b3-protyle-inline-s-color: #202124;
+    --b3-protyle-inline-strong-color: #e8eaed;
+    --b3-protyle-inline-em-color: #e8eaed;
+    --b3-protyle-inline-s-color: #e8eaed;
     --b3-protyle-inline-link-color: #57a2d4;
     --b3-protyle-inline-link-hover-color: #fa60a0;
     --b3-protyle-inline-mark-background: #4d646c;
@@ -315,7 +315,7 @@ mark {
     padding-left: 1em !important;
 }
 .protyle-wysiwyg [data-node-id].bq strong {
-    color: inherit !important;
+    color: #b4bac0 !important;
 }
 
 /* 块引用 */
@@ -1004,4 +1004,8 @@ div[data-subtype='t'][data-type='NodeList'] {
     background-color: var(--b3-tab-custom-background);
     flex-shrink: 0;
     line-height: 24px;
+}
+.b3-typography ul, .b3-typography ol {
+    /* padding-left: 2em; */
+    margin: 4px 0;
 }
