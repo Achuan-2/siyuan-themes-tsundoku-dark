@@ -154,7 +154,7 @@
     --b3-protyle-inline-link-hover-color: #fa60a0;
     --b3-protyle-inline-mark-background: #4d646c;
     --b3-protyle-inline-mark-color: #cdd1d6;
-    --b3-protyle-inline-tag-background: #e968a0;
+    --b3-protyle-inline-tag-background: #e968a0ed;
     --b3-protyle-inline-tag-text-color: #f8f9fa;
     --b3-protyle-inline-code-color: #b9bcbc;
     --b3-protyle-inline-code-background: #1d4650;
@@ -346,7 +346,9 @@ mark {
 @keyframes showBlock {
     0% {
         border-radius: 50%;
-        transform: rotateY(80deg);
+        /* transform: rotateY(80deg); 会位置偏左 */
+        /* transform: rotateX(80deg); */
+        /* transform: rotateY(80deg); */
     }
     100% {
         border-radius: 0;
