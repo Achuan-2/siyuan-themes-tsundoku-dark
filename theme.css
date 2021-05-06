@@ -694,6 +694,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     border-radius: 4px;
     background: var(--b3-protyle-code-background)  !important;
     box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 30%);
+    margin-top: 10px !important;
     /* filter: drop-shadow(2px 2px 3px #999); */
 }
 /* .code-block:before {
@@ -739,7 +740,9 @@ div[data-subtype='t'][data-type='NodeList'] {
     counter-reset: linenumber;
     font-family: var(--b3-font-family-code);
     /* font-size: 100%; */
+    border-right: 1px solid #546364;
 }
+
 .protyle-linenumber__rows > span::before {
     color: var(--b3-theme-on-surface);
     display: block;
