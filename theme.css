@@ -313,6 +313,7 @@ strong {
     /* padding-left: 1em !important; */
     box-shadow: var(--b3-card-shadow);
     /* color: #27a0dacc; */
+    margin-top: 10px;
 }
 .protyle-wysiwyg [data-node-id].bq .p {
     padding-left: 1em !important;
