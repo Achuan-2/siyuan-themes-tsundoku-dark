@@ -427,25 +427,6 @@ li[data-type='navigation-file'] .counter {
     color: #ef9a9ab9;
 }
 
-.protyle-wysiwyg [data-node-id] .img .protyle-action,
-.protyle-wysiwyg [data-node-id].iframe .protyle-action,
-.protyle-wysiwyg [data-node-id].table .protyle-action {
-    position: absolute;
-    right: 4px;
-    top: 4px;
-    color: #61a1c9;
-    display: none;
-    z-index: 1;
-    cursor: pointer;
-    transition: var(--b3-transition);
-    background-color: rgb(45 58 56 / 90%);
-    border-radius: 4px;
-    height: 22px;
-    width: 22px;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-}
 /* sql查找不到字体颜色*/
 div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     color: #ff7875;
