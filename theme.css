@@ -728,7 +728,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     font-family: var(--b3-font-family-code);
     /* background-size: 20px 20px; */
     background-image: none !important;
-    background: var(--b3-protyle-code-background) !important;
+    background: var(--b3-protyle-code-background)
 }
 
 
@@ -737,7 +737,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     display: block;
     border: 2px solid #0d1a25;
     border-radius: 4px;
-    background: var(--b3-protyle-code-background)  !important;
+    background: var(--b3-protyle-code-background);
     box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 30%);
     margin-top: 15px !important;
     padding-top: 32px !important;
