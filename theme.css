@@ -646,11 +646,11 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     margin-bottom: 0;
 }
 /* .protyle-task--done > .p */
-.protyle-task--done .p,.protyle-task--done p{
-    /* 完成的待办事项删除线，父级勾选，子级默认也带删除线 */
+.protyle-task--done [data-type="NodeParagraph"]>[contenteditable="true"],.protyle-task--done p{
+    /* 完成的待办事项删除线 */
     text-decoration: line-through;
     /* 字体颜色 */
-    color: #539ebed2 !important;
+    color: #6791a396 !important;
 }
 .protyle-task--done strong,
 .protyle-task--done em,
