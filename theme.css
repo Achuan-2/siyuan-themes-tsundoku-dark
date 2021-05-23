@@ -48,7 +48,7 @@
     --b3-font-family-graph: mononoki;
 
     /* 线条 */
-    --b3-border-color: rgba(230, 230, 230, 0.1);
+    --b3-border-color: rgba(230, 230, 230, 0.377);
 
     /* 滚动条 */
     --b3-scroll-color: #2f3d49c0;
@@ -233,7 +233,7 @@
     text-align: center;
     border-bottom: 0px solid #c5c7ca !important;
     font-size: 1.75em;
-    color: #d7ddde;
+    color: #acd7eb;
 }
 .protyle-wysiwyg [data-node-id].h2,.b3-typography h2 {
     border-bottom: 1px solid #dfe0e1 !important;
@@ -361,11 +361,15 @@ strong {
 div[data-type='block-render'] {
     margin-top: 5px;
 }
-/* 块嵌入颜色与块引用区分 */
-div[data-type='block-render'] .vditor-ir__blockref[data-type='ref-text-tpl-render-result'] {
-    color: var(--b3-vditor-inline-blockref-color); /*更改颜色*/
-    padding-bottom: 0.1em;
-    border-bottom: 1px dashed var(--b3-vditor-inline-blockref-color); /*下划线可以去掉*/
+
+/* 块嵌入 */
+.protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"] {
+    box-shadow: 0px 0px 3px 1px rgb(143 167 235 / 38%);
+    border-left: 0px dashed var(--b3-border-color);
+}
+.protyle-wysiwyg__embed {
+    border-bottom: 2px dashed rgb(143 167 235 / 38%);;
+    position: relative;
 }
 
 /* 文件树中区别文件数和引用数 */
@@ -432,10 +436,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     color: #ff7875;
     font-weight: 800;
 }
-/* 块嵌入 */
-.protyle-wysiwyg [data-node-id].render-node[data-type='NodeBlockQueryEmbed'] {
-    box-shadow: 0px 0px 2px rgb(0 0 0 / 29%);
-}
+
 /* 标签 */
 .protyle-wysiwyg [data-node-id] span[data-type='tag'] {
     border-bottom: 0px solid var(--b3-protyle-inline-tag-color);
@@ -476,8 +477,8 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 .protyle-wysiwyg [data-node-id] span[data-type='a'] {
     color: var(--b3-protyle-inline-link-color);
     cursor: pointer;
-    /* border-bottom: 1px solid #4d5355; */
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #4d5355;
+    /* border-bottom: 1px solid transparent; */
     /* text-decoration: underline; */
 }
 .b3-typography a {
@@ -504,21 +505,24 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 /* 行内公式 */
 .protyle-wysiwyg [data-node-id] span[data-type='inline-math'] {
     cursor: pointer;
-    font-size: 100%;
+    font-size: 115%;
 }
-
-[data-type='inline-math'] .mfrac {
-    /* 行内分式公式 */
-    font-size: 1.4em;
-}
+   /* 行内分式公式 */
+/* [data-type='inline-math'] .mfrac {
+    font-size: 1.6em;
+}  */
 
 /* 公式块分式 */
 div[data-type='NodeMathBlock'] .minner .mfrac {
-    font-size: 115%;
+    font-size: 165%;
 }
 /* .b3-typography .minner .mfrac {
     font-size: 115%;
 } */
+.b3-typography [data-subtype="math"], .protyle-wysiwyg [data-subtype="math"] {
+    font-size: 140%;
+    font-family: monospace;
+}
 /* 公式换行调大距离 */
 .katex .katex-html > .newline {
     padding-bottom: 0.5em;
@@ -529,7 +533,11 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     margin: 5px 0;
     text-align: center;
 }
-
+/* 字体大小 */
+/* .b3-typography [data-subtype="math"], .protyle-wysiwyg [data-subtype="math"] {
+    font-size: 138%;
+    font-family: monospace;
+} */
 /* 无序列表 */
 
 .protyle-wysiwyg [data-subtype='u'] > .protyle-action svg {
@@ -574,14 +582,15 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 
 /* 调整列表间距 */
 
-.protyle-wysiwyg [data-node-id].li {
+/* 暂时注释,因为发现代码块的行数不会变化 */
+/* .protyle .li {
     padding: 0;
     margin: 0px 4px 0px 4px;
 }
 .b3-typography ul, .b3-typography ol {
     padding-left: 16px !important;
     margin: 4px 11px;
-}
+} */
 
 .b3-typography .protyle-task p {
     margin: 3px 2px;
@@ -589,6 +598,8 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .protyle-task li p{
     margin: 0px 4px 0px 4px;
 }
+
+
 /* ---------------------复选框（待办事项）Start------------------------------------------------ */
 .protyle-wysiwyg .protyle-action--task:before,.b3-typography .protyle-task:before {
     content: '';
@@ -634,8 +645,9 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     margin-top: 0;
     margin-bottom: 0;
 }
+/* .protyle-task--done > .p */
 .protyle-task--done .p,.protyle-task--done p{
-    /* 完成的待办事项删除线 */
+    /* 完成的待办事项删除线，父级勾选，子级默认也带删除线 */
     text-decoration: line-through;
     /* 字体颜色 */
     color: #539ebed2 !important;
@@ -644,7 +656,6 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .protyle-task--done em,
 .protyle-task--done s,
 .protyle-task--done u{
-    /* 完成的待办事项删除线 */
     /* text-decoration: line-through; */
     /* 字体颜色 */
     color: inherit !important;
@@ -711,11 +722,11 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* font-size: 100%; */
     overflow: auto;
     font-family: var(--b3-font-family-code);
-    /* padding-top: 32px !important; */
-    background-size: 20px 20px;
+    /* background-size: 20px 20px; */
     background-image: none !important;
     background: var(--b3-protyle-code-background) !important;
 }
+
 
 .code-block {
     position: relative;
@@ -725,47 +736,68 @@ div[data-subtype='t'][data-type='NodeList'] {
     background: var(--b3-protyle-code-background)  !important;
     box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 30%);
     margin-top: 15px !important;
+    padding-top: 32px !important;
 }
-/* .code-block:before {
+.code-block:before {
     content: ' ';
     position: absolute;
     background: #fa625c;
     box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
     border-radius: 50%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    top:10px;
     left: 15px;
     height: 12px;
     width: 12px;
     z-index: 1;
-} */
-
-/* 代码语言显示 */
-/* .protyle-wysiwyg [data-node-id].code-block .protyle-action__language{
-    margin-right: 8px;
-    margin-top: -8px;
-    cursor: pointer;
-    min-width: 24px;
-    background-color: #30345d36 !important;
-    color: #cbcdca;
-    padding: 0 8px 22px 8px;
-    height: 18px;
-    border: 1px solid #2f4051f5;
-    box-sizing: border-box;
-    line-height: 18px;
-    border-radius: 4px;
-} */
+}
 
 /*  代码块行数*/
 .protyle-linenumber__rows {
     background-color: var(--b3-protyle-code-background) !important;
-    border-right: 1px solid #b1c3c4;
-    /* width: 3em; */
+    /* border-right: 1px solid #b1c3c491; */
+    margin-top: 31px !important;
+    padding-right:15px;
+    padding-bottom: 0px;
+    margin-bottom: 6px;
+    width: 39px;
 }
-.protyle-linenumber__rows > span::before {
-    color: var(--b3-theme-on-surface);
+.protyle-linenumber__rows::before{
+    content: '';
     display: block;
-    padding-right: 1em;
-    text-align: right;
+    position: absolute;
+    width: 1px;
+    height: calc(100% - 10px); 
+    margin: 5px 0px 2px 33px;
+    background-color: #b1c3c491;
+}
+
+/* 代码语言显示 */
+.protyle-icons{
+    background-color: #b1c3c4;
+}
+.code-block .protyle-icons {
+
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.code-block .protyle-icons .protyle-action__language,.code-block .protyle-icons>span{
+    color: rgba(168, 209, 203, 0.719);
+}
+
+.code-block .protyle-icons {
+    opacity: 1;
+}
+.code-block .protyle-icons>span:hover {
+    color: var(--b3-theme-background);
+    background-color: #cad8dd;
+}
+.code-block .protyle-icons .protyle-action__copy {
+    opacity: 0;
+}
+.code-block:hover .protyle-icons .protyle-action__copy {
+    opacity: 1;
 }
 
 /* -----------------      外观样式 ----------------- */
