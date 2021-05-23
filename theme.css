@@ -48,7 +48,7 @@
     --b3-font-family-graph: mononoki;
 
     /* 线条 */
-    --b3-border-color: rgba(230, 230, 230, 0.377);
+    --b3-border-color: #363f49;
 
     /* 滚动条 */
     --b3-scroll-color: #2f3d49c0;
@@ -683,6 +683,10 @@ div[data-subtype='t'][data-type='NodeList'] {
     opacity: 1;
     /* background: rgba(0,0,0,0.5); */
     transition: opacity 0.5s ease-in-out;
+}
+.protyle-task--done  img{
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
 }
 .protyle-task--done  .code-block{
     opacity: 0.5;
