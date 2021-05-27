@@ -513,9 +513,9 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 }  */
 
 /* 公式块分式 */
-div[data-type='NodeMathBlock'] .minner .mfrac {
+/* div[data-type='NodeMathBlock'] .minner .mfrac {
     font-size: 135%;
-}
+} */
 /* .b3-typography .minner .mfrac {
     font-size: 115%;
 } */
