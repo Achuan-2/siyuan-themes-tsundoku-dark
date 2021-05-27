@@ -728,12 +728,14 @@ div[data-subtype='t'][data-type='NodeList'] {
     padding-bottom: 4px !important;
     padding-left: 16px;
     /* 这里字体改小了…… */
-    font-size: 14px
+    font-size: 14px;
     overflow: auto;
     font-family: var(--b3-font-family-code);
     /* background-size: 20px 20px; */
     background-image: none !important;
-    background: var(--b3-protyle-code-background)
+    /* background: var(--b3-protyle-code-background); */
+    background: transparent;
+
 }
 
 
