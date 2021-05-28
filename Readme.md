@@ -2,6 +2,12 @@
 
 ![preview](preview.png)
 
+🌂缘起：Tsundoku “積 ん 読”是日语里的一个词，维基百科是这样解释的“Tsundoku is acquiring reading materials but letting them pile up in one's home without reading them. It is also used to refer to books ready for reading later when they are on a bookshelf.”我希望思源能帮助我成长，而不是又成为缓解知识焦虑的积灰箱。
+
+---
+
+
+
 这可能不会是最符合你审美的主题，但这或许会是一个最追求极致的主题（之一）🏹
 主颜色为青色和青灰色，主字体为思源黑体，代码字体为Fira Code，亮色主题见[Tsundoku Light](https://github.com/Achuan-2/siyuan-themes-tsundoku-light)
 
@@ -32,7 +38,6 @@
 本主题详细改动帖子：#TODO#
 
 ---
-
 
 ## v0.4.0 Rename to Tsundoku& Adapt to new Siyuan/2021-05-06
 
