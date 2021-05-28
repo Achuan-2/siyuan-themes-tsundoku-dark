@@ -153,7 +153,7 @@
     --b3-protyle-inline-s-color: #e8eaed;
     --b3-protyle-inline-link-color: #57a2d4;
     --b3-protyle-inline-link-hover-color: #fa60a0;
-    --b3-protyle-inline-mark-background: #91d5ff75;
+    --b3-protyle-inline-mark-background: #4b6b81;
     --b3-protyle-inline-mark-color: #cdd1d6;
     --b3-protyle-inline-tag-background: #e968a0ed;
     --b3-protyle-inline-tag-text-color: #f8f9fa;
@@ -502,27 +502,37 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     border-radius: 5px;
     transition: all 0.4s ease-in-out;
 }
+
 /* 行内公式 */
 .protyle-wysiwyg [data-node-id] span[data-type='inline-math'] {
     cursor: pointer;
-    /* font-size: 115%; */
+    font-size: 100%;
+}
+.b3-typography span[data-subtype="math"] {
+    font-size: 100% !important;
 }
    /* 行内分式公式 */
-/* [data-type='inline-math'] .mfrac {
-    font-size: 1.6em;
-}  */
-
+[data-type='inline-math'] .mfrac {
+    font-size: 1.5em;
+} 
+.b3-typography span[data-subtype="math"] .mfrac {
+    font-size: 1.5em;
+} 
 /* 公式块分式 */
-/* div[data-type='NodeMathBlock'] .minner .mfrac {
-    font-size: 135%;
-} */
-/* .b3-typography .minner .mfrac {
-    font-size: 115%;
-} */
-.b3-typography [data-subtype="math"], .protyle-wysiwyg [data-subtype="math"] {
-    font-size: 120%;
+.b3-typography [data-subtype="math"]{
+    font-weight: 400 !important;
+}
+.b3-typography div[data-subtype="math"], .protyle-wysiwyg div[data-subtype="math"] {
+    /* font-size: 120%; */
     font-family: monospace;
 }
+.b3-typography .minner .mfrac {
+    font-size: 115%;
+}
+div[data-type='NodeMathBlock'] .minner .mfrac {
+    font-size: 115%;
+}
+
 /* 公式换行调大距离 */
 .katex .katex-html > .newline {
     padding-bottom: 0.5em;
@@ -533,6 +543,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     margin: 5px 0;
     text-align: center;
 }
+
 /* 字体大小 */
 /* .b3-typography [data-subtype="math"], .protyle-wysiwyg [data-subtype="math"] {
     font-size: 138%;
@@ -585,11 +596,11 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 /* 暂时注释,因为发现代码块的行数不会变化 */
 .protyle .li {
     padding: 0;
-    margin: 0px 4px 0px 4px;
+    margin: 0px 3px 0px 3px;
 }
 .b3-typography ul, .b3-typography ol {
     padding-left: 16px !important;
-    margin: 4px 11px;
+    margin: 4px 10px;
 }
 
 .b3-typography .protyle-task p {
@@ -1140,15 +1151,15 @@ iframe {
 
 /* 光标选中文本样式 */
 .protyle-wysiwyg ::selection{ 
-    background-color:#91d5ff75;
+    background-color:#91d5ff5d;
 }
 /* 选中块 */
 .protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
-    background-color: #91d5ff38 !important;
+    background-color: #73bce928 !important;
 }
 /* 鼠标划选区域*/
 .protyle-select{
-    background-color: #91d5ff75;
+    background-color: transparent !important;
 }
 /* 图片大小调整手柄 */
 .protyle-wysiwyg [data-node-id] .img .protyle-action__drag {
