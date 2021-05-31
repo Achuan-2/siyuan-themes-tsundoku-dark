@@ -512,18 +512,26 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     font-size: 100% !important;
 }
    /* 行内分式公式 */
-[data-type='inline-math'] .mfrac {
+[data-type='inline-math'] .mfrac{
     font-size: 1.5em;
 } 
+[data-type='inline-math'] span.sqrt .mfrac {
+    font-size: 100% !important;
+}
+
 .b3-typography span[data-subtype="math"] .mfrac {
     font-size: 1.5em;
 } 
+[data-type='inline-math'] span.sqrt {
+    font-size: 150% !important;
+}
+
 /* 公式块分式 */
 .b3-typography [data-subtype="math"]{
     font-weight: 400 !important;
 }
 .b3-typography div[data-subtype="math"], .protyle-wysiwyg div[data-subtype="math"] {
-    /* font-size: 120%; */
+    font-size: 120%;
     font-family: monospace;
 }
 .b3-typography .minner .mfrac {
@@ -549,6 +557,26 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     font-size: 138%;
     font-family: monospace;
 } */
+
+/* 调整列表间距 */
+
+/* 暂时注释,因为发现代码块的行数不会变化 */
+.protyle .li {
+    padding: 0;
+    margin: 0px 3px 0px 3px;
+}
+.b3-typography ul, .b3-typography ol {
+    padding-left: 16px !important;
+    margin: 4px 10px;
+}
+
+.b3-typography .protyle-task p {
+    margin: 3px 2px;
+}
+.protyle-task li p{
+    margin: 0px 4px 0px 4px;
+}
+
 /* 无序列表 */
 
 .protyle-wysiwyg [data-subtype='u'] > .protyle-action svg {
@@ -589,25 +617,6 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 }
 .b3-typography  .protyle-task input {
     opacity: 0;
-}
-
-/* 调整列表间距 */
-
-/* 暂时注释,因为发现代码块的行数不会变化 */
-.protyle .li {
-    padding: 0;
-    margin: 0px 3px 0px 3px;
-}
-.b3-typography ul, .b3-typography ol {
-    padding-left: 16px !important;
-    margin: 4px 10px;
-}
-
-.b3-typography .protyle-task p {
-    margin: 3px 2px;
-}
-.protyle-task li p{
-    margin: 0px 4px 0px 4px;
 }
 
 
