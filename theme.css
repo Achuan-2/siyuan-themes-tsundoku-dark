@@ -320,7 +320,7 @@ strong {
     padding-left: 1em !important;
 }
 .protyle-wysiwyg [data-node-id].bq strong,.b3-typography blockquote strong{
-    color: inherit !important;
+    color: inherit;
 }
 
 /* 块引用 */
@@ -369,8 +369,9 @@ div[data-type='block-render'] {
     border-left: 0px dashed #363f49;
 }
 .protyle-wysiwyg__embed {
-    border-bottom: 2px dashed rgb(143 167 235 / 38%);;
+    border-top: 2px dashed rgb(143 167 235 / 38%);;
     position: relative;
+    margin:10px 0px;
 }
 
 /* 文件树中区别文件数和引用数 */
@@ -513,14 +514,14 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 }
    /* 行内分式公式 */
 [data-type='inline-math'] .mfrac{
-    font-size: 1.5em;
+    font-size: 1.4em;
 } 
 [data-type='inline-math'] span.sqrt .mfrac {
     font-size: 100% !important;
 }
 
 .b3-typography span[data-subtype="math"] .mfrac {
-    font-size: 1.5em;
+    font-size: 1.4em;
 } 
 [data-type='inline-math'] span.sqrt {
     font-size: 150% !important;
@@ -530,16 +531,13 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 .b3-typography [data-subtype="math"]{
     font-weight: 400 !important;
 }
-.b3-typography div[data-subtype="math"], .protyle-wysiwyg div[data-subtype="math"] {
-    font-size: 120%;
-    font-family: monospace;
-}
-.b3-typography .minner .mfrac {
+
+/* .b3-typography .minner .mfrac {
     font-size: 115%;
 }
 div[data-type='NodeMathBlock'] .minner .mfrac {
     font-size: 115%;
-}
+} */
 
 /* 公式换行调大距离 */
 .katex .katex-html > .newline {
@@ -679,13 +677,14 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 } */
 .protyle-task--done strong,
 .protyle-task--done em,
-.protyle-task--done s,
 .protyle-task--done u{
     /* text-decoration: line-through; */
     /* 字体颜色 */
-    color: inherit !important;
+    color: inherit;
 }
-
+.protyle-task--done s {
+    color: rgb(115 235 213 / 72%);
+}
 .protyle-task--done [data-type='a'],.protyle-task--done a {
     /* 超链接调整 */
     color: #64b7c4 !important;
@@ -934,7 +933,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     padding: 8px 16px;
     color: #fff;
     font-size: inherit;
-    background-color: #df5b5d;
+    background-color: #4db999;
     box-sizing: border-box;
     box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
         0 1px 18px 0 rgb(0 0 0 / 12%);
@@ -1073,12 +1072,13 @@ div[data-subtype='t'][data-type='NodeList'] {
     border-bottom: 2px solid #47707c75;
 } */
 
+/* 由于1.2标签页横向排列不换行，故取消 */
 /* 调整选中标签页文字最大宽度 */
-.item--focus .item__text {
+/* .item--focus .item__text {
     max-width: 300px;
-}
+} */
 /* 文字超出范围的模糊效果 */
-.fn__flex .layout-tab-bar .item--focus .item__text::after {
+/* .fn__flex .layout-tab-bar .item--focus .item__text::after {
     content: ' ';
     position: absolute;
     left: 294px;
@@ -1086,7 +1086,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     height: 100%;
     background: linear-gradient(110deg, rgba(0, 0, 0, 0.001), var(--b3-theme-surface));
     pointer-events: none;
-}
+} */
 
 /* 标签页按钮 */
 .layout-tab-bar .item__close {
