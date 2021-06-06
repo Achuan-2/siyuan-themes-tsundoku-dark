@@ -619,8 +619,15 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .b3-typography ul li::before {
     left: -19px;
 }
+
+/* 无序列表悬浮的小圆点 */
 .protyle-wysiwyg [data-subtype='u'] > .protyle-action:hover:before {
     background-color: #3ca3ce;
+}
+/* 无序列表悬浮的大圆点 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
+    background-color: #3ca2ce9c !important;
+    opacity: .68;
 }
 
 .protyle-wysiwyg [data-node-id].li > .protyle-action--task svg {
@@ -1233,6 +1240,6 @@ iframe {
 
 /* 调整kbd */
 .b3-typography kbd, .protyle-wysiwyg kbd {
-    padding: 2px 2px;
+    padding: 2px 4px;
     font: 80% Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
