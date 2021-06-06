@@ -212,12 +212,14 @@
 /* .vditor-ir:hover{
     background-color: var(--b3-theme-background);
 } */
-.fn__flex-column .protyle-wysiwyg {
+.fn__flex-column .protyle-content,
+.fn__flex-column .protyle-title .protyle-title__input {
     /* 多窗口非活动窗口变暗 */
     background-color: #1c2730;
     transition: background-color 0.5s linear;
 }
-.layout__wnd--active .protyle-wysiwyg {
+.layout__wnd--active .protyle-content,
+.layout__wnd--active .protyle-title .protyle-title__input{
     /* 当前编辑窗口保持主背景色 */
     background-color: var(--b3-theme-background);
 }
@@ -237,7 +239,7 @@
     color: #acd7eb;
 }
 .protyle-wysiwyg [data-node-id].h2,.b3-typography h2 {
-    border-bottom: 1px solid #dfe0e1 !important;
+    border-bottom: 1px solid #596169 !important;
     font-size: 1.55em !important;
     color: #63cfde;
     padding: 0.3em 0px !important;
@@ -457,7 +459,8 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     z-index: 20;
 }
 .protyle-wysiwyg [data-node-id] span[data-type='tag']:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    background-color: var(--b3-protyle-inline-tag-background);
 }
 /* 行内代码 */
 .protyle-wysiwyg [data-node-id] code,
@@ -563,6 +566,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     padding: 0;
     margin: 0px 3px 0px 3px;
 }
+
 .b3-typography ul, .b3-typography ol {
     padding-left: 16px !important;
     margin: 4px 10px;
@@ -575,6 +579,12 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     margin: 0px 4px 0px 4px;
 }
 
+/* 有序列表 */
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover {
+    color: #3ca3ce;
+}
+
 /* 无序列表 */
 
 .protyle-wysiwyg [data-subtype='u'] > .protyle-action svg {
@@ -583,16 +593,21 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .b3-typography li {
     position: relative;
 }
-.b3-typography ul li {
+.b3-typography ul>li {
     list-style-type: none;
 }
-.protyle-wysiwyg [data-subtype='u'] > .protyle-action:before, .b3-typography ul li::before  {
+.protyle-wysiwyg [data-node-id].li {
+    position: relative;
+}
+
+
+.protyle-wysiwyg [data-subtype='u'] > .protyle-action:before, .b3-typography ul>li::before  {
     content: '';
     position: absolute;
     display: inline-block;
     cursor: pointer;
-    width: 0.5em;
-    height: 0.5em;
+    width: 8px;
+    height: 8px;
     vertical-align: middle;
     text-align: center;
     border: 0px;
@@ -605,7 +620,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     left: -19px;
 }
 .protyle-wysiwyg [data-subtype='u'] > .protyle-action:hover:before {
-    background-color: var(--b3-theme-primary);
+    background-color: #3ca3ce;
 }
 
 .protyle-wysiwyg [data-node-id].li > .protyle-action--task svg {
@@ -685,13 +700,20 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 .protyle-task--done s {
     color: rgb(115 235 213 / 72%);
 }
-.protyle-task--done [data-type='a'],.protyle-task--done a {
-    /* 超链接调整 */
-    color: #64b7c4 !important;
-}
+
 .protyle-task--done [data-type='a']:hover {
     /* 超链接悬浮调整 */
     color: rgb(184, 57, 135) !important;
+}
+
+/* 完成的待办事项有序列表样式 */
+.protyle-wysiwyg .protyle-task--done  [data-node-id].li>.protyle-action--order,
+.b3-typography ol>li{
+    color: #56a4c5c9 !important;
+}
+/* 完成的待办事项无序列表样式 */
+.protyle-wysiwyg .protyle-task--done  [data-subtype='u'] > .protyle-action:before,.b3-typography .protyle-task--done  ul>li::before {
+    background-color: #56a4c5c9 !important;
 }
 
 /* 对完成的待办事项内容全部调整透明度，发现一个问题，父级的透明度会被子级继承 */
@@ -734,13 +756,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 /* -------------------------------代码块样式-------------------------------------- */
 
-/* .hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    color: #333;
-    
-} */
+
 .protyle-reset .hljs,
 .protyle-wysiwyg .hljs,.b3-typography .hljs {
     padding-top: 4px !important;
@@ -748,8 +764,10 @@ div[data-subtype='t'][data-type='NodeList'] {
     padding-left: 16px;
     /* 这里字体改小了…… */
     font-size: 14px;
+    /* font-size: 77%; */
     overflow: auto;
     font-family: var(--b3-font-family-code);
+    /* font-family: mononoki, Consolas; */
     /* background-size: 20px 20px; */
     background-image: none !important;
     /* background: var(--b3-protyle-code-background); */
@@ -767,6 +785,8 @@ div[data-subtype='t'][data-type='NodeList'] {
     box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 30%);
     margin-top: 15px !important;
     padding-top: 32px !important;
+    /* font-size: 14px; */
+    /* font-size:10px; */
 }
 .code-block:before {
     content: ' ';
@@ -780,21 +800,18 @@ div[data-subtype='t'][data-type='NodeList'] {
     height: 12px;
     width: 12px;
     z-index: 1;
+    
 }
 
 /*  代码块行数*/
 .protyle-linenumber__rows {
-    counter-reset: linenumber;
-    font-family: var(--b3-font-family-code);
-    background-color: var(--b3-protyle-code-background) !important;
-    /* border-right: 1px solid #b1c3c491; */
     margin-top: 31px !important;
+    /* font-family: mononoki, Consolas; */
+    background-color: var(--b3-protyle-code-background) !important;
     padding-right:15px;
     padding-bottom: 0px;
     margin-bottom: 6px;
     width: 39px;
-    font-size:14px;
-    user-select: none;
 }
 .protyle-linenumber__rows::before{
     content: '';
@@ -951,7 +968,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     font-size: 50%;
     padding: 4px;
     /* background-color: bisque; */
-    background: #df5b5d;
+    background: #4db999;
     border-radius: 16px;
     cursor: pointer;
     top: 2px;
@@ -1067,6 +1084,10 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* 更改多窗口标签页当前页面底框高亮颜色 */
     border-bottom: 2px solid transparent;
 }
+/* 标签页后面的背景 */
+.layout-tab-bar {
+    background-color: #1d2833;
+}
 /* 未保存样式 */
 /* .layout__wnd--active .layout-tab-bar .item--unsave {
     border-bottom: 2px solid #47707c75;
@@ -1103,8 +1124,8 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 }
 .b3-typography ul, .b3-typography ol {
-    padding-left: 16px !important; 
-    margin: 4px 0;
+    padding-left: 16px !important;
+    margin: 4px 10px;
 }
 
 .toolbar__item--action1:hover {
@@ -1236,4 +1257,11 @@ iframe {
 .protyle-wysiwyg .sb div[data-node-id]{
     margin: 4px;
     border-radius: 3px;
+}
+
+
+/* 调整kbd */
+.b3-typography kbd, .protyle-wysiwyg kbd {
+    padding: 2px 2px;
+    font: 80% Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
