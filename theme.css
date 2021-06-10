@@ -30,7 +30,7 @@
     --b3-theme-on-error: #ee1c009f;
 
     /* 字体 */
-    --b3-font-family: 'SourceHan', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
+    --b3-font-family: 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB',
         'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
         'Win10 Emoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols';
     --b3-font-family-code: 'FiraCode', mononoki, Consolas, 'Liberation Mono', Menlo, Courier,
@@ -575,7 +575,8 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 }
 /* 有序列表 */
 
-.protyle-wysiwyg [data-node-id].li>.protyle-action:hover {
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover,
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action {
     color: #3ca3ce;
 }
 
@@ -615,11 +616,13 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 }
 
 /* 无序列表悬浮的小圆点 */
-.protyle-wysiwyg [data-subtype='u'] > .protyle-action:hover:before {
+.protyle-wysiwyg [data-subtype='u'] > .protyle-action:hover:before,
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:before {
     background-color: #3ca3ce;
 }
 /* 无序列表悬浮的大圆点 */
-.protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after,
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:after {
     background-color: #3ca2ce9c !important;
     opacity: .68;
 
@@ -630,7 +633,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
     /* visibility: hidden;   */
     opacity: 0;
 }
-.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after {
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after, {
     background-color: transparent !important;
     opacity: 0 !important;
 }
@@ -814,7 +817,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 .protyle-linenumber__rows {
     margin-top: 31px !important;
     /* font-family: mononoki, Consolas; */
-    background-color: var(--b3-protyle-code-background) !important;
+    background-color:transparent !important;
     padding-right:15px;
     padding-bottom: 0px;
     margin-bottom: 6px;
@@ -920,7 +923,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 .b3-menu__item:hover:not(.b3-menu__item--readonly):not(.b3-menu__item--custom)
     > .b3-menu__accelerator {
     color: var(--b3-menu-highlight-focus-color);
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 /* 创建文件按钮 */
