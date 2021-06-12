@@ -1,3 +1,11 @@
+<a title="Hits" target="_blank" href="https://github.com/Achuan-2/siyuan-themes-tsundoku-"><img src="https://hits.b3log.org/Achuan-2/siyuan-themes-tsundoku-light.svg" ></a>
+[![Downloads](https://img.shields.io/github/downloads/Achuan-2/siyuan-themes-tsundoku/total?logo=github)](https://github.com/Achuan-2/siyuan-themes-tsundoku-light/releases/latest/download/siyuan-themes-tsundoku.zip)
+[![Release](https://img.shields.io/github/release/Achuan-2/siyuan-themes-tsundoku.svg)](https://github.com/Achuan-2/siyuan-themes-tsundoku-light/releases)
+![stars](https://badgen.net/github/stars/Achuan-2/siyuan-themes-tsundoku)
+![open-issues](https://badgen.net/github/open-issues/Achuan-2/siyuan-themes-tsundoku)
+![closed-issues](https://badgen.net/github/closed-issues/Achuan-2/siyuan-themes-tsundoku)
+![GitHub last commit](https://img.shields.io/github/last-commit/Achuan-2/siyuan-themes-tsundoku)
+
 # 思源主题: Tsundoku(dark)
 
 ![preview](preview.png)
