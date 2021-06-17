@@ -148,7 +148,7 @@
     --b3-protyle-inline-mark-background: #4b817c;
     --b3-protyle-inline-mark-color: #cdd1d6;
     --b3-protyle-inline-tag-background: #e968a0ed;
-    --b3-protyle-inline-tag-text-color: #f8f9fa;
+    --b3-protyle-inline-tag-color: #f8f9fa;
     --b3-protyle-inline-code-color: #b9bcbc;
     --b3-protyle-inline-code-background: #225764;
     --b3-protyle-inline-blockref-color: #f58484;
@@ -439,7 +439,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     display: inline-flex;
     font-size: 85%;
     text-decoration: none !important;
-    color: var(--b3-protyle-inline-tag-text-color);
+    color: var(--b3-protyle-inline-tag-color);
     background-color: var(--b3-protyle-inline-tag-background);
     border-radius: 0.625em;
     padding: 0.08em 0.375em 0.08em !important;
@@ -478,9 +478,22 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     /* border-bottom: 1px solid transparent; */
     /* text-decoration: underline; */
 }
+
 .b3-typography a {
     text-decoration: underline;
     color: var(--b3-protyle-inline-link-color);
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a']:before,
+.b3-typography a:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width:  1.2em;
+    height: 1.2em;
+    top: 0.2em;
+    margin-right:2px;
+    background-image: url(src/share2.svg);
+    background-size: 100% 100%;
 }
 .protyle-wysiwyg [data-node-id] span[data-type='a']:hover {
     color: var(--b3-protyle-inline-link-hover-color);
@@ -719,7 +732,7 @@ div[data-type='NodeMathBlock'] .minner .mfrac {
 
 /* 完成的待办事项有序列表样式 */
 .protyle-wysiwyg .protyle-task--done  [data-node-id].li>.protyle-action--order,
-.b3-typography ol>li{
+.protyle-task--done .b3-typography ol>li{
     color: #56a4c5c9 !important;
 }
 /* 完成的待办事项无序列表样式 */
