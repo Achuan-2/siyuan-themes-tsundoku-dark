@@ -228,7 +228,7 @@
     text-align: center;
     border-bottom: 0px solid #c5c7ca !important;
     font-size: 1.75em;
-    color: #acd7eb;
+    color: #4dedf5;
 }
 .protyle-wysiwyg [data-node-id].h2,.b3-typography h2 {
     border-bottom: 1px solid #596169 !important;
@@ -512,51 +512,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     /* transition: all 0.4s ease-in-out; */
 }
 
-/* 行内公式 */
-.protyle-wysiwyg [data-node-id] span[data-type='inline-math'] {
-    cursor: pointer;
-    font-size: 100%;
-}
-.b3-typography span[data-subtype="math"] {
-    font-size: 100% !important;
-}
-   /* 行内分式公式 */
-[data-type='inline-math'] .mfrac{
-    font-size: 1.4em;
-} 
-[data-type='inline-math'] span.sqrt .mfrac {
-    font-size: 100% !important;
-}
 
-.b3-typography span[data-subtype="math"] .mfrac {
-    font-size: 1.4em;
-} 
-[data-type='inline-math'] span.sqrt {
-    font-size: 150% !important;
-}
-
-/* 公式块分式 */
-.b3-typography [data-subtype="math"]{
-    font-weight: 400 !important;
-}
-
-/* .b3-typography .minner .mfrac {
-    font-size: 115%;
-}
-div[data-type='NodeMathBlock'] .minner .mfrac {
-    font-size: 115%;
-} */
-
-/* 公式换行调大距离 */
-.katex .katex-html > .newline {
-    padding-bottom: 0.5em;
-}
-/* 修复1.1.3后公式块与正文间距变大的问题 */
-.katex-display {
-    display: block;
-    margin: 5px 0;
-    text-align: center;
-}
 
 /* 字体大小 */
 /* .b3-typography [data-subtype="math"], .protyle-wysiwyg [data-subtype="math"] {
@@ -1205,16 +1161,13 @@ iframe {
 
 /* 光标选中文本样式 */
 .protyle-wysiwyg ::selection{ 
-    background-color:#91d5ff5d;
+    background-color:#98f0da60;
 }
 /* 选中块 */
 .protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
     background-color: #73bce928 !important;
 }
-/* 鼠标划选区域*/
-.protyle-select{
-    background-color: transparent !important;
-}
+
 /* 图片大小调整手柄 */
 .protyle-wysiwyg [data-node-id] .img .protyle-action__drag {
     width: 7px;
@@ -1230,17 +1183,7 @@ iframe {
     box-shadow: 0 0 2px #415f86;
     border-left: 2px solid #000000b5;
 }
-/* 加一个小装饰，不过效果不太好 */
-/* .protyle-wysiwyg [data-node-id] .img .protyle-action__drag::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border: 10px solid #2182bbad;
-    border-color: transparent transparent transparent #2182bbad;
-    position: absolute;
-    top: 50%;
-    left: 7px;
-} */
+
 
 
 /* 实验功能：调整超级块中元素间距 */
