@@ -314,19 +314,35 @@ strong {
     color:inherit;
 }
 /* blockquote 引用 */
-.protyle-wysiwyg [data-node-id].bq,.b3-typography blockquote {
+/* old */
+/* .protyle-wysiwyg [data-node-id].bq,.b3-typography blockquote {
     border-left: 0.25em solid #4c7378 !important;
 
     border-radius: 0.31em;
     background-color: rgba(66, 185, 185, 0.048) !important;
-    /* padding-left: 1em !important; */
     box-shadow: var(--b3-card-shadow);
-    /* color: #27a0dacc; */
     margin-top: 10px;
+} */
+
+.protyle-wysiwyg [data-node-id].bq, .b3-typography blockquote {
+    border-left: 4px solid #8aacac !important;
+    border: 2px solid #8aacac ;
+    /* background-color: transparent; */
+    border-radius: 0em 0.31em 0.31em 0.em;
+    margin-top: 8px !important;
 }
-.protyle-wysiwyg [data-node-id].bq >div{
-    padding-left: 1em;
+/* 缩进调整 */
+.protyle-wysiwyg [data-node-id].bq > div{
+    margin-left: 1em;
 }
+.b3-typography blockquote > p,
+.b3-typography blockquote .code-block,
+.b3-typography blockquote ul,
+.b3-typography blockquote li
+.b3-typography blockquote > blockquote {
+    margin-left: 1em;
+}
+
 .protyle-wysiwyg [data-node-id].bq strong,.b3-typography blockquote strong{
     color: inherit;
 }
@@ -724,27 +740,20 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* background: rgba(0,0,0,0.5); */
     transition: opacity 0.5s ease-in-out;
 }
+.protyle-task--done  .code-block,
+.protyle-task--done  code,
+.protyle-task--done  kbd,
 .protyle-task--done  img{
     opacity: 0.5;
-    transition: opacity 0.2s ease-in-out;
-}
-.protyle-task--done  .code-block{
-    opacity: 0.5;
     transition: opacity 0.5s ease-in-out;
 }
-.protyle-task--done .protyle-task--done {
-    /* opacity: 0.5; */
-    /* filter:opacity(50%) ; */
-    opacity: 1;
-    /* background: rgba(0,0,0,0.5); */
-    transition: opacity 0.5s ease-in-out;
-}
-.protyle-task--done:hover {
+
+
+.protyle-task--done:hover  .code-block,
+.protyle-task--done:hover img {
     opacity: 1 !important;
 }
-.protyle-task--done:hover  .code-block{
-    opacity: 1 !important;
-}
+
 
 
 
@@ -1175,7 +1184,7 @@ iframe {
 
 /* 光标选中文本样式 */
 .protyle-wysiwyg ::selection{ 
-    background-color:#98f0da60;
+    background-color:rgba(121, 150, 231, 0.315);
 }
 /* 选中块 */
 .protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
@@ -1212,4 +1221,9 @@ iframe {
     font-size: 90%;
     padding: 2px 4px;
     margin: 0px 1px;
+}
+
+.protyle-title__input {
+    border-bottom: 2px solid #f4ffffad;
+
 }
