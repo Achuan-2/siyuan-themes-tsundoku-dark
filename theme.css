@@ -565,7 +565,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     position: relative;
 }
 
-
+/* 无序列表样式 */
 .protyle-wysiwyg [data-subtype='u'] > .protyle-action:before, .b3-typography ul>li::before  {
     content: '';
     position: absolute;
@@ -578,8 +578,8 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     border: 0px;
     border-radius: 0.6em;
     background-color: #c9d1d9;
-    top: 12px;
-    left: 12px;
+    top: 14.5px;
+    left: 13px;
 }
 .b3-typography ul li::before {
     left: -19px;
