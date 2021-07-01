@@ -332,7 +332,12 @@ strong {
     margin-top: 8px !important;
 }
 /* 缩进调整 */
+
 .protyle-wysiwyg [data-node-id].bq > div{
+    /* margin-left: 1em; */
+    padding-left: 1em;
+}
+.protyle-wysiwyg [data-node-id].bq div.code-block {
     margin-left: 1em;
 }
 .b3-typography blockquote > p,
@@ -569,6 +574,12 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 .protyle-task li p{
     margin: 0px 4px 0px 4px;
 }
+
+/* 列表和文字的距离 */
+.protyle-wysiwyg [data-node-id].li>[data-node-id] {
+    margin-left: 1.7em !important;
+
+}
 /* 让有序列表数字居中 */
 .protyle-wysiwyg [data-node-id].li>.protyle-action {
     text-align: center;
@@ -581,8 +592,8 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 }
 
 /* 无序列表 */
-
-.protyle-wysiwyg [data-subtype='u'] > .protyle-action svg {
+/* 暂时取消无序列表特殊样式 */
+/* .protyle-wysiwyg [data-subtype='u'] > .protyle-action svg {
     opacity: 0;
 }
 .b3-typography li {
@@ -593,10 +604,10 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 }
 .protyle-wysiwyg [data-node-id].li {
     position: relative;
-}
+} */
 
 /* 无序列表样式 */
-.protyle-wysiwyg [data-subtype='u'] > .protyle-action:before, .b3-typography ul>li::before  {
+/* .protyle-wysiwyg [data-subtype='u'] > .protyle-action:before, .b3-typography ul>li::before  {
     content: '';
     position: absolute;
     display: inline-block;
@@ -613,7 +624,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 }
 .b3-typography ul li::before {
     left: -19px;
-}
+} */
 
 /* 无序列表悬浮的小圆点 */
 .protyle-wysiwyg [data-subtype='u'] > .protyle-action:hover:before,
@@ -633,7 +644,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     /* visibility: hidden;   */
     opacity: 0;
 }
-.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after, {
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after{
     background-color: transparent !important;
     opacity: 0 !important;
 }
@@ -643,7 +654,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 
 
 /* ---------------------复选框（待办事项）Start------------------------------------------------ */
-.protyle-wysiwyg .protyle-action--task:before,.b3-typography .protyle-task:before {
+.protyle-wysiwyg .protyle-action--task:before,.b3-typography .protyle-task:before{
     content: '';
     position: absolute;
     display: inline-block;
@@ -657,9 +668,8 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     border: 0px;
     border-radius: 0.17em;
     background-color: #c7ced1;
-    top: 0.3em;
-    left: 6px;
-    font-size: 1.1em;
+    top: 0.35em;
+    font-size: 1em;
 }
 .b3-typography  .protyle-task:before {
     left: -1.2em;
@@ -669,18 +679,18 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 /* .protyle-task--done>.protyle-action--task:before */
 .protyle-task--done > .protyle-action--task:before,.b3-typography .protyle-task--done:before{
     content: '\2713';
-    font-size: 1.1em;
-    line-height: 1.1em;
-    color: #d3ddd7;
-    background-color: #539ebe;
-}
-/* 复选框选中 ，鼠标悬停 */
-.protyle-wysiwyg [data-node-id].li > .protyle-action--task:hover:before {
-    content: '\2713';
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.2em;
     color: #d3ddd7;
     background-color: #539ebe;
+}
+/*  鼠标悬停 */
+.protyle-wysiwyg [data-node-id].li > .protyle-action--task:hover:before {
+    content: '\2713';
+    font-size: 1.1em;
+    line-height: 1.2em;
+    color: #f8f9fa;
+
 }
 /* 待办列表文本间距 */
 .protyle-wysiwyg [data-subtype='t'] > [data-node-id] div[contenteditable='true'] {
@@ -765,8 +775,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     padding-top: 4px !important;
     padding-bottom: 4px !important;
     padding-left: 16px;
-    /* 这里字体改小了…… */
-    font-size: 14px;
+    /* font-size: 14px; */
     /* font-size: 77%; */
     overflow: auto;
     font-family: var(--b3-font-family-code);
@@ -1138,39 +1147,6 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 
 
-iframe {
-    height: 500px;
-}
-/* 手机端平板端适配 */
-@media screen and (min-width: 320px) and (max-width: 420px) {
-    iframe {
-        height: 150px;
-    }
-    .fn__flex-column .vditor-ir {
-        background-color: var(--b3-theme-background);
-    }
-    .vditor-reset img {
-         /* 手机端图片不变暗 */
-        opacity: 1;
-    }
-}
-@media screen and (min-width: 421px) and (max-width: 1023px) {
-    /* 保证手机端和平板端的窗口背景不为电脑端非活动背景 */
-    .fn__flex-column .vditor-ir {
-        background-color: var(--b3-theme-background);
-    }
-    iframe {
-        height: 320px;
-    }
-    iframe[src~="https://player.bilibili.com/"]
-    {
-        height: 420px;
-    }
-    .vditor-reset img {
-        /* 平板端图片不变暗 */
-        opacity: 1;
-    }
-}   
 /* 字体样式弹窗清除样式按钮颜色 */
 .protyle-font__remove {
     border: 1px;
@@ -1193,11 +1169,11 @@ iframe {
 
 /* 图片大小调整手柄 */
 .protyle-wysiwyg [data-node-id] .img .protyle-action__drag {
+    height: 50%;
     width: 7px;
     background: #5dd3bf;
     border-radius: 3px;
-    top: 37%;
-    right: -1px;
+    top: 25%;
     border:1px solid #000000;
     /* opacity:0.5; */
 }
