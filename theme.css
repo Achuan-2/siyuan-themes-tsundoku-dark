@@ -274,6 +274,53 @@
     /* 预览样式 */
     color:inherit;
 }
+/* 标题自动编号 */
+/* 首先全局进行一次reset，这样即使不添加h1标题也可以使用较低级别的标题 */
+/* .protyle-wysiwyg ,.b3-typography {
+    counter-reset:  h2 0 h3 0 h4 0 h5 0 h6 0;
+}
+.protyle-wysiwyg [data-node-id].h1,.b3-typography h1 {
+    counter-reset: h2;
+}
+.protyle-wysiwyg [data-node-id].h2,.b3-typography h2 {
+    counter-reset: h3;
+}
+.protyle-wysiwyg [data-node-id].h3 ,.b3-typography h3{
+    counter-reset: h4;
+}
+.protyle-wysiwyg [data-node-id].h4 ,.b3-typography h4{
+    counter-reset: h5;
+}
+.protyle-wysiwyg [data-node-id].h5,.b3-typography h5 {
+    counter-reset: h6;
+}
+.protyle-wysiwyg [data-node-id].h2 div:before,.b3-typography h2:before {
+    counter-increment: h2;
+    content: counter(h2) ;
+    margin-right: 2rem;
+}
+.protyle-wysiwyg [data-node-id].h3 div:before,.b3-typography h3:before{
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3);
+    margin-right: 2rem;
+}
+.protyle-wysiwyg [data-node-id].h4 div:before,.b3-typography h4:before{
+    counter-increment: h4;
+    content: counter(h2) "." counter(h3) "." counter(h4);
+    margin-right: 2rem;
+}
+.protyle-wysiwyg [data-node-id].h5 div:before,.b3-typography h5:before{
+    counter-increment: h5;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5);
+    margin-right: 2rem;
+}
+.protyle-wysiwyg [data-node-id].h6 div:before,.b3-typography h6:before {
+    counter-increment: h6;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "."
+        counter(h6);
+    margin-right: 2rem;
+} */
+
 /* -------------------------------表格------------------------------------- */
 
 /* 表格 */
@@ -398,7 +445,7 @@ div[data-type='block-render'] {
     border-left: 0px dashed #363f49;
 }
 .protyle-wysiwyg__embed {
-    border-top: 2px dashed rgb(143 167 235 / 38%);;
+    border-top: 3px dashed #4de0cdc7;
     position: relative;
     margin:10px 0px;
 }
@@ -518,8 +565,8 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     text-decoration: underline;
     color: var(--b3-protyle-inline-link-color);
 }
-.protyle-wysiwyg [data-node-id] span[data-type='a']:before,
-.b3-typography a:before {
+.protyle-wysiwyg [data-node-id] span[data-type='a']:after,
+.b3-typography a:after {
     content: "";
     position: relative;
     display: inline-block;
