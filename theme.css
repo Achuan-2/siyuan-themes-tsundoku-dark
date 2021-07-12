@@ -204,17 +204,7 @@
 /* .vditor-ir:hover{
     background-color: var(--b3-theme-background);
 } */
-.fn__flex-column .protyle-content,
-.fn__flex-column .protyle-title .protyle-title__input {
-    /* 多窗口非活动窗口变暗 */
-    background-color: #1c2730;
-    transition: background-color 0.5s linear;
-}
-.layout__wnd--active .protyle-content,
-.layout__wnd--active .protyle-title .protyle-title__input{
-    /* 当前编辑窗口保持主背景色 */
-    background-color: var(--b3-theme-background);
-}
+
 
 /* 集市动画 */
 .b3-dialog__container div[data-name='bazaar'] .b3-card:hover {
