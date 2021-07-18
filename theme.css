@@ -234,8 +234,8 @@
     border-left: 4px solid #15aabf;
     text-align: justify;
     padding: 5px 0px 0px 7px;
-    margin-top: 19px;
-    /* margin-bottom: 16px; */
+    margin-top: 20px;
+    margin-bottom: 17px;
     padding-left: 7px;
 }
 
@@ -313,7 +313,16 @@
 
 /* -------------------------------表格------------------------------------- */
 
-/* 表格 */
+/* 表格默认居中 */
+.protyle  .table {
+    text-align: center;
+    font-size: 0.9em;
+}
+.protyle table {
+    font-size: 0.9em;
+    /* 导出时表格无法居中 */
+}
+/* 表格背景设置 */
 .protyle   table thead tr {
     background-color: var(--b3-table-th-color) !important;
 }
@@ -339,6 +348,7 @@
 .protyle table tr td:last-child {
     border-right-width: 0px;
 }
+
 
 /* -------------------------------行内块字体样式-------------------------------------- */
 
@@ -754,7 +764,8 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     color: inherit;
 }
 .protyle-task--done s {
-    color: rgb(115 235 213 / 72%);
+    color: inherit;
+    opacity: 0.5;
 }
 
 .protyle-task--done [data-type='a']:hover {
@@ -1239,4 +1250,8 @@ div[data-subtype='t'][data-type='NodeList'] {
 .protyle-title__input {
     border-bottom: 2px solid #f4ffffad;
 
+}
+.protyle-wysiwyg [data-node-id] [spellcheck="false"]:focus:empty:after {  
+    content: "To the time to life, rather than to life in time.";  
+    color: #9fa5a6;
 }
