@@ -58,13 +58,13 @@
 
     /* 卡片背景 */
     --b3-card-error-color: rgb(250, 179, 174);
-    --b3-card-error-background:#ea575026;
+    --b3-card-error-background:#b9251e26;
     --b3-card-warning-color: rgb(255, 213, 153);
-    --b3-card-warning-background: #ffc04c26;
+    --b3-card-warning-background: #96551326;
     --b3-card-info-color: rgb(166, 213, 250);
     --b3-card-info-background: rgba(0,151,255,.15);
     --b3-card-success-color: rgb(183, 223, 185);
-    --b3-card-success-background: rgba(205, 243, 220, 0.25);
+    --b3-card-success-background: #85d0a326;
 
     /* 自定义文字 */
     --b3-font-color1: #52d4ca;
@@ -72,7 +72,7 @@
     --b3-font-color3: var(--b3-card-info-color);
     --b3-font-color4: var(--b3-card-success-color);
     --b3-font-color5: var(--b3-theme-on-surface);
-    --b3-font-color6: var(--b3-theme-primary);
+    --b3-font-color6: #4cbce8;
     --b3-font-color7: var(--b3-theme-secondary);
     --b3-font-color8: #ed9fa0;
     --b3-font-color9: #f5539e;
@@ -82,17 +82,17 @@
     --b3-font-color13: var(--b3-theme-background);
     --b3-font-background1: #e45e9082;
     --b3-font-background2: #f1ebbb99;
-    --b3-font-background3: #32a3f13d;
+    --b3-font-background3: #1c85ad;
     --b3-font-background4: #a4f1c0a6;
-    --b3-font-background5: var(--b3-theme-surface);
-    --b3-font-background6: #dfdddd96;
-    --b3-font-background7: #fa541c;
-    --b3-font-background8: #f8e8cbbf;
-    --b3-font-background9: #d6ddfc9c;
+    --b3-font-background5: #3bb92c85;
+    --b3-font-background6: #fa541c;
+    --b3-font-background7: #dfdddd96;
+    --b3-font-background8: #c59d53bf;
+    --b3-font-background9: #afbbfa9c;
     --b3-font-background10: #d3adf7d0;
     --b3-font-background11: #ff85c0d5;
     --b3-font-background12: #87e8de94;
-    --b3-font-background13: var(--b3-theme-on-background);
+    --b3-font-background13: #e8eaed;
     /* 动画效果 */
     --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
 
@@ -1217,7 +1217,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 /* 光标选中文本样式 */
 .protyle-wysiwyg ::selection{ 
-    background-color:rgba(105, 189, 245, 0.288);
+    background-color:rgba(19, 203, 236, 0.15);
 }
 /* 选中块 */
 .protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
@@ -1268,4 +1268,83 @@ div[data-subtype='t'][data-type='NodeList'] {
 .protyle-wysiwyg [data-node-id] [spellcheck="false"]:focus:empty:after {  
     content: "To the time to life";  
     color: #9fa5a6;
+}
+
+/* ------------------ 自定义属性 ----------------------- */
+.protyle-wysiwyg [data-node-id][custom-function="挖空"] {
+    border:2px dashed rgb(25, 230, 245);
+    color: transparent;
+    transition: all 2s ease-in-out;
+}
+.protyle-wysiwyg [data-node-id][custom-function="挖空"]:hover {
+    border:2px solid rgb(25, 230, 245);
+    color: var(--b3-theme-on-background);
+    transition: all 2s ease-in-out;
+}
+.protyle-wysiwyg [data-node-id][custom-function ="黄"] {
+    background: #ffeb3b;
+    color: black;
+}
+.protyle-wysiwyg [data-node-id][custom-function ="红"]{
+    background: #ff5722;
+    color: white;
+
+}
+.protyle-wysiwyg [data-node-id][custom-function ="蓝"]{
+    background: #2196f3;
+    color: white;
+}
+.protyle-wysiwyg [data-node-id][custom-function="ing"]{
+    display: flex;
+}
+.protyle-wysiwyg [data-node-id][custom-function="ing"]:after {
+    content: "ING";
+    padding: 0 7px;
+    background: #ffeb3b;
+    border-radius: 15px;
+    color: black;
+margin-left:10px;
+transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="done"]{
+    display: flex;
+} 
+.protyle-wysiwyg [data-node-id][custom-function="done"]:after {
+    content: "✔";
+    padding: 0px 3px;
+    background: #ffffff;
+    border-radius: 20px;
+    color: white;
+    margin-left: 4px;
+    margin-left:10px;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="50"]{
+display: flex;
+} 
+.protyle-wysiwyg [data-node-id][custom-function="50"]:after {
+    padding: 1px 3px;
+    background: #ff3b3b;
+    border-radius: 15px;
+    color: white;
+    content: "50%";
+    margin-left:10px;
+    transform:scale(0.7);
+}
+.protyle-wysiwyg [data-node-id][custom-function="zy"]{
+    display: flex;
+} 
+.protyle-wysiwyg [data-node-id][custom-function="zy"]:after{
+    content: "❕❕❕";
+    padding: 0 7px;
+    background:#ff5722;
+    border-radius: 15px;
+    color: black;
+    margin-left:10px;
+    transform:scale(0.7);
+}
+
+
+.protyle-wysiwyg [data-node-id][custom-function="kaiti"]{
+        font-family: kaiti;
 }
