@@ -58,42 +58,41 @@
 
     /* 卡片背景 */
     --b3-card-error-color: rgb(250, 179, 174);
-    --b3-card-error-background: rgb(24, 6, 5);
+    --b3-card-error-background:#ea575026;
     --b3-card-warning-color: rgb(255, 213, 153);
-    --b3-card-warning-background: rgb(25, 15, 0);
+    --b3-card-warning-background: #ffc04c26;
     --b3-card-info-color: rgb(166, 213, 250);
-    --b3-card-info-background: rgb(3, 14, 24);
+    --b3-card-info-background: rgba(0,151,255,.15);
     --b3-card-success-color: rgb(183, 223, 185);
-    --b3-card-success-background: rgb(7, 17, 7);
+    --b3-card-success-background: rgba(205, 243, 220, 0.25);
 
     /* 自定义文字 */
-    --b3-font-color1: var(--b3-card-error-color);
+    --b3-font-color1: #52d4ca;
     --b3-font-color2: var(--b3-card-warning-color);
     --b3-font-color3: var(--b3-card-info-color);
     --b3-font-color4: var(--b3-card-success-color);
     --b3-font-color5: var(--b3-theme-on-surface);
     --b3-font-color6: var(--b3-theme-primary);
     --b3-font-color7: var(--b3-theme-secondary);
-    --b3-font-color8: var(--b3-theme-error);
+    --b3-font-color8: #ed9fa0;
     --b3-font-color9: #f5539e;
-    --b3-font-color10: #944194;
+    --b3-font-color10: #be4cbe;
     --b3-font-color11: #65b84d;
     --b3-font-color12: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background1: var(--b3-card-error-background);
-    --b3-font-background2: var(--b3-card-warning-background);
-    --b3-font-background3: var(--b3-card-info-background);
-    --b3-font-background4: var(--b3-card-success-background);
+    --b3-font-background1: #e45e9082;
+    --b3-font-background2: #f1ebbb99;
+    --b3-font-background3: #32a3f13d;
+    --b3-font-background4: #a4f1c0a6;
     --b3-font-background5: var(--b3-theme-surface);
-    --b3-font-background6: var(--b3-theme-primary-light);
-    --b3-font-background7: rgba(217, 211, 215, 0.5);
-    --b3-font-background8: rgba(255, 193, 153, 0.5);
-    --b3-font-background9: rgba(189, 201, 255, 0.5);
-    --b3-font-background10: rgba(239, 218, 251, 0.5);
-    --b3-font-background11: rgba(234, 202, 220, 0.5);
-    --b3-font-background12: rgba(253, 198, 200, 0.5);
+    --b3-font-background6: #dfdddd96;
+    --b3-font-background7: #fa541c;
+    --b3-font-background8: #f8e8cbbf;
+    --b3-font-background9: #d6ddfc9c;
+    --b3-font-background10: #d3adf7d0;
+    --b3-font-background11: #ff85c0d5;
+    --b3-font-background12: #87e8de94;
     --b3-font-background13: var(--b3-theme-on-background);
-
     /* 动画效果 */
     --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
 
@@ -1218,7 +1217,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 /* 光标选中文本样式 */
 .protyle-wysiwyg ::selection{ 
-    background-color:rgba(121, 150, 231, 0.315);
+    background-color:rgba(105, 189, 245, 0.288);
 }
 /* 选中块 */
 .protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
@@ -1243,17 +1242,16 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 
 
-
 /* 调整超级块中元素间距 */
-.protyle-wysiwyg .sb{
+.protyle-wysiwyg>.sb{
     padding: 4px 0px !important;
 }
-.protyle-wysiwyg .sb div[data-node-id]{
+.protyle-wysiwyg .sb>div[data-node-id]{
     margin:4px 4px 4px 0px;
     /* padding: 0px; */
     border-radius: 3px;
 }
-.protyle-wysiwyg .sb div[data-node-id]:nth-last-child(2){
+.protyle-wysiwyg .sb>div[data-node-id]:nth-last-child(2){
     margin:4px 0px 4px 0px;
 }
 /* 调整kbd */
@@ -1268,6 +1266,6 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 }
 .protyle-wysiwyg [data-node-id] [spellcheck="false"]:focus:empty:after {  
-    content: "To the time to life, rather than to life in time.";  
+    content: "To the time to life";  
     color: #9fa5a6;
 }
