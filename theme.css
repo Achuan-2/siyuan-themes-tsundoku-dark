@@ -369,22 +369,13 @@ mark {
 strong {
     color:inherit;
 }
-/* blockquote 引用 */
-/* old */
-/* .protyle-wysiwyg [data-node-id].bq,.b3-typography blockquote {
-    border-left: 0.25em solid #4c7378 !important;
 
-    border-radius: 0.31em;
-    background-color: rgba(66, 185, 185, 0.048) !important;
-    box-shadow: var(--b3-card-shadow);
-    margin-top: 10px;
-} */
 
 .protyle-wysiwyg [data-node-id].bq, .b3-typography blockquote {
     border-left: 4px solid #8aacac !important;
     border: 2px solid #8aacac ;
-    /* background-color: transparent; */
-    border-radius: 0em 0.31em 0.31em 0.em;
+    background-color: transparent;
+    border-radius: 0.31em 0.31em 0.31em 0.31em;
     margin-top: 8px !important;
 }
 /* 缩进调整 */
@@ -1105,7 +1096,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 .b3-dialog__container svg:hover {
     color: var(--b3-menu-highlight-color);
-    background: #2f4150;
+    background: transparent;
     transform: scale(1.2);
 }
 
