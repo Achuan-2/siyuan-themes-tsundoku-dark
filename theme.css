@@ -607,92 +607,51 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     font-family: monospace;
 } */
 
-/* 调整列表间距 */
 
+
+/* 调整列表间距 */
 
 .protyle .li {
     padding: 0;
     margin: 0px 0px 0px 0px;
 }
-.protyle-wysiwyg [data-node-id].li>[data-node-id] {
-    margin-left: 27px;
+.protyle-wysiwyg [data-node-id].li>.p {
+    margin-left: 28px;
     margin-top: 0;
     margin-bottom: 0;
 }
-.b3-typography ul, .b3-typography ol {
-    padding-left: 2em;
-    margin: 4px 10px;
-}
 
-.b3-typography .protyle-task p {
-    margin: 3px 2px;
-}
-.protyle-task li p{
-    margin: 0px 4px 0px 4px;
-}
-/* 列表和文字的距离 */
-/* .protyle-wysiwyg [data-node-id].li>[data-node-id] {
-    margin-left: 1.7em !important;
 
-} */
-/* 让有序列表数字居中 */
-.protyle-wysiwyg [data-node-id].li>.protyle-action {
-    text-align: center;
-}
-/* 有序列表 */
 
-.protyle-wysiwyg [data-node-id].li>.protyle-action:hover,
-.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action {
-    color: #3ca3ce;
-}
 
-/* 无序列表 */
-/* 暂时取消无序列表特殊样式 */
-/* .protyle-wysiwyg [data-subtype='u'] > .protyle-action svg {
-    opacity: 0;
-}
-.b3-typography li {
-    position: relative;
-}
-.b3-typography ul>li {
-    list-style-type: none;
-}
-.protyle-wysiwyg [data-node-id].li {
-    position: relative;
-} */
 
-/* 无序列表样式 */
-/* .protyle-wysiwyg [data-subtype='u'] > .protyle-action:before, .b3-typography ul>li::before  {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    cursor: pointer;
-    width: 8px;
-    height: 8px;
-    vertical-align: middle;
-    text-align: center;
-    border: 0px;
-    border-radius: 0.6em;
-    background-color: #c9d1d9;
-    top: 14.5px;
-    left: 13px;
-}
-.b3-typography ul li::before {
-    left: -19px;
-} */
 
-/* 无序列表悬浮的小圆点 */
-.protyle-wysiwyg [data-subtype='u'] > .protyle-action:hover:before,
-.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:before {
-    background-color: #3ca3ce;
-}
-/* 无序列表悬浮的大圆点 */
-.protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after,
-.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:after {
+/* 列表悬浮 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
+    /* 大圆背景 */
     background-color: #3ca2ce9c !important;
     opacity: .68;
 
 }
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover {
+    /* 小圆点 */
+    color: #3ca3ce;
+}
+/* 列表折叠 */
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:after{
+    /* 大圆背景 */
+    background-color: #3072d687 !important;
+    opacity: .68;
+}
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action {
+    /* 小圆点 */
+    color: #3ca3ce !important;
+}
+
+
+
+
+/* ---------------------复选框（待办事项）Start------------------------------------------------ */
 
 .protyle-wysiwyg [data-node-id].li > .protyle-action--task svg {
     /* display: v; */
@@ -706,9 +665,6 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 .b3-typography  .protyle-task input {
     opacity: 0;
 }
-
-
-/* ---------------------复选框（待办事项）Start------------------------------------------------ */
 .protyle-wysiwyg .protyle-action--task:before,.b3-typography .protyle-task:before{
     content: '';
     position: absolute;
