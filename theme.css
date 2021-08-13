@@ -169,13 +169,14 @@
     fill: var(--b3-theme-on-surface);
 }
 /* ---------------编辑器内容两侧宽度设置 Start ————————————————————————*/
-/* 调整思源编辑器内容宽度 */
 
+/* 调整思源编辑器内容最大宽度 */
 .protyle-content > .protyle-wysiwyg,
 .protyle  .b3-typography *,
-.protyle-content > .protyle-title {
+.protyle-content > .protyle-title,
+.protyle-content > .protyle-title .protyle-title__input{
     /* 如果要调整编辑器宽度只需调整下面这个值 */
-    max-width: 1100px;
+    max-width: 1000px;
 }
 
 /* 居中 */
@@ -184,21 +185,30 @@
     margin: 0px auto !important;
 }
 
+/* 调整两侧宽度 */
+/* 要调整宽度，就搜索75px 把下面是75px的全部修改 */
+.protyle-content > .protyle-wysiwyg {
+    /* 思源的编辑器在宽度较小的时候会主动调小编辑器内容,晕😵 */
+    /* 所以我就搞固定宽度了，不然不好调整 */
+    padding: 16px 75px 162px !important;
+    
+}
+
 .protyle-content > .protyle-title {
     margin: 16px auto 0px !important;
     /* 原来title就有margin 96px，上面为了水平居中就清除了，于是改为padding，
     保证标题和内容对齐
      */
-    padding: 0px 60px 0px;
+    padding: 0px 75px 0px;
 }
-.protyle-title__icon  {
+
+.protyle-title .protyle-title__icon  {
     /* 标题的块图标还在原来的位置，也要修改 */
-    margin: -15px 0 0 60px;
+    margin: -15px 0 0 75px;
 }
-/* 思源的编辑器在宽度较小的时候会主动调小编辑器内容,晕😵 */
-.protyle-content > .protyle-wysiwyg {
-    padding: 16px 65px 162px !important;
-    
+.protyle-title .protyle-attr {
+    /* 然后文档右边的引用数原来是right0，要改成前面设置的宽度 */
+    right: 75px;
 }
 /* ---------------编辑器内容两侧宽度设置 END ———————————————————————— */
 
@@ -351,10 +361,10 @@
 .protyle  .table {
     text-align: center;
 }
-.protyle table {
+/* 调整表格字体 */
+/* .protyle table {
     font-size: 0.9em;
-    /* 导出时表格无法居中 */
-}
+} */
 /* 表格背景设置 */
 .protyle   table thead tr {
     background-color: var(--b3-table-th-color) !important;
@@ -381,7 +391,7 @@
 .protyle table tr td:last-child {
     border-right-width: 0px;
 }
-
+/* -----------------------------表格结束 --------------------------------------------- */
 
 /* -------------------------------行内块字体样式-------------------------------------- */
 
@@ -400,7 +410,7 @@ mark {
     color: var(--b3-protyle-inline-mark-color);
     transition: all 0.2s ease-in-out;
 }
-/* -------------如果希望取消挖空效果，请删除这段代码 END----------------------------------- */
+/* -------------如果希望取消挖空效果，请删除这段代码 END--------------- */
 strong {
     color:inherit;
 }
@@ -1265,7 +1275,10 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 
 
-/* 调整超级块中元素间距 */
+/* 调整超级块的块间距 */
+/* 效果：
+- 左右超级块添加间距，
+- 超级块与普通块间距一致 */
 .protyle-wysiwyg>.sb{
     padding: 4px 0px !important;
 }
@@ -1284,13 +1297,16 @@ div[data-subtype='t'][data-type='NodeList'] {
     margin: 0px 1px;
 }
 
+/* 文档标题添加下划线 */
 .protyle-title__input {
     border-bottom: 2px solid #f4ffffad;
 
 }
-.protyle-wysiwyg [data-node-id]:not(.code-block)>[spellcheck="false"]:focus:empty:after  {  
+/* 更改空行提示 */
+.protyle-wysiwyg [data-node-id]:not(.code-block)>[spellcheck="false"]:focus:empty:after {
+    /* 避免代码块也出现空行提示  */
     content: "To the time to life";  
-    color: #9fa5a656;
+    color: #9fa5a6;
 }
 
 /* ------------------ 自定义属性 ----------------------- */
