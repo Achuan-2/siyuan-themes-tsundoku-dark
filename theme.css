@@ -1333,10 +1333,10 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 
 /* 文档标题添加下划线 */
-.protyle-title__input {
+/* .protyle-title__input {
     border-bottom: 2px solid #f4ffffad;
 
-}
+} */
 /* 更改空行提示 */
 .protyle-wysiwyg [data-node-id]:not(.code-block)>[spellcheck="false"]:focus:empty:after {
     /* 避免代码块也出现空行提示  */
