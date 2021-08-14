@@ -80,17 +80,18 @@
     --b3-font-color11: #6cf9ee;
     --b3-font-color12: var(--b3-theme-on-background);
     --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background1: #f98b8bdb;
-    --b3-font-background2: #ffcf64b0;
-    --b3-font-background3: #2196f3;
-    --b3-font-background4: #64ff77b0;
-    --b3-font-background5: #00ffe785;
-    --b3-font-background6: #de6c46;
-    --b3-font-background7: #dfdddd96;
-    --b3-font-background8: #ffb00dd4;
-    --b3-font-background9: #5368d6d9;
-    --b3-font-background10: #c790fbde;
-    --b3-font-background11: #0cc6e4d9;
+    /* 思考下要不要前四个背景色和卡片样式一致 */
+    --b3-font-background1: #b9261e3b;
+    --b3-font-background2: var(--b3-card-warning-background);
+    --b3-font-background3: var(--b3-card-info-background);
+    --b3-font-background4: var(--b3-card-success-background);
+    --b3-font-background5: #00ffe548;
+    --b3-font-background6: #8e7d70a2;
+    --b3-font-background7: #6f8ca348;
+    --b3-font-background8: #e0cb0748;
+    --b3-font-background9: #5667bb48;
+    --b3-font-background10: #8c69ac48;
+    --b3-font-background11: #09a1b848;
     --b3-font-background12: var(--b3-theme-background);
     --b3-font-background13: var(--b3-theme-on-background);
     /* 动画效果 */
@@ -227,7 +228,7 @@
     border-bottom: 1px solid #596169 !important;
     font-size: 1.55em !important;
     color: #60e4f7;
-    padding: 0.3em 0px !important;
+    /* padding: 0.3em 0px !important; */
 }
 .protyle-wysiwyg [data-node-id].h3 ,.b3-typography h3{
     position: relative;
@@ -236,10 +237,10 @@
     line-height: 1.25em;
     border-left: 4px solid #15aabf;
     text-align: justify;
-    padding: 5px 0px 0px 7px;
-    margin-top: 20px;
+    padding: 5px 0px 0px 7px !important;
+    margin-top: 20px !important;
     margin-bottom: 17px;
-    padding-left: 7px;
+    padding-left: 7px !important;
 }
 
 .protyle-wysiwyg [data-node-id].h4 ,.b3-typography h4{
@@ -1268,6 +1269,11 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* 避免代码块也出现空行提示  */
     content: "To the time to life";  
     color: #9fa5a6;
+}
+
+/* 块添加圆角 */
+.protyle-wysiwyg [data-node-id] {
+    border-radius: 3px;
 }
 
 /* ------------------ 自定义属性 ----------------------- */
