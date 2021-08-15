@@ -241,21 +241,20 @@
     border-bottom: 1px solid #596169 !important;
     font-size: 1.55em !important;
     color: #60e4f7;
-    /* padding: 0.3em 0px !important; */
-}
-.protyle-wysiwyg [data-node-id].h3 ,.b3-typography h3{
-    position: relative;
-    font-size: 1.35em;
-    color: #43b8ca;
-    line-height: 1.25em;
-    border-left: 4px solid #15aabf;
-    text-align: justify;
-    padding: 5px 0px 0px 7px !important;
-    margin-top: 20px !important;
-    margin-bottom: 17px;
-    padding-left: 7px !important;
 }
 
+.protyle-wysiwyg [data-node-id].h3,.b3-typography h3 {
+    font-size: 1.35em;
+    color: #43b8ca;
+}
+.protyle-wysiwyg [data-node-id].h3:before {
+    content:"| ";
+    display: inline;
+    font-size: 1.35em;
+}
+.protyle-wysiwyg [data-node-id].h3 div[contenteditable="true"] {
+    display: inline;
+}
 .protyle-wysiwyg [data-node-id].h4 ,.b3-typography h4{
     font-size: 1.2em;
     color: #06a0b7;
@@ -1276,7 +1275,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* 超级块与超级块间距 */
     margin:0px 4px 0px 0px;
 }
-.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]>div[data-node-id]:nth-last-child(2){
+.protyle-wysiwyg [data-node-id].sb[data-sb-layout="col"]> .sb:nth-last-child(2){
      /* 超级块与超级块间距，最后一个超级块无右margin */
     margin:0px;
 }
