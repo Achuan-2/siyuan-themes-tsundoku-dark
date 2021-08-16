@@ -6,7 +6,7 @@
 ![closed-issues](https://img.shields.io/github/issues-closed-raw/Achuan-2/siyuan-themes-tsundoku)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Achuan-2/siyuan-themes-tsundoku)
 
-# 思源主题: Tsundoku(dark)
+# A Theme for siyuan-note: Tsundoku(dark)
 
 ![preview](preview.png)
 
