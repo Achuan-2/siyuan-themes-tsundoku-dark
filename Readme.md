@@ -1,4 +1,3 @@
-# A Theme for siyuan-note: Tsundoku(dark)
 <h1 align="center">A Theme for siyuan-note: Tsundoku(dark)</h1>
 
 <p align="center">          
