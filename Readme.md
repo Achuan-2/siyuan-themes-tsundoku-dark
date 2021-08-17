@@ -1,7 +1,10 @@
-<h1 align="center">A Theme for siyuan-note: Tsundoku(dark)</h1>
+<h1 align="center">Tsundoku(dark): A Theme for siyuan-note</h1>
 
 <p align="center">          
            <a title="Hits" target="_blank" href="https://github.com/Achuan-2/siyuan-themes-tsundoku"><img src="https://hits.b3log.org/Achuan-2/siyuan-themes-tsundoku.svg" ></a>
+            <a href="https://gitmoji.dev">
+             <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+           </a>
            <a href="https://github.com/Achuan-2/siyuan-themes-tsundoku/releases/latest/download/siyuan-themes-tsundoku.zip">
                       <img src="https://img.shields.io/github/downloads/Achuan-2/siyuan-themes-tsundoku/total?logo=github" alt="Downloads">
            </a>
@@ -29,13 +32,13 @@ Tsundoku “積 ん 読”是日语里的一个词，维基百科是这样解释
 
 
 
-## 💥特色
+## ✨特色
 
 * **动效丰富**：弹出窗口有左右展开动效，块引用预览页面展开动效、点开关闭窗口动效，丰富用户在写作和阅读时的体验
 * **任务列表样式优化**：对任务列表效果做了最多的优化，当把任务列表勾选时，普通文字变色加删除线，各个行内和块样式都做了一定处理
 * **win端和安卓端emoji样式统一**：修改**安卓端的默认 emoji** 为 Win 10 emoji——Segoe UI Emoji，保证emoji样式统一
 
-## 🦠 本主题重要的修改
+## 💥本主题重要的修改
 
 1. 本主题暂时将高亮<kbd>Ctrl+E</kbd>,设置为挖空效果：悬浮时才显示高亮的文字，默认隐藏文字
 
@@ -63,7 +66,7 @@ Tsundoku “積 ん 読”是日语里的一个词，维基百科是这样解释
    | 状态   | 配色情况                                                                                        |
    | ------ | ----------------------------------------------------------------------------------------------- |
    | 修改前 | ![Pl图片注释](https://b3logfile.com/siyuan/1610205759005/assets/image-20210801154046-7bhhio4.png) |
-   | 修改后 | ![Pl图片注释](https://b3logfile.com/siyuan/1610205759005/assets/image-20210814205829-7vpq931.png) |
+   | 修改后 |![image](https://user-images.githubusercontent.com/60436214/129700188-d54dcab5-03b4-43be-95ff-5d402e73b639.png) |
 
 
 ## **☎️意见交流**
