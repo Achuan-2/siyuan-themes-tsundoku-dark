@@ -561,8 +561,10 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 /* 行内代码 */
 .protyle-wysiwyg [data-node-id] code,
 .b3-typography code:not(.hljs), .protyle-wysiwyg code:not(.hljs)  {
+    display: inline-flex;
+    transform: translateY(-1.5px);
     padding: 0.2em 0.4em;
-    margin: 0;
+    margin:0px 2px;
     font-size: 85%;
     border-radius: 3px;
     font-family: var(--b3-font-family-code);
