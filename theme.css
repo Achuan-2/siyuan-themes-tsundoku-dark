@@ -1120,18 +1120,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 .b3-dialog__container .b3-dialog__close:hover {
     background: #2f4150;
 }
-.b3-dialog__container {
-    animation: show 0.5s ease forwards;
-}
-@keyframes show {
-    0% {
-        /* 左右展开效果 */
-        transform: rotateY(80deg);
-    }
-    100% {
-        transform: rotateY(0deg);
-    }
-}
+
 
 /* ------------------------------------------------------------------ */
 
