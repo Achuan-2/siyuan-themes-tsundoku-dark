@@ -918,10 +918,12 @@ div[data-subtype='t'][data-type='NodeList'] {
     border-radius: 0% 6px 6px 0%;
     color: var(--b3-menu-highlight-focus-color);
     font-weight: bold;
+    transition: all 0.1s ease-in-out;
 }
 .b3-list--files .b3-list-item--focus .b3-list-item__text {
     color: var(--b3-menu-highlight-focus-color);
     font-weight: bold;
+    transition: all 0.1s ease-in-out;
     /* border-radius: 15px 15px 15px 15px; */
 }
 .b3-list--files .b3-list-item--focus .b3-list-item__graphic {
@@ -948,10 +950,12 @@ div[data-subtype='t'][data-type='NodeList'] {
     border-radius: 0% 6px 6px 0%;
     color: var(--b3-menu-highlight-focus-color);
     font-weight: bold;
+    transition: all 0.1s ease-in-out;
 }
 .b3-list--background .b3-list-item--focus .b3-list-item__text {
     color: var(--b3-menu-highlight-focus-color);
     font-weight: bold;
+    transition: all 0.1s ease-in-out;
     /* border-radius: 15px 15px 15px 15px; */
 }
 .b3-list--background .b3-list-item--focus .b3-list-item__graphic {
@@ -1009,6 +1013,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 .b3-button--outline:focus {
     background-color: #1b3a4d;
     font-weight: 600;
+    transition: all 0.1s ease-in-out;
     filter: drop-shadow(2px 2px 2px #272e3c);
 }
 /* 悬浮工具栏 */
@@ -1063,6 +1068,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     font-size: 1.05em;
     font-weight: bold;
     color: var(--b3-menu-highlight-color);
+    transition: all 0.1s ease-in-out;
 }
 
 .b3-dialog__container .b3-list--background .b3-list-item--focus {
@@ -1116,6 +1122,10 @@ div[data-subtype='t'][data-type='NodeList'] {
     color: var(--b3-menu-highlight-color);
     background: transparent;
     transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+}
+.b3-dialog__container svg {
+    transition: all 0.1s ease-in-out;
 }
 .b3-dialog__container .b3-dialog__close:hover {
     background: #2f4150;
@@ -1303,14 +1313,38 @@ div[data-subtype='t'][data-type='NodeList'] {
 .protyle-wysiwyg [data-node-id] {
     border-radius: 3px;
 }
+
 /* 文件树文档图标悬浮放大 */
+.b3-list--files .b3-list-item__icon {
+    transition: all 0.1s ease-in-out;
+}
 .b3-list--files .b3-list-item__icon:hover {
     transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+
+
+}
+/* dock栏和顶部图标放大动效 */
+.dock--vertical .dock__item:hover svg,
+.toolbar__item:hover svg,
+.block__icon:hover svg{
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+}
+.dock--vertical .dock__item svg,
+.toolbar__item svg,
+.block__icon svg{
+    transition: all 0.1s ease-in-out;
 }
 /* 文档树文字放大 */
 .b3-list--files .b3-list-item__text:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
+    transition: all 0.1s ease-in-out;
 }
+.b3-list--files .b3-list-item__text {
+    transition: all 0.1s ease-in-out;
+}
+
 /* ------------------ 自定义属性 ----------------------- */
 .protyle-wysiwyg [data-node-id][custom-function="挖空"]{
     border: 2px dashed  rgba(92, 135, 138, 0.322);
