@@ -1141,7 +1141,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     color: #13c2c279;
     font-weight: 400;
     font-size: 15px;
-    background-color: #19232c !important;
+    background-color: var(--b3-theme-background) !important;
     /* border-bottom: 2px solid #47707c75; */
     border-bottom: 2px solid transparent;
 }
