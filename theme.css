@@ -1548,3 +1548,16 @@ display: flex;
 .b3-menu {
     padding: 0px 0;
 }
+
+/* Optimize the style of closed notebooks */
+
+.file-tree__close>li{
+    opacity: .6;
+    /* font-weight: bolder; */
+    /* text-shadow: 0 0 1px #202124; */
+}
+
+.file-tree__close.fn__flex-1>li{
+    opacity: 1;
+    border-top: 1px solid rgba(4, 21, 25, 0.589);
+}
