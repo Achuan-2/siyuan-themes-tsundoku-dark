@@ -1561,3 +1561,10 @@ display: flex;
     opacity: 1;
     border-top: 1px solid rgba(4, 21, 25, 0.589);
 }
+
+/* optimize-custom-emoji */
+.b3-typography img.emoji, .protyle-wysiwyg img.emoji {
+    cursor: auto;
+    max-width: 2.5em;
+    box-shadow: none !important;
+}
