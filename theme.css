@@ -248,9 +248,10 @@
     font-size: 1.35em !important;
     color: #43b8ca;
 }
-.protyle-wysiwyg [data-node-id].h3:before {
+.protyle-wysiwyg [data-node-id].h3:before,
+.b3-typography h3:before {
     content:"| ";
-    display: inline;
+    display: inline !important;
     font-size: 1.35em !important;
 }
 .protyle-wysiwyg [data-node-id].h3>div:first-child {
