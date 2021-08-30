@@ -1,7 +1,7 @@
-## v0.7.0 / 2021-8-28
+## v0.7.1 / 2021-8-30
 
-* :bug: Fix h3 mouse click problem
-* :bug: Fix table location in preview mode
+* :lipstick: 调整自定义emoji大小，适配 win10emoji大小
+* ：lipstick: 隐藏twemoji中一些啰嗦的emoji，适配win10 emoji
 
 ## v0.6.9 / 2021-8-27
 
