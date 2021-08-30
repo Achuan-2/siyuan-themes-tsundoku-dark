@@ -1604,4 +1604,9 @@ display: flex;
     padding: 0 2px;
     width: 20px;
 }
+/* 删除了一些无谓的emoji，适应win10emoji */
+.emojis__item[data-unicode *="-"] {
+    /* font-size: 12px; */
+    display: none;
+}
 /* ----------optimize-custom-emoji ---END---------*/
