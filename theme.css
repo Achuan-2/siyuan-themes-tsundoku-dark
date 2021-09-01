@@ -80,7 +80,6 @@
     --b3-font-color11: #18fbc6;
     --b3-font-color12: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
-    /* 思考下要不要前四个背景色和卡片样式一致 */
     --b3-font-background1: #e6524a44;
     --b3-font-background2: var(--b3-card-warning-background);
     --b3-font-background3: var(--b3-card-info-background);
@@ -1693,7 +1692,10 @@ display: flex;
 .emojis__item[data-unicode ="1f491"],
 .emojis__item[data-unicode ="1f48f"],
 .emojis__item[data-unicode ="1f6b6"],
-.emojis__item[data-unicode ="1f9cd"]{
+.emojis__item[data-unicode ="1f9cd"],
+.emojis__item[data-unicode ="2764-fe0f-200d-1fa79"],
+.emojis__item[data-unicode ="2764-fe0f-200d-1f525"]{
     display: none;
 }
+
 /* ----------optimize-custom-emoji ---END---------*/
