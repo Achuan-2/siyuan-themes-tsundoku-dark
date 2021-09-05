@@ -402,6 +402,9 @@ strong {
     margin-top: 8px !important;
     box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.253), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
+.protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
+    color: rgba(255, 255, 255, 0.856);
+}
 /* 缩进调整 */
 
 .protyle-wysiwyg [data-node-id].bq > div{
@@ -423,9 +426,6 @@ strong {
     margin-left: 1em;
 }
 
-.protyle-wysiwyg [data-node-id].bq strong,.b3-typography blockquote strong{
-    color: inherit;
-}
 
 /* 块引用 */
 .protyle-wysiwyg [data-node-id] span[data-type='block-ref'] {
@@ -559,6 +559,12 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     z-index: 20;
+}
+.protyle-wysiwyg [data-node-id] span[data-type='tag']::before {
+    content: "#";
+}
+.protyle-wysiwyg [data-node-id] span[data-type='tag']::after {
+    content: "#";
 }
 .protyle-wysiwyg [data-node-id] span[data-type='tag']:hover {
     transform: scale(1.05);
