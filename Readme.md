@@ -22,8 +22,7 @@
 > 🎠 这可能不会是最符合你审美的主题，但或许会是一个最追求极致体验的主题（之一）！
 > 
 > 🌞 亮色主题见[Tsundoku Light](https://github.com/Achuan-2/siyuan-themes-tsundoku-light) | 🌛 深色主题见[Tsundoku Dark ](https://github.com/Achuan-2/siyuan-themes-tsundoku) | 🥗 护眼主题见[Tsundoku Green](https://github.com/Achuan-2/siyuan-themes-tsundoku-green)
-> 
-> 另外，本人的思源订阅推荐码：**B3XX0Y8**，欢迎各位老板使用！在买会员时使用订阅推荐码可增加 500 MB 云端空间和 7 天使用期！
+
 
 ## 💌 **缘起**
 
@@ -69,8 +68,8 @@ Tsundoku “積 ん 読”是日语里的一个词，维基百科是这样解释
 
    | 状态   | 配色情况                                                                                        |
    | ------ | ----------------------------------------------------------------------------------------------- |
-   | 修改前 | ![Pl图片注释](https://b3logfile.com/siyuan/1610205759005/assets/image-20210801154046-7bhhio4.png) |
-   | 修改后 |![image](https://user-images.githubusercontent.com/60436214/129700188-d54dcab5-03b4-43be-95ff-5d402e73b639.png) |
+   | 修改前 |![image](https://user-images.githubusercontent.com/60436214/132627034-234f40ff-476c-4f00-bd0a-f5e8fe7b2f46.png) |
+   | 修改后 |![image](https://user-images.githubusercontent.com/60436214/132627046-ecdce10d-5d19-4238-8e0b-1fd939d3e174.png) |
 
 
 ## **☎️意见交流**
