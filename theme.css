@@ -1144,7 +1144,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 .layout-tab-bar .item {
     padding: 4px 4px 4px 14px;
     border: 0px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 0px solid transparent;
     border-right: 2px solid #011616;
     border-left: 2px solid #011616;
     border-radius: 7px 7px 0px 0px;
@@ -1159,7 +1159,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     font-size: 15px;
     background-color: var(--b3-theme-background) !important;
     /* border-bottom: 2px solid #47707c75; */
-    border-bottom: 2px solid transparent;
+    border-bottom: 0px solid transparent;
 }
 /* 多窗口foucs的标签页 */
 .layout__wnd--active .layout-tab-bar .item--focus {
@@ -1167,11 +1167,15 @@ div[data-subtype='t'][data-type='NodeList'] {
     border-color: #1f1818;
     font-weight: 600;
     /* 更改多窗口标签页当前页面底框高亮颜色 */
-    border-bottom: 2px solid transparent;
+    border-bottom: 0px solid transparent;
 }
 /* 标签页后面的背景 */
 .layout-tab-bar {
     background-color: #1d2833;
+}
+.layout-tab-bar .item:first-child {
+    border-radius: 0px 7px 0px 0px;
+    border-left: 0px solid #b7b8b97c;
 }
 /* 未保存样式 */
 /* .layout__wnd--active .layout-tab-bar .item--unsave {
