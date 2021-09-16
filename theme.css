@@ -254,6 +254,11 @@ strong[style="background-color: var(--b3-font-background13);"] {
     color: #60e4f7;
 }
 
+.protyle-wysiwyg [data-node-id].h3,.b3-typography h3 {
+    font-size: 1.35em !important;
+    color: #43b8ca;
+
+}
 .protyle-wysiwyg [data-node-id].h3:before,
 .b3-typography h3:before {
     content:"|";
