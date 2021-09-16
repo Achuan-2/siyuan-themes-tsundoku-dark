@@ -1810,3 +1810,8 @@ display: flex;
 .pdf__util.b3-menu .fn__flex {
     padding: 4px 4px 0px 4px!important;
 }
+
+/* 区分侧栏聚焦和未聚焦状态 */
+.block__icons--active {
+    background-color: rgba(63, 103, 136, 0.12);
+}
