@@ -160,7 +160,7 @@
     --b3-protyle-inline-tag-color: #f8f9fa;
     --b3-protyle-inline-code-color: #b9bcbc;
     --b3-protyle-inline-code-background: #225764;
-    --b3-protyle-inline-blockref-color: #f58484;
+    --b3-protyle-inline-blockref-color: #70c4c4;
     --b3-protyle-inline-blockref-hover-color: #ff398b;
     /* 表格 */
     --b3-table-border-color: #313d49;
@@ -1840,12 +1840,12 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 }
 /* pdf双链 */
 .protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref'] {
-    color: #40c2b7;
+    color: #b1d5d8;
     padding-bottom: 0em;
     box-sizing: border-box;
     height: 1.5em;
     opacity: 1;
-    border-bottom: 1px dashed #40c2b7;
+    border-bottom: 1px dashed #b1d5d8;
 
 }
 .protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']:hover {
