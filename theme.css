@@ -659,7 +659,9 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     box-shadow: 0px 1px 5px 1px rgba(6, 6, 6, 10%);
     border-radius: 5px;
 }
-
+.protyle-wysiwyg img:hover {
+    box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.3);
+}
 
 
 /* 字体大小 */
@@ -1850,6 +1852,10 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
     opacity: 1;
     border-bottom: 1px dashed #b1d5d8;
 
+}
+.protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']::before {
+    /* 隐藏默认主题加的🔖，原因：我觉得很多余 */
+    display: none;
 }
 .protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref']:hover {
     color: var(--b3-protyle-inline-blockref-hover-color); /*更改鼠标悬浮的颜色*/
