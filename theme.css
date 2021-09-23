@@ -18,8 +18,8 @@
     --b3-theme-primary-lighter: #5b96af;
     --b3-theme-primary-lightest: rgba(66, 133, 244, 0.12);
     --b3-theme-secondary: #f3a92f;
-    --b3-theme-background: #1d2833;
-    --b3-theme-surface: #1d2833;
+    --b3-theme-background: #1d2734;
+    --b3-theme-surface: #1d2734;
     --b3-theme-error: #d23f31;
 
     /* 文字颜色 */
@@ -52,7 +52,7 @@
     --b3-tab-background: #222d38;
     --b3-tab-background-hover: #2c3341;
     /* 菜单 */
-    --b3-menu-background: #1d2833;
+    --b3-menu-background: #1d2734;
     /* 提示 */
     --b3-tooltips-color: #07899d9f;
 
@@ -96,12 +96,12 @@
     /* PDF */
     --b3-pdf-sidebar-width: 200px;
     --b3-pdf-offset: 0;
-    --b3-pdf-background1: #fff195ec;
+    --b3-pdf-background1: #f4eba3;
     --b3-pdf-background2: #9af997;
     --b3-pdf-background3: #59c6ff;
-    --b3-pdf-background4: #ff8280;
+    --b3-pdf-background4: #fd7472;
     --b3-pdf-background5:  #faad14;
-    --b3-pdf-background6:  #d4d4d4;
+    --b3-pdf-background6:  #b9b7b7;
     --b3-pdf-background7: #52d4ca;
     /* 动画效果 */
     --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
@@ -209,7 +209,7 @@ strong[style="background-color: var(--b3-font-background13);"] {
     background-color: #19232c;
 }
 .layout-tab-container {
-    background-color: #1d2833;
+    background-color: #1d2734;
 }
 .block__icons {
     /* box-shadow: rgb(0 0 0 / 30%) 0px 1px 2px; */
@@ -1206,7 +1206,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 /* 标签页后面的背景 */
 .layout-tab-bar {
-    background-color: #1d2833;
+    background-color: #1d2734;
 }
 .layout-tab-bar .item:first-child {
     border-radius: 0px 7px 0px 0px;
@@ -1905,6 +1905,12 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
     width: 20px;
     border-radius: 10px;    
     margin-right: 4px;
+}
+
+/* pdf光标选中文本样式 */
+.pdf__outer ::selection{ 
+    /* 颜色不能加透明度，不然有叠加层  */
+    background-color:#a7cfe2;
 }
 
 
