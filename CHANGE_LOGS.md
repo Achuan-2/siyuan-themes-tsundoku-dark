@@ -1,3 +1,8 @@
+## v0.8.2/2021-09-24
+
+* ✨ add link icon!
+* ✨ add local protocol icon!
+
 
 ## v0.8.1/2021-09-23
 
