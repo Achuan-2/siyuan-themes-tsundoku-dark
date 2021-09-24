@@ -2219,6 +2219,7 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 
     content: "";
     background-image: url('src/thepaper.ico');
+    filter: invert(1) hue-rotate(.5turn);
 }
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="toutiao.com"]:not(:empty)::before,
 .b3-typography a[href *="toutiao.com"]::before{
@@ -2261,7 +2262,7 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 .b3-typography a[href *="github.com"]::before{
 
     content: "";
-    background-image: url('src/github_icon.svg');
+    background-image: url('src/github_icon.png');
 }
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="bing.com"]:not(:empty)::before,
 .b3-typography a[href *="bing.com"]::before{
@@ -2323,7 +2324,8 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="notion."]:not(:empty)::before,
 .b3-typography a[href *="notion."]::before{
     content: "";
-    background-image: url('src/logo_notion-logo.svg');
+    background-image: url('src/notion.svg');
+    filter: invert(1) hue-rotate(.5turn);
 }
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="douban.com"]:not(:empty)::before,
 .b3-typography a[href *="douban.com"]::before{
@@ -2350,5 +2352,9 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
     content: "";
     background-image: url('src/nature.png');
 }
-
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="discord."]:not(:empty)::before,
+.b3-typography a[href *="nature.com"]::before{
+    content: "";
+    background-image: url('src/discord.png');
+}
 /* ----------------------------custom: 超链接icon---end------------------------------- */
