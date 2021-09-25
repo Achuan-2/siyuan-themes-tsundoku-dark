@@ -616,7 +616,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     white-space: pre-wrap;
     color: var(--b3-protyle-inline-code-color);
     background-color: var(--b3-protyle-inline-code-background);
-    box-shadow: #0993a580 1px 0px 5px 1px inset;
+    box-shadow: #0993a580 0px 0px 3px 1px inset;
 }
 
 /* 超链接 */
@@ -1337,8 +1337,9 @@ div[data-subtype='t'][data-type='NodeList'] {
 .b3-typography kbd, .protyle-wysiwyg kbd {
     display: inline-flex;
     padding: 2px 4px;
+    font-size: 85%;
     margin: 0px 2px;
-    background-color: #cccccc38;
+    background-color: #112235;
     box-shadow: 0 0 1px #889fbd inset;
     transform: translateY(-1.5px);
 }

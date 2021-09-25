@@ -1,6 +1,7 @@
 ## v0.8.3/2021-09-25
 * ✨ net hyperlink default icon
 * 🍱 add new link icons
+* 💄 increase kbd font size
 
 ## v0.8.2/2021-09-24
 
