@@ -57,7 +57,8 @@ I use this name to wake myself up and hope that SiYuan will help me make gradual
 
 1. This theme temporarily set highlighting <kbd>Ctrl+E</kbd>, to a hide effect: the highlighted text is shown only when mouse hovering, and the default text is hidden.
 
-   * If you need to cancel this effect, please search for the `.protyle-wysiwyg mark` keyword in the theme css, and delete the suggested code ![](assets/Readme_2021-09-27-17-21-43.png)
+   * If you need to cancel this effect, please search for the `.protyle-wysiwyg mark` keyword in the theme css, and delete the suggested code 
+   ![](assets/Readme_2021-09-27-17-21-43.png)
 2. Added custom block attribute styles
 
    * Attributes key are set to `function` or `f` (abbreviated)
