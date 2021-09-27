@@ -5,9 +5,6 @@
             <a href="https://gitmoji.dev">
              <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
            </a>
-           <a href="https://github.com/Achuan-2/siyuan-themes-tsundoku/releases/latest/download/siyuan-themes-tsundoku.zip">
-                      <img src="https://img.shields.io/github/downloads/Achuan-2/siyuan-themes-tsundoku/total?logo=github" alt="Downloads">
-           </a>
            <a href="https://github.com/Achuan-2/siyuan-themes-tsundoku/releases">
                       <https://img.shields.io/github/release/Achuan-2/siyuan-themes-tsundoku.svg" alt="Release">
            </a>
