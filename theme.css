@@ -946,6 +946,19 @@ div[data-subtype='t'][data-type='NodeList'] {
 .code-block:hover .protyle-icons .protyle-action__copy {
     opacity: 1;
 }
+/* 代码块编辑时不闪 */
+
+
+.code-block:focus-within .protyle-icons .protyle-action__copy{
+    opacity: 0;
+}
+.code-block .protyle-icons .protyle-action__copy:hover{
+    opacity: 1;
+}
+
+.code-block:hover .protyle-icons {
+    opacity: 1 !important;
+}
 
 /* -----------------      外观样式 ----------------- */
 
