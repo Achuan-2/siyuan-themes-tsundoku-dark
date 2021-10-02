@@ -18,8 +18,8 @@
     --b3-theme-primary-lighter: #5b96af;
     --b3-theme-primary-lightest: rgba(66, 133, 244, 0.12);
     --b3-theme-secondary: #f3a92f;
-    --b3-theme-background: #1d2734;
-    --b3-theme-surface: #1d2734;
+    --b3-theme-background: #16232f;
+    --b3-theme-surface: #16232f;
     --b3-theme-error: #d23f31;
 
     /* 文字颜色 */
@@ -52,7 +52,7 @@
     --b3-tab-background: #222d38;
     --b3-tab-background-hover: #2c3341;
     /* 菜单 */
-    --b3-menu-background: #1d2734;
+    --b3-menu-background: #16232f;
     /* 提示 */
     --b3-tooltips-color: #07899d9f;
 
@@ -151,7 +151,7 @@
     /* 所见即所得行内元素颜色 */
     --b3-protyle-inline-strong-color: #e8eaed;
     --b3-protyle-inline-em-color: #e8eaed;
-    --b3-protyle-inline-s-color: #e8eaed;
+    --b3-protyle-inline-s-color: #c9d1d9;
     --b3-protyle-inline-link-color: #57a2d4;
     --b3-protyle-inline-link-hover-color: #fa60a0;
     --b3-protyle-inline-mark-background: #4b817c;
@@ -199,7 +199,7 @@ strong[style="background-color: var(--b3-font-background13);"] {
 
 /*分窗口的边框（线）  */
 .layout__resize::after {
-    background-color: #041519;
+    background-color: #101820;
 }
 /* 主要背景色 */
 .dock {
@@ -209,13 +209,12 @@ strong[style="background-color: var(--b3-font-background13);"] {
     background-color: #19232c;
 }
 .layout-tab-container {
-    background-color: #1d2734;
+    background-color: #16232f;
 }
 .block__icons {
     /* box-shadow: rgb(0 0 0 / 30%) 0px 1px 2px; */
     /* background-color: #a3a3a36c; */
-    background-color: #19232c;
-    /* border-top: 1px solid #030303; */
+    background-color: #041f29;
     /* border-bottom: 1px solid #030303; */
 }
 /* 搜索项页面名称背景 */
@@ -245,7 +244,7 @@ strong[style="background-color: var(--b3-font-background13);"] {
     text-align: center;
     border-bottom: 0px solid #c5c7ca !important;
     font-size: 1.75em !important;
-    color: #09e5f3;
+    color: #4ef7e0;
 }
 .protyle-wysiwyg [data-node-id].h2,.b3-typography h2 {
     /* border-bottom: 1px solid #596169 !important; */
@@ -424,16 +423,19 @@ strong {
     color:inherit;
 }
 
-
+/* 调整blockquote文字颜色 */
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+    color: #9fa8b1;
+}
 .protyle-wysiwyg [data-node-id].bq, .b3-typography blockquote {
     border: 2px solid #8aacac ;
     background-color: transparent;
     border-radius: 0.31em;
     margin-top: 8px !important;
-    box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.253), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 2px 0 rgba(51, 43, 43, 0.253), 0 0 0 1px rgba(45, 150, 192, 0.4);
 }
 .protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
-    color: rgba(255, 255, 255, 0.856);
+    color: rgba(255, 255, 255, 0.7);
 }
 /* blockquote 缩进调整 */
 .protyle-wysiwyg [data-node-id].bq > div{
@@ -495,15 +497,22 @@ div[data-type='block-render'] {
     margin-top: 5px;
 }
 
+.block__popover--move .block__icons{
+    background-color: #041f29;
+}
+.block__popover {
+    box-shadow: 0 11px 15px 5px rgba(0, 0, 0, 0.4);
+
+}
 /* 块嵌入 */
 .protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"] {
-    box-shadow: 0px 0px 3px 1px rgb(143 167 235 / 38%);
-    border-left: 0px dashed #363f49;
-    /* margin: 10px -10px; */
+    box-shadow: 0px 0px 5px 3px #01010a ;
+    border-left: 0px dashed #010e1b;
     padding: 4px 10px;
+    margin:12px 0px;
 }
 .protyle-wysiwyg__embed {
-    border-top: 3px dashed #1ea1ef9c;
+    border-top: 3px dashed #10d6d69c;
     position: relative;
     margin:10px 0px;
 }
@@ -623,7 +632,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 .protyle-wysiwyg [data-node-id] span[data-type='a'] {
     color: var(--b3-protyle-inline-link-color);
     cursor: pointer;
-    border-bottom: 1px solid #4d5355;
+    border-bottom: 1px solid #39464b;
     /* border-bottom: 1px solid transparent; */
     /* text-decoration: underline; */
 }
@@ -802,7 +811,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 /* 完成的待办列表调整透明度 */
 .protyle-task--done [data-type='a'],
 .protyle-task--done a {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .protyle-task--done [data-type='a']:hover {
@@ -1200,12 +1209,13 @@ div[data-subtype='t'][data-type='NodeList'] {
     padding: 4px 4px 4px 14px;
     border: 0px;
     border-bottom: 0px solid transparent;
+    border-top: 2px solid #011616;
     border-right: 2px solid #011616;
     border-left: 2px solid #011616;
     border-radius: 7px 7px 0px 0px;
     margin-right: 2px;
     /* transition: all 0.1s ease; */
-    background-color: #222d38;
+    background-color: #222d38ad;
 }
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
@@ -1219,14 +1229,14 @@ div[data-subtype='t'][data-type='NodeList'] {
 /* 多窗口foucs的标签页 */
 .layout__wnd--active .layout-tab-bar .item--focus {
     color: var(--b3-menu-highlight-focus-color);
-    border-color: #1f1818;
+    border-color: #046868;
     font-weight: 600;
     /* 更改多窗口标签页当前页面底框高亮颜色 */
     border-bottom: 0px solid transparent;
 }
 /* 标签页后面的背景 */
 .layout-tab-bar {
-    background-color: #1d2734;
+    background-color: #16232f;
 }
 .layout-tab-bar .item:first-child {
     border-radius: 0px 7px 0px 0px;
@@ -2610,7 +2620,7 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 .file-tree ul.b3-list.b3-list--background>ul>ul>[data-type="NodeHeading"]{
     opacity: 1;
     font-weight: 600;
-    color:#3afcf2cb;
+    color:#60e3f7e5;
 }
 .file-tree ul.b3-list.b3-list--background>ul>ul>ul>[data-type="NodeHeading"] .b3-list-item__text,
 .file-tree ul.b3-list.b3-list--background>ul>ul>ul>[data-type="NodeHeading"] {
@@ -2639,13 +2649,25 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
     color: var(--b3-menu-highlight-color) !important;
 }
 .file-tree .b3-list--background .b3-list-item--focus .b3-list-item__text {
-    color: var(--b3-menu-highlight-focus-color) !important;
+    color: inherit !important;
     opacity: 1 !important;
+
 }
 /* 标题图标放大，提示可以块悬浮窗 */
 .file-tree .b3-list-item__graphic.popover__block:hover {
     transform: scale(1.2);
     transition: all 0.1s ease-in-out;
 
+
 }
 /* -------------------主题增强面板区分度-------------------- */
+
+/* 标签搜索面板区分 */
+[id="globalSearchList"] {
+    background-color: #16232f;
+    border-right: 2px solid #000000;
+}
+.fn__flex-column.fn__flex-1{
+    background-color: #16232f;
+    /* 这个颜色不错？ */
+}
