@@ -156,7 +156,7 @@
     --b3-protyle-inline-link-hover-color: #fa60a0;
     --b3-protyle-inline-mark-background: #4b817c;
     --b3-protyle-inline-mark-color: #cdd1d6;
-    --b3-protyle-inline-tag-background: #ec65a0db;
+    --b3-protyle-inline-tag-background: #65c8eccc;
     --b3-protyle-inline-tag-color: #f8f9fa;
     --b3-protyle-inline-code-color: #b9bcbc;
     --b3-protyle-inline-code-background: #225764;
@@ -744,7 +744,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     text-align: center;
     border: 0px;
     border-radius: 0.17em;
-    background-color: #c7ced1;
+    background-color: #c7ced159;
     top: 0.35em;
     font-size: 1em;
 }
@@ -2561,3 +2561,78 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 
 }
 /* ----------------------------custom: 超链接icon---end------------------------------- */
+
+/* -------------------主题增强面板区分度-------------------- */
+.block__logo {
+    font-weight: 600;
+    color: var(--b3-menu-highlight-color);
+}
+/* 加强笔记本强调 */
+
+.b3-list--files [data-type="navigation-root"] .b3-list-item__text,
+.b3-list--files [data-type="navigation-root"]{
+    font-weight: 600;
+    color: #3ef5dd !important;
+}
+.b3-list--files [data-type="navigation-root"] .b3-list-item__toggle {
+    color: #3ef5dd;
+}
+
+/* 区分大纲中的各级标题 */
+/* 文档标题 */
+.file-tree ul.b3-list.b3-list--background [data-type="NodeDocument"][data-treetype="outline"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-type="NodeDocument"][data-treetype="outline"]{
+    font-weight: 600;
+    /* opacity: 0.95; */
+    color:#23f1f898;
+}
+
+.file-tree ul.b3-list.b3-list--background>ul>[data-type="NodeHeading"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background>ul>[data-type="NodeHeading"]{
+    font-weight: 600;
+    /* opacity: 0.95; */
+    color:#3ef5dd;
+}
+.file-tree ul.b3-list.b3-list--background>ul>ul>[data-type="NodeHeading"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background>ul>ul>[data-type="NodeHeading"]{
+    opacity: 1;
+    font-weight: 600;
+    color:#3afcf2cb;
+}
+.file-tree ul.b3-list.b3-list--background>ul>ul>ul>[data-type="NodeHeading"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background>ul>ul>ul>[data-type="NodeHeading"] {
+    opacity: 1;
+    font-weight: 600;
+    color:rgb(49, 212, 218);
+
+}
+.file-tree ul.b3-list.b3-list--background>ul>ul>ul>ul>[data-type="NodeHeading"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background>ul>ul>ul>ul>[data-type="NodeHeading"]{
+    opacity: 1;
+    color:#3ae2fcda;
+}
+.file-tree ul.b3-list.b3-list--background >ul>ul>ul>ul>ul>[data-type="NodeHeading"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background >ul>ul>ul>ul>ul>[data-type="NodeHeading"]{
+    opacity:1;
+    color:#3ae2fcaf;
+
+}
+.file-tree ul.b3-list.b3-list--background >ul>ul>ul>ul>ul>ul>[data-type="NodeHeading"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background >ul>ul>ul>ul>ul>ul>[data-type="NodeHeading"]{
+    opacity: 1;
+    color:#3ae2fc79;
+}
+.file-tree .b3-list--background .b3-list-item .b3-list-item__text:hover {
+    color: var(--b3-menu-highlight-color) !important;
+}
+.file-tree .b3-list--background .b3-list-item--focus .b3-list-item__text {
+    color: var(--b3-menu-highlight-focus-color) !important;
+    opacity: 1 !important;
+}
+/* 标题图标放大，提示可以块悬浮窗 */
+.file-tree .b3-list-item__graphic.popover__block:hover {
+    transform: scale(1.2);
+    transition: all 0.1s ease-in-out;
+
+}
+/* -------------------主题增强面板区分度-------------------- */
