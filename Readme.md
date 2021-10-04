@@ -83,7 +83,7 @@ I use this name to wake myself up and hope that SiYuan will help me make gradual
       | Condition   | Color Scheme                                                                                        |
       | ------ | ----------------------------------------------------------------------------------------------- |
       | Before |![](assets/Readme_2021-09-27-17-23-37.png) |
-      | After |![](assets/Readme_2021-09-27-17-23-47.png) |
+      | After | ![](assets/Readme_2021-10-04-11-31-22.png)|
 
 
 ## ☎️Feedback

@@ -58,13 +58,13 @@
 
     /* 卡片背景 */
     --b3-card-error-color: rgb(243, 153, 147);
-    --b3-card-error-background:#b9251e26;
+    --b3-card-error-background:#cc352d3d;
     --b3-card-warning-color: rgb(255, 213, 153);
-    --b3-card-warning-background: #9655133d;
+    --b3-card-warning-background: #be8b585d;
     --b3-card-info-color: rgb(166, 213, 250);
-    --b3-card-info-background: rgba(0,151,255,.2);
+    --b3-card-info-background: rgba(0, 153, 255, 0.288);
     --b3-card-success-color: rgb(183, 223, 185);
-    --b3-card-success-background: #85d0a333;
+    --b3-card-success-background: #85d0a34d;
 
     /* 自定义文字 */
     --b3-font-color1: var(--b3-card-error-color);
@@ -80,18 +80,18 @@
     --b3-font-color11: #18fbc6;
     --b3-font-color12: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background1: #e6524a44;
-    --b3-font-background2: var(--b3-card-warning-background);
-    --b3-font-background3: var(--b3-card-info-background);
-    --b3-font-background4: var(--b3-card-success-background);
-    --b3-font-background5: #6f8ca348;
-    --b3-font-background6: #09a1b848;
-    --b3-font-background7: #e0cb0748;
-    --b3-font-background8: rgba(197, 81, 81, 0.644);
-    --b3-font-background9: #5667bb65;
-    --b3-font-background10: #9164bb6c;
-    --b3-font-background11: #00ffe548;
-    --b3-font-background12: #b8601c59;
+    --b3-font-background1: #ff8f89c9;
+    --b3-font-background2: #ffd599c0;
+    --b3-font-background3: rgba(54, 171, 248, 0.521);
+    --b3-font-background4: #8fe7b277;
+    --b3-font-background5: #6f8ca38f;
+    --b3-font-background6: #09a1b873;
+    --b3-font-background7: #f3a82fbd;
+    --b3-font-background8: #eb5042d3;
+    --b3-font-background9: #5667bb9d;
+    --b3-font-background10: #9164bb83;
+    --b3-font-background11: #00ffe562;
+    --b3-font-background12: #f5812ece;
     --b3-font-background13: var(--b3-theme-on-background);
     /* PDF */
     --b3-pdf-sidebar-width: 200px;
@@ -506,7 +506,7 @@ div[data-type='block-render'] {
 }
 /* 块嵌入 */
 .protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"] {
-    box-shadow: 0px 0px 7px 1px #6b6b86;
+    box-shadow: 0px 0px 7px 1px #386d79;
     border-left: 0px dashed #010e1b;
     padding: 4px 10px;
     margin-bottom:12px;
@@ -887,9 +887,10 @@ div[data-subtype='t'][data-type='NodeList'] {
     border: 2px solid #0d1a25;
     border-radius: 4px;
     background: var(--b3-protyle-code-background);
-    box-shadow: 0px 3px 10px 3px rgb(6 6 6 / 30%);
+    box-shadow: 0px 3px 10px 3px rgb(6 6 6);
     margin-top: 15px !important;
     padding-top: 32px !important;
+    
     /* font-size: 14px; */
     /* font-size:10px; */
 }
@@ -2671,3 +2672,11 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
     background-color: #16232f;
     /* 这个颜色不错？ */
 }
+
+/* 块背景色颜色调低 */
+/* div[style*="background-color: var(--b3-font-background"] {
+    filter: contrast(0.6);
+}
+div[style*="background-color: var(--b3-font-background"] [contenteditable="true"] {
+    filter:contrast(1.667) !important;
+} */
