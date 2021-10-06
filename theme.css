@@ -2790,6 +2790,9 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 .protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"]::before{
         content: "Mermaid";
 }
+.protyle-wysiwyg [data-node-id][fold="1"][data-subtype="mermaid"][data-content^="gantt"]::before {
+        content: "Gannt";
+}
 .protyle-wysiwyg [data-node-id][fold="1"].sb{
     line-height: inherit;
     height: 1.5em;
