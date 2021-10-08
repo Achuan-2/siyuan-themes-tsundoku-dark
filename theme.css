@@ -2803,7 +2803,7 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     height: 1.5em;
 }
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.sb,.li) [contenteditable="true"] {
-    display: -webkit-box;
+    display: -webkit-box !important;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
@@ -2885,4 +2885,157 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     transition: display 0.2s ease;
 }
 
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"] {
+    line-height: 1.2em;
+}
+.protyle-wysiwyg [data-node-id][fold="1"][data-type="NodeHeading"]:after{
+    background-size: 1.5rem;
+}
+.protyle-wysiwyg [data-node-id][fold="1"].h2:after {
+    left:-1.3em;
+    top:0.5em;
+}
+.protyle-wysiwyg [data-node-id][fold="1"].h1:after {
+    left:-1.15em;
+    top:0.5em;
+}
 /* -----------------------------折叠优化 End---------------- */
+
+
+/* -------------------搬运语雀的提示区块 ---------Start----------------------------*/
+
+/* 卡片样式 */
+.bq[style*="background-color: var(--b3-card-error-background);"] {
+    border: 1px solid var(--b3-card-error-color) !important;
+    background-color: var(--b3-card-error-background) !important;
+}
+
+.bq[style*="background-color: var(--b3-card-success-background);"] {
+    border: 1px solid var(--b3-card-success-color) !important;
+    background-color: var(--b3-card-success-background) !important;
+}
+
+.bq[style*="background-color: var(--b3-card-warning-background);"] {
+    border: 1px solid var(--b3-card-warning-color) !important ;
+    background-color: var(--b3-card-warning-background)!important;
+}
+.bq[style*="background-color: var(--b3-card-info-background);"] {
+    border: 1px solid var(--b3-card-info-color) !important;
+    background-color: var(--b3-card-info-background) !important;
+}
+
+/* 块背景色 */
+.bq[style*="background-color: var(--b3-font-background1);"] {
+    border: 1px solid var(--b3-card-error-color) !important;
+    background-color: var(--b3-card-error-background) !important;
+}
+
+.bq[style*="background-color: var(--b3-font-background2);"] {
+    border: 1px solid var(--b3-card-warning-color) !important;
+    background-color: var(--b3-card-warning-background) !important;
+
+}
+.bq[style*="background-color: var(--b3-font-background3);"] {
+        border: 1px solid var(--b3-card-info-color)  !important;
+        background-color: var(--b3-card-info-background)  !important;
+}
+
+.bq[style*="background-color: var(--b3-font-background4);"] {
+    border: 1px solid var(--b3-card-success-color) !important;
+    background-color: var(--b3-card-success-background) !important;
+}
+
+
+.bq[style*="background-color: var(--b3-font-background1);"] {
+    border: 1px solid var(--b3-font-color1) !important;
+}
+
+.bq[style*="background-color: var(--b3-font-background2);"] {
+    border: 1px solid var(--b3-font-color2) !important;
+
+}
+.bq[style*="background-color: var(--b3-font-background3);"] {
+        border: 1px solid var(--b3-font-color3)  !important;
+}
+
+.bq[style*="background-color: var(--b3-font-background4);"] {
+    border: 1px solid var(--b3-font-color4) !important;
+}
+
+
+.bq[style*="background-color: var(--b3-font-background5);"] {
+    border: 1px solid var(--b3-font-color5) !important;
+}
+.bq[style*="background-color: var(--b3-font-background6);"] {
+    border: 1px solid var(--b3-font-color6) !important;
+}
+.bq[style*="background-color: var(--b3-font-background7);"] {
+    border: 1px solid var(--b3-font-color7) !important;
+}
+.bq[style*="background-color: var(--b3-font-background8);"] {
+    border: 1px solid var(--b3-font-color8) !important;
+}
+.bq[style*="background-color: var(--b3-font-background9);"] {
+    border: 1px solid var(--b3-font-color9) !important;
+}
+.bq[style*="background-color: var(--b3-font-background10);"] {
+    border: 1px solid var(--b3-font-color10) !important;
+}
+.bq[style*="background-color: var(--b3-font-background11);"] {
+    border: 1px solid var(--b3-font-color11) !important;
+}
+.bq[style*="background-color: var(--b3-font-background12);"] {
+    border: 1px solid var(--b3-font-color12) !important;
+}
+.bq[style*="background-color: var(--b3-font-background13);"] {
+    border: 1px solid var(--b3-font-color13) !important;
+}
+/* 选中块的优化 */
+.protyle-wysiwyg--select.bq[style*="background-color:"]>div{
+    background-color: #91d5ff38 !important;
+
+}
+/* -------------------搬运语雀的提示区块 --END-----------------------------------*/
+/* dark主题块背景色特别优化 */
+div[style*="background-color: var(--b3-font-background1);"]{
+    background-color: var(--b3-card-error-background) !important;
+    
+}
+div[style*="background-color: var(--b3-font-background2);"]{
+    background-color: var(--b3-card-warning-background) !important;
+    
+}
+div[style*="background-color: var(--b3-font-background3);"]{
+    background-color: var(--b3-card-info-background)  !important
+}
+div[style*="background-color: var(--b3-font-background4);"]{
+    background-color: var(--b3-card-success-background) !important;
+    
+}
+div[style*="background-color: var(--b3-font-background5);"]{
+    background-color: var(--b3-font-background5) !important;
+    
+}
+div[style*="background-color: var(--b3-font-background6);"]{
+    background-color: #09a1b848 !important;
+    
+}
+div[style*="background-color: var(--b3-font-background7);"]{
+    background-color: #e0cb0748 !important; 
+}
+div[style*="background-color: var(--b3-font-background8);"]{
+    background-color: rgba(197, 81, 81, 0.644) !important; 
+}
+div[style*="background-color: var(--b3-font-background9);"]{
+    background-color: #5667bb65 !important; 
+}
+div[style*="background-color: var(--b3-font-background10);"]{
+    background-color: #9164bb6c !important; 
+}
+div[style*="background-color: var(--b3-font-background11);"]{
+    background-color: #00ffe548 !important; 
+}
+div[style*="background-color: var(--b3-font-background12);"]{
+    background-color: #b8601c59 !important; 
+}
+
