@@ -451,12 +451,14 @@ strong {
 .b3-typography blockquote > p,
 .b3-typography blockquote .code-block,
 .b3-typography blockquote ul,
-.b3-typography blockquote li,
+/* .b3-typography blockquote li, */
 .b3-typography blockquote > blockquote {
     margin-left: 1em;
 }
 
-
+.protyle-wysiwyg [data-node-id].li .bq>.list {
+    margin-left: 0px;
+}
 /* 块引用 */
 .protyle-wysiwyg [data-node-id] span[data-type='block-ref']{
     color: var(--b3-protyle-inline-blockref-color); /*更改颜色*/
