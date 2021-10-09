@@ -1445,10 +1445,12 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 /* dock栏和顶部图标放大动效 */
 .dock--vertical .dock__item:hover svg,
-.toolbar__item:hover svg,
-.block__icon:hover svg{
+.toolbar__item:hover svg{
     transform: scale(1.1);
     transition: all 0.1s ease-in-out;
+}
+.block__icon:hover svg{
+    transform: scale(0.9) !important;
 }
 .dock--vertical .dock__item svg,
 .toolbar__item svg,
