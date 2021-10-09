@@ -211,12 +211,18 @@ strong[style="background-color: var(--b3-font-background13);"] {
 .layout-tab-container {
     background-color: #16232f;
 }
-.block__icons {
-    /* box-shadow: rgb(0 0 0 / 30%) 0px 1px 2px; */
-    /* background-color: #a3a3a36c; */
-    background-color: #041f29;
-    /* border-bottom: 1px solid #030303; */
+
+/* 修复面板收缩的留白问题 */
+.block__icons,
+.block__icons>* {
+    background-color: #041f29 !important;
 }
+.block__icons span.fn__space,
+.block__icons div.fn__space{
+    display: inline-block;
+    flex-shrink: 1 !important;
+}
+
 /* 搜索项页面名称背景 */
 .spread-search__path {
     padding: 8px 16px;
