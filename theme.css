@@ -674,7 +674,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     border-radius: 5px;
 }
 .protyle-wysiwyg img:hover,
-.p [contenteditable="true"]:focus img{
+.p [contenteditable="true"]:focus>.img:first-child img{
     box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.3);
 }
 
