@@ -645,10 +645,14 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     color: var(--b3-protyle-inline-link-color);
     cursor: pointer;
     border-bottom: 1px solid #39464b;
+    word-break:break-all;
     /* border-bottom: 1px solid transparent; */
     /* text-decoration: underline; */
 }
+.b3-typography a{
+    word-break:break-all;
 
+}
 .b3-typography a {
     text-decoration: underline;
     color: var(--b3-protyle-inline-link-color);
