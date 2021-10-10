@@ -2853,7 +2853,7 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     line-height: 2em;
     color: transparent;
     width: 2.5em;
-    z-index: 999;
+    z-index: 1;
     transition: opacity 0.2s ease;
 }
 .protyle-wysiwyg [data-node-id][fold="1"].p::after {
