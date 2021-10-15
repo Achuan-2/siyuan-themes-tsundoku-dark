@@ -435,11 +435,14 @@ strong {
     color: #9fa8b1;
 }
 .protyle-wysiwyg [data-node-id].bq, .b3-typography blockquote {
-    border: 2px solid #8aacac ;
+    /* border: 2px solid #8aacac ; */
+    border-left: 0.25em solid #6d9a9a;
     background-color: transparent;
     border-radius: 0.31em;
     margin-top: 8px;
-    box-shadow: 0 2px 2px 0 rgba(51, 43, 43, 0.253), 0 0 0 1px rgba(45, 150, 192, 0.4);
+    background-color: #c4d3d417;
+
+    /* box-shadow: 0 2px 2px 0 rgba(51, 43, 43, 0.253), 0 0 0 1px rgba(45, 150, 192, 0.4); */
 }
 .protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
     color: rgba(255, 255, 255, 0.7);
@@ -2915,6 +2918,7 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 .protyle-wysiwyg [data-node-id][fold="1"].bq{
     border-width: 0px !important;
     box-shadow: none !important;
+    background-color: unset;
 }
 
 .protyle-wysiwyg [data-node-id][fold="1"].bq>div::before {
@@ -3048,12 +3052,10 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     border: 1px solid var(--b3-card-error-color) !important;
     background-color: var(--b3-card-error-background) !important;
 }
-
 .bq[style*="background-color: var(--b3-card-success-background);"] {
     border: 1px solid var(--b3-card-success-color) !important;
     background-color: var(--b3-card-success-background) !important;
 }
-
 .bq[style*="background-color: var(--b3-card-warning-background);"] {
     border: 1px solid var(--b3-card-warning-color) !important ;
     background-color: var(--b3-card-warning-background)!important;
@@ -3063,6 +3065,18 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     background-color: var(--b3-card-info-background) !important;
 }
 
+.bq[style*="background-color: var(--b3-card-warning-background);"] strong {
+    color:#ffc46f !important;
+}
+.bq[style*="background-color: var(--b3-card-success-background);"] strong {
+    color:#abfda2 !important;
+}
+.bq[style*="background-color: var(--b3-card-error-background);"] strong {
+    color:#e26262 !important;
+}
+.bq[style*="background-color: var(--b3-card-info-background);"] strong {
+    color:#67c6ff !important;
+}
 /* 块背景色 */
 .bq[style*="background-color: var(--b3-font-background1);"] {
     border: 1px solid var(--b3-card-error-color) !important;
@@ -3195,4 +3209,8 @@ div[style*="background-color: var(--b3-font-background12);"]{
 .toolbar__item--disabled, .toolbar__item--disabled:hover {
     color: #374848;
     cursor: not-allowed;
+}
+
+.protyle-wysiwyg [data-node-id].li>[data-node-id]:before{
+    background-color: #4f565e;
 }
