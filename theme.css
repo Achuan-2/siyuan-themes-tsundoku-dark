@@ -3213,4 +3213,10 @@ div[style*="background-color: var(--b3-font-background12);"]{
 
 .protyle-wysiwyg [data-node-id].li>[data-node-id]:before{
     background-color: #4f565e;
+    width:0.95px;
+}
+
+
+.protyle-wysiwyg [data-node-id].hr>div {
+    border-bottom: 2px solid #79848a75;
 }
