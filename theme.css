@@ -539,6 +539,11 @@ div[data-type='block-render'] {
 .block__popover.block__popover--move.block__popover--open{
     min-height: 30%;
 }
+/* 添加块引用钉住图标动画 */
+.block__popover--move .block__icon .ft__primary {
+    transform: rotate(30deg) !important;
+    transition: all 0.2s ease-out;
+}
 /* 块嵌入 */
 .protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"] {
     box-shadow: 0px 0px 7px 1px #386d79;
@@ -825,7 +830,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     margin-bottom: 0;
 }
 /* .protyle-task--done > .p */
-.protyle-task--done [data-type="NodeParagraph"]>[contenteditable="true"],.protyle-task--done p{
+.protyle-task--done [data-type="NodeParagraph"]>div:first-child,.protyle-task--done p{
     /* 完成的待办事项删除线 */
     text-decoration: line-through;
     /* 字体颜色 */
