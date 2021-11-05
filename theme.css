@@ -2968,9 +2968,9 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 }
 .protyle-wysiwyg [data-node-id][fold="1"].bq>div:first-child:before {
     content: "Blockquote";
+    font-size: 1rem;
     margin-left: -0.8em;
 }
-
 .protyle-wysiwyg [data-node-id][fold="1"].bq::after {
     top: 0.8em;
     left:-2em;
