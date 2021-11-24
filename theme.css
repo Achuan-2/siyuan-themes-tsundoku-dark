@@ -3361,5 +3361,6 @@ blockquote[style*="background-color: var(--b3-font-background12);"]{
 }
 .b3-menu .b3-menu__submenu {
     margin-left: 10px;
+    margin-right: 10px;
     padding: 5px 6px 5px;
 }
