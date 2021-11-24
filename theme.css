@@ -3353,9 +3353,13 @@ blockquote[style*="background-color: var(--b3-font-background12);"]{
     border-bottom: 2px solid var(--b3-theme-on-background);
 }
 
-/* 左上方菜单栏加宽 */
-.b3-menu, .b3-menu .b3-menu__submenu {
+/* 菜单栏加宽 */
+.b3-menu,.b3-menu .b3-menu__submenu {
     border-radius: 6px;
-    padding: 7px 6px 6px;
+    padding: 6px 6px 6px;
     min-width: 200px;
+}
+.b3-menu .b3-menu__submenu {
+    margin-left: 10px;
+    padding: 5px 6px 5px;
 }
