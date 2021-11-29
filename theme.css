@@ -2110,17 +2110,25 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
     background-image: url('src/bookxnote.ico');
 }
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="assets/"]:not(:empty)::before,
-.b3-typography a[href *="assets/"]::before{
+.b3-typography a[href ^="assets/"]::before{
     content: "";
     background-image: url('src/assets.svg');
-    filter: invert(1) hue-rotate(.5turn);
 }
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="assets/"][data-href $=".pdf"]:not(:empty)::before,
-.b3-typography [href *="assets/"][href $=".pdf"]::before{
+.b3-typography [href ^="assets/"][href $=".pdf"]::before{
     content: "";
     background-image: url('src/pdf.svg');
-    filter: invert(0) hue-rotate(0turn);    
 }
+
+.protyle-wysiwyg [data-node-id] span[data-type="a"][data-href^="备注"],
+.b3-typography [href ^="备注"],
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="note"],
+.b3-typography [href ^="note"]{
+    border-bottom: 2px solid #f3a92f !important;
+    background-color: #57472c;
+    color: var(--b3-theme-on-background);
+}
+
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="http"]:not(:empty)::before,
 .b3-typography a[href ^="http"]::before{
     content: "";
