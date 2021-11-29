@@ -2126,7 +2126,7 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 .b3-typography [href ^="note"]{
     border-bottom: 2px solid #f3a92f !important;
     background-color: #57472c;
-    color: var(--b3-theme-on-background);
+    color: inherit;
 }
 
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="http"]:not(:empty)::before,
