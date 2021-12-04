@@ -214,9 +214,8 @@ strong[style="background-color: var(--b3-font-background13);"] {
 }
 
 /* 修复面板收缩的留白问题 */
-.block__icons,
-.block__icons>* {
-    background-color: #041f29 !important;
+.block__icons {
+    background-color: #041f29;
 }
 .block__icons span.fn__space,
 .block__icons div.fn__space{
@@ -455,13 +454,21 @@ strong {
 }
 .protyle-wysiwyg [data-node-id].bq, .b3-typography blockquote {
     /* border: 2px solid #8aacac ; */
-    border-left: 0.25em solid #6d9a9a;
+    /* border-left: 0.25em solid #6d9a9a; */
+    border-left: 0.25em solid transparent;
     background-color: transparent;
     border-radius: 0.31em;
-    margin-top: 8px;
-    background-color: #c4d3d417;
+    /* margin-top: 8px; */
+    /* background-color: #c4d3d417; */
 
     /* box-shadow: 0 2px 2px 0 rgba(51, 43, 43, 0.253), 0 0 0 1px rgba(45, 150, 192, 0.4); */
+}
+.protyle-wysiwyg [data-node-id].bq:not([style]),
+.b3-typography blockquote:not([style]) {
+    opacity: 0.8;
+    background-image: url('src/blockquote.svg');
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
 }
 .protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
     color: rgba(255, 255, 255, 0.7);
@@ -1261,13 +1268,15 @@ div[data-subtype='t'][data-type='NodeList'] {
     border-top: 2px solid #011616;
     border-right: 2px solid #011616;
     border-left: 2px solid #011616;
-    border-radius: 7px 7px 0px 0px;
+    /* border-radius: 7px 7px 0px 0px; */
+    border-radius: 7px 7px 7px 7px;
     margin-right: 2px;
     /* transition: all 0.1s ease; */
     background-color: #222d38ad;
 }
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
+    border-radius: 7px 7px 0px 0px !important; 
     color: #13c2c279;
     font-weight: 400;
     font-size: 15px;
@@ -1277,6 +1286,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 /* 多窗口foucs的标签页 */
 .layout__wnd--active .layout-tab-bar .item--focus {
+    border-radius: 7px 7px 0px 0px !important; 
     color: var(--b3-menu-highlight-focus-color);
     border-color: #046868;
     font-weight: 600;
@@ -1288,7 +1298,8 @@ div[data-subtype='t'][data-type='NodeList'] {
     background-color: #16232f;
 }
 .layout-tab-bar .item:first-child {
-    border-radius: 0px 7px 0px 0px;
+    border-radius: 0px 7px 7px 0px;
+    /* border-radius: 0px 7px 0px 0px; */
     border-left: 0px solid #b7b8b97c;
 }
 /* 未保存样式 */
@@ -1301,16 +1312,17 @@ div[data-subtype='t'][data-type='NodeList'] {
 /* .item--focus .item__text {
     max-width: 300px;
 } */
-/* 文字超出范围的模糊效果 */
-/* .fn__flex .layout-tab-bar .item--focus .item__text::after {
+
+.layout-tab-bar .item__text::after {
     content: ' ';
     position: absolute;
-    left: 294px;
+    left: 140px;
     width: 16px;
     height: 100%;
-    background: linear-gradient(110deg, rgba(0, 0, 0, 0.001), var(--b3-theme-surface));
+    background: linear-gradient(
+90deg, #16232f0f, #272728a3);
     pointer-events: none;
-} */
+}
 
 /* 标签页按钮 */
 .layout-tab-bar .item__close {
@@ -2071,7 +2083,7 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 
 /* 区分侧栏聚焦和未聚焦状态 */
 .block__icons--active {
-    background-color: rgba(63, 103, 136, 0.12);
+    background-color: rgba(63, 103, 136, 0.12) !important;
 }
 
 /* ----------------------------custom: 超链接icon---------------------------------- */
@@ -3387,4 +3399,9 @@ blockquote[style*="background-color: var(--b3-font-background12);"]{
     margin-left: 10px;
     margin-right: 10px;
     padding: 5px 6px 5px;
+}
+
+.emojis__item--current {
+    background: rgba(103, 182, 235, 0.658);
+    border-radius: 4px;
 }
