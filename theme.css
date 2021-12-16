@@ -37,6 +37,7 @@
         monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Segoe UI Symbol',
         'Android Emoji', 'EmojiSymbols';
     --b3-font-family-graph: mononoki;
+    --b3-font-family-math: KaTeX_Math;
 
     /* 线条 */
     /* --b3-border-color: #363f49; */
@@ -469,6 +470,7 @@ strong {
     background-image: url('src/blockquote.svg');
     background-size: 18px 18px;
     background-repeat: no-repeat;
+    background-color: rgba(91, 144, 187, 0.19);
 }
 .protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
     color: rgba(255, 255, 255, 0.7);
@@ -2032,9 +2034,11 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 
 .pdf__util.b3-menu.pdf__util--hide {
     padding: 2px 4px 5px;
+    border: 1px solid #aae6eb;
+
 }
 .pdf__util.b3-menu .fn__flex {
-    padding: 6px 4px 0px !important;
+    padding: 4px 4px 0px !important;
 }
 
 /* 自定义颜色选框调整宽高 */
@@ -2060,13 +2064,12 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
     box-shadow: 0 0 1.5px 1px var(--b3-theme-on-background) inset;
 }
 
-
 .pdf__util.b3-menu .b3-color__square{
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     border-radius: 10px;    
-    margin-right: 4px;
 }
+
 
 /* pdf光标选中文本样式 */
 .pdf__outer ::selection{ 
@@ -2154,6 +2157,8 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 
 
 }
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="b23.tv"]:not(:empty)::before,
+.b3-typography a[href *="b23.tv"]::before,
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="bilibili.com"]:not(:empty)::before,
 .b3-typography a[href *="bilibili.com"]::before{
     content: "";
@@ -3202,6 +3207,28 @@ blockquote[style*="background-color: var(--b3-card-info-background);"] strong:no
 .bq[style*="background-color: var(--b3-card-info-background);"] strong:not([style*="color: var(--b3"]) {
     color:#79cdff !important;
 }
+/* 优化kbd */
+
+
+blockquote[style*="background-color: var(--b3-card-error-background);"] kbd,
+.bq[style*="background-color: var(--b3-card-error-background);"] kbd{
+    background-color: #69514a59 !important;
+}
+
+blockquote[style*="background-color: var(--b3-card-warning-background);"] kbd,
+.bq[style*="background-color: var(--b3-card-warning-background);"] kbd{
+    background-color: #52483259 !important;
+}
+
+blockquote[style*="background-color: var(--b3-card-info-background);"] kbd,
+.bq[style*="background-color: var(--b3-card-info-background);"] kbd{
+    background-color: #3e556359 !important;
+}
+
+blockquote[style*="background-color: var(--b3-card-success-background);"] kbd,
+.bq[style*="background-color: var(--b3-card-success-background);"] kbd{
+    background-color: #3b553459 !important;
+}
 
 
 /* 优化列表线 */
@@ -3405,3 +3432,4 @@ blockquote[style*="background-color: var(--b3-font-background12);"]{
     background: rgba(103, 182, 235, 0.658);
     border-radius: 4px;
 }
+
