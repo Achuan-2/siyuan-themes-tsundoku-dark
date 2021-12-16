@@ -464,8 +464,9 @@ strong {
 
     /* box-shadow: 0 2px 2px 0 rgba(51, 43, 43, 0.253), 0 0 0 1px rgba(45, 150, 192, 0.4); */
 }
-.protyle-wysiwyg [data-node-id].bq:not([style]),
-.b3-typography blockquote:not([style]) {
+
+.protyle-wysiwyg [data-node-id].bq:not([style*="color"]),
+.b3-typography blockquote:not([style*="color"])  {
     opacity: 0.87;
     background-image: url('src/blockquote.svg');
     background-size: 18px 18px;
