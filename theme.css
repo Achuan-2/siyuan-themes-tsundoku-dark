@@ -199,9 +199,12 @@ strong[style="background-color: var(--b3-font-background13);"] {
     max-width: 1000px;
 }
 
+
 /* ---------------编辑器内容两侧宽度设置 END ———————————————————————— */
 
-
+body{
+    font-size: 15.5px;
+}
 
 /*分窗口的边框（线）  */
 .layout__resize::after {
@@ -475,7 +478,7 @@ strong {
     background-image: url('src/blockquote.svg');
     background-size: 18px 18px;
     background-repeat: no-repeat;
-    background-color: rgba(91, 144, 187, 0.19);
+    background-color: #40608630;
 }
 .protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
     color: rgba(255, 255, 255, 0.7);
@@ -2755,7 +2758,7 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 .file-tree ul.b3-list.b3-list--background [data-subtype="h2"]{
     opacity: 1;
     font-weight: 600;
-    color:#60e3f7e5;
+    color:#60e4f7;
 }
 .file-tree ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text,
 .file-tree ul.b3-list.b3-list--background [data-subtype="h3"] {
@@ -2767,12 +2770,13 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 .file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text,
 .file-tree ul.b3-list.b3-list--background [data-subtype="h4"]{
     opacity: 1;
-    color:#3ae2fcda;
+    color:#3ae2fcc4;
 }
 .file-tree ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text,
 .file-tree ul.b3-list.b3-list--background [data-subtype="h5"]{
     opacity:1;
-    color:#3ae2fcaf;
+    color:#06a0b7;
+
 
 }
 .file-tree ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text,
