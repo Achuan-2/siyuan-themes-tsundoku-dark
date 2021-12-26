@@ -269,7 +269,7 @@ body{
 
 .protyle-wysiwyg [data-node-id].h3,.b3-typography h3 {
     font-size: 1.35em !important;
-    color: #43b8ca;
+    color: rgb(49, 218, 181);
 
 }
 .protyle-wysiwyg [data-node-id].h3:before,
@@ -972,13 +972,28 @@ div[data-subtype='t'][data-type='NodeList'] {
 /*  代码块行数*/
 .protyle-linenumber__rows {
     margin-top: 31px !important;
-    /* font-family: mononoki, Consolas; */
-    background-color:transparent !important;
+    background-color:var(--b3-protyle-code-background);
     padding-right:15px;
     padding-bottom: 0px;
-    margin-bottom: 6px;
+    margin-bottom: 0px;
     width: 39px;
 }
+::-webkit-scrollbar-thumb {
+    /* background-color: #4f657244; */
+    /* background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent); */
+    border-radius: 2em;
+}
+
+.protyle-linenumber__rows::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: calc(100% - 10px); 
+    margin: -3px 0px 2px 33px;
+    background-color: #b1c3c491;
+}
+
 .protyle-linenumber__rows::before{
     content: '';
     display: block;
@@ -2771,7 +2786,7 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 .file-tree ul.b3-list.b3-list--background [data-subtype="h3"] {
     opacity: 1;
     font-weight: 600;
-    color:rgb(49, 212, 218);
+    color:rgb(49, 218, 181);
 
 }
 .file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text,
@@ -3477,5 +3492,11 @@ blockquote[style*="background-color: var(--b3-font-background12);"]{
 .b3-typography a[href *="zh.javascript.info"]::before{
 
     content: "";
-    background-image: url('src/self/zhjavascript.png');
+    background-image: url('src/zhjavascript.png');
+}
+.protyle-wysiwyg [data-node-id] span[data-type='a'][data-href *="qiime2.org"]:not(:empty)::before,
+.b3-typography a[href *="qiime2.org"]::before{
+
+    content: "";
+    background-image: url('src/qiime2.ico');
 }
