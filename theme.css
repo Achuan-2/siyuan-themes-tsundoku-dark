@@ -1287,21 +1287,21 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 /* 标签页样式 */
 .layout-tab-bar .item {
-    padding: 4px 4px 3px 14px;
+    /* padding: 4px 4px 3px 14px; */
     border: 0px;
     border-bottom: 0px solid transparent;
     border-top: 2px solid #011616;
-    border-right: 2px solid #011616;
-    border-left: 2px solid #011616;
+    border-right: 0px solid #011616;
+    border-left: 0px solid #011616;
     /* border-radius: 7px 7px 0px 0px; */
     border-radius: 7px 7px 7px 7px;
-    margin-right: 2px;
+    /* margin-right: 2px; */
     /* transition: all 0.1s ease; */
     background-color: #222d38ad;
 }
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
-    border-radius: 7px 7px 0px 0px !important; 
+    border-radius: 7px 7px 0px 0px; 
     color: #13c2c279;
     font-weight: 400;
     font-size: 15px;
@@ -1322,7 +1322,8 @@ div[data-subtype='t'][data-type='NodeList'] {
 .layout-tab-bar {
     background-color: #16232f;
 }
-.layout-tab-bar .item:first-child {
+.layout-tab-bar .item:first-child,
+.layout-tab-bar .item--focus:first-child {
     border-radius: 0px 7px 7px 0px;
     /* border-radius: 0px 7px 0px 0px; */
     border-left: 0px solid #b7b8b97c;
