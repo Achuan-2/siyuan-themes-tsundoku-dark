@@ -2341,6 +2341,10 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 .b3-typography strong{
     text-shadow: 0 0 0.5px #ffffff; 
 }
+.b3-typography s, .protyle-wysiwyg s{
+    color: inherit !important;
+    opacity: 0.5;
+}
 .protyle-toolbar {
     background-color: #2d3245;
 }
