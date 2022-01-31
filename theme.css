@@ -163,7 +163,7 @@
     /* 所见即所得行内元素颜色 */
     --b3-protyle-inline-strong-color: #e8eaed;
     --b3-protyle-inline-em-color: #e8eaed;
-    --b3-protyle-inline-s-color: #c9d1d9;
+    --b3-protyle-inline-s-color: #c9d1d991;
     --b3-protyle-inline-link-color: #57a2d4;
     --b3-protyle-inline-link-hover-color: #fa60a0;
     --b3-protyle-inline-mark-background: #4b817c;
@@ -403,9 +403,10 @@ body{
     font-size: 0.9em;
 } */
 /* 表格背景设置 */
-.b3-typography table,
-.protyle-wysiwyg table {
+
+.b3-typography table, .protyle-wysiwyg table {
     border-collapse: separate;
+    box-shadow: 1px 1px 5px 2px #050505;
 }
 .protyle-wysiwyg   table thead tr,
 .b3-typography   table thead tr {
@@ -421,6 +422,7 @@ body{
 }
 .protyle-wysiwyg   table tr th,
 .b3-typography   table tr th  {
+    border-top: 1px solid var(--b3-table-border-color);
     border-left: 1px solid var(--b3-table-border-color);
     border-right: 1px solid var(--b3-table-border-color);
 }
@@ -495,11 +497,11 @@ strong {
     border-radius: 0.31em;
     margin-top: 8px;
     background-color: #c4d3d417;
-    box-shadow: 0px 0px 5px 0px #050505;
+    /* box-shadow: 0px 0px 5px 0px #050505; */
 }
-.protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
+/* .protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
     color: rgba(255, 255, 255, 0.7);
-}
+} */
 /* blockquote 缩进调整 */
 .protyle-wysiwyg [data-node-id].bq > div{
     padding-left: 1rem;
@@ -894,7 +896,9 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 .protyle-task--done a {
     opacity: 0.8;
 }
-
+.protyle-task--done [data-type='a']::before{
+    opacity: 0.8;
+}
 .protyle-task--done [data-type='a']:hover {
     /* 超链接悬浮调整 */
     opacity: 1.5;
@@ -2079,7 +2083,7 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 }
 .b3-color__square[data-type="color"]{
     background: no-repeat round url("src/a1.svg") ;
-    box-shadow: 0 0 0 1.5px var(--b3-border-color) inset;
+    box-shadow: 0 0 0 1.5px #9b9ea1 inset;
 }
 
 .b3-color__square[data-type="backgroundColor"]{
@@ -2328,4 +2332,18 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 }
 .layout__center {
     margin: 0px 0px 0px 6px;
+}
+.b3-typography em, .protyle-wysiwyg em,
+.protyle-wysiwyg strong{
+    color: inherit;
+}
+.protyle-wysiwyg strong ,
+.b3-typography strong{
+    text-shadow: 0 0 0.5px #ffffff; 
+}
+.protyle-toolbar {
+    background-color: #2d3245;
+}
+.b3-menu, .protyle-util {
+    box-shadow: 0px 0px 12px #0a0a0a;
 }
