@@ -969,7 +969,6 @@ div[data-subtype='t'][data-type='NodeList'] {
 .code-block {
     position: relative;
     display: block;
-    /* border: 2px solid #0d1a25; */
     border-radius: 4px;
     background: var(--b3-protyle-code-background);
     box-shadow: 0px 2px 6px 2px rgb(6 6 6);
@@ -998,6 +997,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     padding-bottom: 0px;
     margin-bottom: 0px;
     width: 39px;
+    font-family: var(--b3-font-family-code);
 }
 
 
@@ -1005,21 +1005,14 @@ div[data-subtype='t'][data-type='NodeList'] {
     content: '';
     display: block;
     position: absolute;
+    
     width: 1px;
     height: calc(100% - 10px); 
     margin: -3px 0px 2px 33px;
     background-color: #b1c3c491;
 }
 
-.protyle-linenumber__rows::before{
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: calc(100% - 10px); 
-    margin: 5px 0px 2px 33px;
-    background-color: #b1c3c491;
-}
+
 
 /* 代码语言显示 */
 .protyle-icons{
