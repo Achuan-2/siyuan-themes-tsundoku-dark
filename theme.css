@@ -52,7 +52,7 @@
     /* 线条 */
     /* --b3-border-color: #363f49; */
     /* --b3-border-color: rgba(230, 230, 230, .08); */
-    --b3-border-color:#16232f;
+    --b3-border-color:#4c6780;
 
     /* 滚动条 */
     --b3-scroll-color: #2f3d49c0;
@@ -2332,7 +2332,7 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 }
 .protyle-wysiwyg strong ,
 .b3-typography strong{
-    text-shadow: 0 0 0.5px #ffffff; 
+    text-shadow: 0 0 0.5px #8aa9b3; 
 }
 .b3-typography s, .protyle-wysiwyg s{
     color: inherit !important;
