@@ -2326,11 +2326,13 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 .layout__center {
     margin: 0px 0px 0px 6px;
 }
-.b3-typography em, .protyle-wysiwyg em,
-.protyle-wysiwyg strong{
+.b3-typography em, .protyle-wysiwyg em{
     color: inherit;
 }
 
+.b3-typography strong ,.protyle-wysiwyg strong:not([style]){
+    color:var(--b3-protyle-inline-strong-color);
+}
 .b3-typography s, .protyle-wysiwyg s{
     color: inherit !important;
     opacity: 0.5;
