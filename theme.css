@@ -52,7 +52,7 @@
     /* 线条 */
     /* --b3-border-color: #363f49; */
     /* --b3-border-color: rgba(230, 230, 230, .08); */
-    --b3-border-color:#4c6780;
+    --b3-border-color:#16232f;
 
     /* 滚动条 */
     --b3-scroll-color: #2f3d49c0;
@@ -1308,7 +1308,9 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* margin-right: 2px; */
     /* transition: all 0.1s ease; */
     background-color: #222d38ad;
+    box-shadow: 1px 4px 2px 0 var(--b3-theme-background);
 }
+
 /* 选中的标签页 */
 .layout-tab-bar .item--focus {
     border-radius: 7px 7px 0px 0px; 
