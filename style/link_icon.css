@@ -164,7 +164,7 @@
 .protyle-wysiwyg [data-node-id] a[href ^="note"],
 .b3-typography [href ^="note"]{
     border-bottom: 2px solid #f3a92f !important;
-    background-color: #f6ddb5d1;
+    background-color: #583f16d1;
     color: inherit;
 }
 .protyle-wysiwyg [data-node-id] span[data-type='a'][data-href ^="http"]:not(:empty)::before,
