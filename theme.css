@@ -332,7 +332,7 @@ body{
 
 /* 标题加粗样式 */
 .protyle-wysiwyg [data-type="NodeHeading"] strong {
-    color: inherit;
+    color: inherit !important;
     text-shadow: 1px 1px 1px #efefef;
 }
 .b3-typography h1 strong,
@@ -495,7 +495,7 @@ strong {
     border-left: 0.25em solid #6d9a9a;
     background-color: transparent;
     border-radius: 0.31em;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     background-color: #c4d3d417;
     /* box-shadow: 0px 0px 5px 0px #050505; */
 }
@@ -991,24 +991,24 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 /*  代码块行数*/
 .protyle-linenumber__rows {
-    margin-top: 31px !important;
+    margin-top: 32px !important;
     background-color:var(--b3-protyle-code-background);
-    padding-right:10px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    width: 39px;
+    /* padding-right:10px; */
+    /* padding-bottom: 0px; */
+    /* margin-bottom: 0px; */
+    /* width: 39px; */
     font-family: var(--b3-font-family-code);
 }
 
 
 .protyle-linenumber__rows::before{
+    /* 代码行数右边的分割线 */
     content: '';
     display: block;
     position: absolute;
-    
     width: 1px;
     height: calc(100% - 10px); 
-    margin: -3px 0px 2px 33px;
+    margin: 0px 0px 2px 44px;
     background-color: #b1c3c491;
 }
 
@@ -1868,7 +1868,8 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
     border-radius: 0px;
 }
 .b3-list--files .b3-list-item__icon:hover::after,
-.b3-list--files .b3-list-item__icon:hover::before{
+.b3-list--files 
+:hover::before{
     opacity: 0;
 }
 /* 文档图标标题上方大小调整win10 emoji */
@@ -1888,15 +1889,14 @@ rotyle-wysiwyg [data-node-id][custom-f="20"]  div[contenteditable="true"]:after 
 
 
 /* 文档图标文件树大小调整 */
-.b3-list--files .b3-list-item__icon svg, .b3-list--files .b3-list-item__icon img {
-    float: left;
-    margin-top: 6px;
+.file-tree .b3-list-item__icon svg, .file-tree .b3-list-item__icon img {
+    /* margin-top: 6px; */
     height: 18px;
     width: 18px;
     color: var(--b3-theme-on-surface);
 }
 
-.b3-list--files .b3-list-item__icon {
+.file-tree .b3-list-item__icon {
     text-align: center;
     font-size: 15px;
     margin-right: 1px;
