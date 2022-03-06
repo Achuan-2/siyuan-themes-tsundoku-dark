@@ -2271,3 +2271,6 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 .b3-menu, .protyle-util {
     box-shadow: 0px 0px 12px #0a0a0a;
 }
+.layout-tab-bar .item--pin{
+    width:200px;
+}
