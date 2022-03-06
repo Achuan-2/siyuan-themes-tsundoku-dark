@@ -1311,6 +1311,8 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* transition: all 0.1s ease; */
     background-color: #222d38ad;
     box-shadow: 1px 4px 2px 0 var(--b3-theme-background);
+    transition: background-color 0.1s ease-in-out;
+
 }
 
 /* 选中的标签页 */
@@ -1342,6 +1344,9 @@ div[data-subtype='t'][data-type='NodeList'] {
     border-radius: 7px 7px 7px 0px;
     /* border-radius: 0px 7px 0px 0px; */
     border-left: 0px solid #b7b8b97c;
+}
+.layout-tab-bar .item__text{
+    padding: 4px 0px 0px 8px;
 }
 /* 未保存样式 */
 /* .layout__wnd--active .layout-tab-bar .item--unsave {
