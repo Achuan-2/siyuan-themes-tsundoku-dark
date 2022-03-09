@@ -710,7 +710,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 .protyle-wysiwyg [data-node-id] span[data-type='a'] {
     color: var(--b3-protyle-inline-link-color);
     cursor: pointer;
-    border-bottom: 1px solid #39464b;
+    border-bottom: 1px solid #39464b96;
     word-break:break-all;
     /* border-bottom: 1px solid transparent; */
     /* text-decoration: underline; */
