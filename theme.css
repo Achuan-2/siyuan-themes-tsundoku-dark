@@ -964,6 +964,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     background-image: none !important;
     /* background: var(--b3-protyle-code-background); */
     background: var(--b3-protyle-code-background);
+    border-radius: 0px 0px 4px 4px;
 
 }
 
@@ -990,19 +991,18 @@ div[data-subtype='t'][data-type='NodeList'] {
     z-index: 1;
     
 }
-
 /*  代码块行数*/
 .protyle-linenumber__rows {
-    margin-top: 3em !important;
+    margin-top: 32px !important;
+    padding-top: 8px;
     background-color: var(--b3-protyle-code-background);
     font-family: var(--b3-font-family-code);
     opacity: 0.5;
     width: 40px;
     left:0px;
-    font-size: 0.6em;
+    font-size: 60%;
+
 }
-
-
 
 
 
