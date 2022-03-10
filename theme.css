@@ -178,6 +178,7 @@
     --b3-protyle-inline-code-background: #225764;
     --b3-protyle-inline-blockref-color: #70c4c4;
     --b3-protyle-inline-blockref-hover-color: #ff398b;
+    --blockquote-border-color: #6d9a9a;
     /* 表格 */
     --b3-table-border-color: #313d49;
     --b3-table-th-color: #13242c;
@@ -496,7 +497,8 @@ strong {
 }
 
 .protyle-wysiwyg [data-node-id].bq, .b3-typography blockquote {
-    border: 1px solid #8e8e8e ;
+    /* border: 1px solid var(--blockquote-border-color); */
+    border-left: 0.18em solid var(--blockquote-border-color);
     background-color: #26333e;
 }
 /* .protyle-wysiwyg [data-node-id].bq strong, .b3-typography blockquote strong {
@@ -720,7 +722,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 
 }
 .b3-typography a {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: var(--b3-protyle-inline-link-color);
 }
 /* 超链接icon */
@@ -1001,16 +1003,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 
 
-.protyle-linenumber__rows::before{
-    /* 代码行数右边的分割线 */
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: calc(100% - 10px); 
-    margin: 0px 0px 2px 44px;
-    background-color: #b1c3c491;
-}
+
 
 
 
