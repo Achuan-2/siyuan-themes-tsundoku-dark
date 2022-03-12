@@ -505,7 +505,7 @@ strong {
     color: rgba(255, 255, 255, 0.7);
 } */
 /* blockquote 缩进调整 */
-.protyle-wysiwyg [data-node-id].bq > div{
+.protyle-wysiwyg [data-node-id].bq > div:not(.code-block){
     padding-left: 1rem;
 }
 .protyle-wysiwyg [data-node-id].bq > div.bq{
