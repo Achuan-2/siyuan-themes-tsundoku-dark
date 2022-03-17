@@ -1289,15 +1289,15 @@ div[data-subtype='t'][data-type='NodeList'] {
 .layout-tab-bar .item {
     /* padding: 4px 4px 3px 14px; */
     border: 0px;
+    border: 1px solid #b7b8b93f;
+    border-top: 1px solid #b7b8b93f;
     border-bottom: 0px solid transparent;
-    border-top: 2px solid #011616;
-    border-right: 0px solid #011616;
-    border-left: 0px solid #011616;
+    /* border: 1px solid #b7b8b93f;  */
     /* border-radius: 7px 7px 0px 0px; */
     border-radius: 7px 7px 7px 7px;
     /* margin-right: 2px; */
     /* transition: all 0.1s ease; */
-    background-color: #222d38ad;
+    background-color: #04101dad;
     box-shadow: 1px 4px 2px 0 var(--b3-theme-background);
     transition: background-color 0.1s ease-in-out;
 
@@ -1311,27 +1311,28 @@ div[data-subtype='t'][data-type='NodeList'] {
     font-size: 15px;
     background-color: var(--b3-theme-background) !important;
     /* border-bottom: 2px solid #47707c75; */
+    border-top: 1px solid #b7b8b9;
+    border-right: 0px solid #b7b8b9;
+    border-left: 0px solid #b7b8b9;
     border-bottom: 0px solid transparent;
 }
 /* 多窗口foucs的标签页 */
 .layout__wnd--active .layout-tab-bar .item--focus {
-    border-radius: 7px 7px 0px 0px !important; 
     color: var(--b3-menu-highlight-focus-color);
-    border-color: #046868;
     font-weight: 600;
     /* 更改多窗口标签页当前页面底框高亮颜色 */
-    border-bottom: 0px solid transparent;
+    border-top: 2px solid #046868;
 }
 /* 标签页后面的背景 */
 .layout-tab-bar {
-    background-color: #16232f;
+    background-color: #031c25;
     border-radius:10px;
 }
 .layout-tab-bar .item:first-child,
 .layout-tab-bar .item--focus:first-child {
     border-radius: 7px 7px 7px 0px;
     /* border-radius: 0px 7px 0px 0px; */
-    border-left: 0px solid #b7b8b97c;
+    border-left: 0px solid #b7b8b93f;
 }
 .layout-tab-bar .item__text{
     padding: 4px 0px 0px 8px;
