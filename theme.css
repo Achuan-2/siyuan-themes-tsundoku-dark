@@ -1311,7 +1311,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     font-size: 15px;
     background-color: var(--b3-theme-background) !important;
     /* border-bottom: 2px solid #47707c75; */
-    border-top: 1px solid #b7b8b9;
+    border-top: 1px solid #9cadbe;
     border-right: 0px solid #b7b8b9;
     border-left: 0px solid #b7b8b9;
     border-bottom: 0px solid transparent;
@@ -1327,6 +1327,9 @@ div[data-subtype='t'][data-type='NodeList'] {
 .layout-tab-bar {
     background-color: #031c25;
     border-radius:10px;
+}
+.b3-dialog__container .layout-tab-bar {
+    background-color: transparent
 }
 .layout-tab-bar .item:first-child,
 .layout-tab-bar .item--focus:first-child {
