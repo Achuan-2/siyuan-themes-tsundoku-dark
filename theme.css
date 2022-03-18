@@ -1292,14 +1292,14 @@ div[data-subtype='t'][data-type='NodeList'] {
     /* padding: 4px 4px 3px 14px; */
     border: 0px;
     border: 1px solid #b7b8b93f;
-    border-top: 1px solid #b7b8b93f;
+    border-top: 1px solid transparent;
     border-bottom: 0px solid transparent;
     /* border: 1px solid #b7b8b93f;  */
     /* border-radius: 7px 7px 0px 0px; */
     border-radius: 7px 7px 7px 7px;
     /* margin-right: 2px; */
     /* transition: all 0.1s ease; */
-    background-color: #04101dad;
+    background-color: #031c25;
     box-shadow: 1px 4px 2px 0 var(--b3-theme-background);
     transition: background-color 0.1s ease-in-out;
 
