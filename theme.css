@@ -1,3 +1,5 @@
+/* 导入代码块样式 */
+@import url("style/code_block.css");
 /* 导入自定义属性 */
 @import url("style/attr.css");
 /* 导入自定义无序列表样式 */
@@ -947,8 +949,6 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 
 
-
-
 /* -------------------------------代码块样式-------------------------------------- */
 
 
@@ -975,7 +975,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     position: relative;
     display: block;
     border-radius: 4px;
-    background: #000b14;
+    background: var(--b3-protyle-code-background);
     box-shadow: 0px 2px 6px 2px rgb(6 6 6);
     padding-top: 32px !important;
 
@@ -1046,6 +1046,8 @@ div[data-subtype='t'][data-type='NodeList'] {
 .code-block:hover .protyle-icons {
     opacity: 1 !important;
 }
+
+
 
 
 /* -----------------      外观样式 ----------------- */
