@@ -530,6 +530,11 @@ strong {
 .protyle-wysiwyg [data-node-id].li .bq>.list {
     margin-left: 0px;
 }
+/* 调整列表下引述块小竖线 */
+.protyle-wysiwyg [data-node-id].li>.bq{
+    left:0.07em;
+    top:-1px;
+}
 /* 块引用 */
 .protyle-wysiwyg [data-node-id] span[data-type='block-ref']{
     color: var(--b3-protyle-inline-blockref-color); /*更改颜色*/
