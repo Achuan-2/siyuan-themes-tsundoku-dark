@@ -1,39 +1,48 @@
+
+div[data-subtype="u"].list {
+    /* 无序列表自定义层级样式 */
+    --u1-style: '●';
+    --u2-style: '◆';
+    --u3-style: '❖';
+    --u4-style: '➤';
+    --u5-style: '■';
+}
 .li[data-subtype="u"]>.protyle-action{
-	color:transparent !important;
+	color:transparent!important;
 }
 .li[data-subtype="u"]>.protyle-action:before{
     color:var(--b3-theme-on-background) !important;
 }
 .li[data-subtype="u"][fold="1"]>.protyle-action:before{
-    color: #3ca3ce !important;
+    color: #1757b5bb !important;
 }
 /* 第1层级 */
 .list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action:before {
-    content: '●';
+    content: var(--u1-style);
     font-size: 0.4em;
     position: absolute;
 }
 /* 第2层级 */
 .list[data-subtype="u"]>.li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action:before {
-    content: '◆';
+    content: var(--u2-style);
     font-size: 0.5em;
     position: absolute;
 }
 /* 第3层级 */
 .list[data-subtype="u"]>.li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action:before {
-    content: '❖';
+    content: var(--u3-style);
     font-size: 0.6em;
     position: absolute;
 }
 /* 第4层级 */
 .list[data-subtype="u"]>.li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action:before {
-    content: '➤';
+    content: var(--u4-style);
     font-size: 0.5em;
     position: absolute;
 }
 /* 第5层级及之后层级 */
 .list[data-subtype="u"]>.li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action:before {
-    content: '■';
+    content: var(--u5-style);
     font-size: 0.5em;
     position: absolute;
 }
