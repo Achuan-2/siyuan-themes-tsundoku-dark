@@ -1304,7 +1304,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 .layout-tab-bar .item {
     /* padding: 4px 4px 3px 14px; */
     border: 0px;
-    border: 1px solid #b7b8b93f;
+    border: 1px solid #0b2b37;
     border-top: 1px solid transparent;
     border-bottom: 0px solid transparent;
     /* border: 1px solid #b7b8b93f;  */
@@ -1312,7 +1312,7 @@ div[data-subtype='t'][data-type='NodeList'] {
     border-radius: 7px 7px 7px 7px;
     /* margin-right: 2px; */
     /* transition: all 0.1s ease; */
-    background-color: #031c25;
+    background-color: #0b2b37;
     box-shadow: 1px 4px 2px 0 var(--b3-theme-background);
     transition: background-color 0.1s ease-in-out;
 
@@ -1326,9 +1326,9 @@ div[data-subtype='t'][data-type='NodeList'] {
     font-size: 15px;
     background-color: var(--b3-theme-background) !important;
     /* border-bottom: 2px solid #47707c75; */
-    border-top: 1px solid #9cadbe;
-    border-right: 0px solid #b7b8b9;
-    border-left: 0px solid #b7b8b9;
+    border-top: 1px solid #0b2b37;
+    border-right: 0px solid #0b2b37;
+    border-left: 0px solid #0b2b37;
     border-bottom: 0px solid transparent;
 }
 /* 多窗口foucs的标签页 */
@@ -1341,7 +1341,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 /* 标签页后面的背景 */
 .layout-tab-bar {
     background-color: #031c25;
-    border-radius:10px;
+    /* border-radius:10px; */
 }
 .b3-dialog__container .layout-tab-bar {
     background-color: transparent
@@ -1989,15 +1989,25 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     background-color:#53474b;
 }
 
-.layout__resize--lr{
+
+/* 调整外框样式 */
+.layout__resize--lr {
     background-color:black;
+    width: 2px;
+    margin: 0px -2px 0px 0px;
 }
 .layout__resize--lr:after{
-    width: 2px;
+    width: 3px;
 }
-.layout__center {
-    margin: 0px 0px 0px 6px;
+.file-tree {
+    border-radius: 5px 5px 0px 0px;
 }
+
+.layout-tab-container {
+    background-color: #031c25;
+}
+
+
 .b3-typography em, .protyle-wysiwyg em{
     color: inherit;
 }
