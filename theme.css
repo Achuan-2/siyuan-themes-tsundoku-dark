@@ -607,6 +607,12 @@ div[data-type='block-render'] {
     border-left: 0px dashed #010e1b;
     padding: 4px 10px;
     margin-bottom:12px;
+    margin-top: 10px;
+
+}
+/* 调整列表下嵌入块小竖线*/
+.protyle-wysiwyg [data-node-id].li>[data-type="NodeBlockQueryEmbed"]{
+    top:-10px;
 }
 .protyle-wysiwyg__embed {
     border-top: 3px dashed #10d6d69c;
