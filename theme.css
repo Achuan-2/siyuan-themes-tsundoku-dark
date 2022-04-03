@@ -731,8 +731,10 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 /* 行内代码 */
 /* .protyle-wysiwyg [data-node-id] code, */
 .b3-typography code:not(.hljs):not(:empty) , .protyle-wysiwyg code:not(.hljs):not(:empty){
-    /* display: inline-flex; */
-    transform: translateY(-1.5px);
+    position: relative;
+    display: inline-block;
+    margin: 0px 2px 0px;
+    top: -0.1em;
     padding: 0em 0.4em;
     margin:0px 2px;
     font-size: 85%;
@@ -744,6 +746,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     color: var(--b3-protyle-inline-code-color);
     background-color: var(--b3-protyle-inline-code-background);
     box-shadow: #0993a580 0px 0px 3px 1px inset;
+    font-size: 80%;
 }
 
 /* 超链接 */
@@ -2071,12 +2074,12 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     box-shadow: inherit;
 }
 
-/* 调整自定义演示：灰色不加粗 */
+/* 调整自定义颜色：灰色不加粗 */
 strong[style="color: var(--b3-font-color5);"] {
     font-weight: 400 !important;
 }
 
-
+/* 修复一些按钮出现滚轮 */
 .b3-label .fn__flex-1 {
     overflow: hidden;
 }
