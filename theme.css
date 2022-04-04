@@ -635,7 +635,7 @@ div[data-type='block-render'] {
 
 /* 文件树中区别文件数和引用数 */
 li[data-type='navigation-file'] .counter {
-    color: #ef9a9ab9;
+    color: var(--b3-protyle-inline-blockref-color);
     /* background-color: #dfdfdf9e; */
     font-weight: 600;
     background: transparent !important;
