@@ -197,7 +197,10 @@
     --b3-menu-highlight-focus-color: #13c2c2f1;
     /* 文件树背景高亮颜色 */
     --b3-menu-highlight-background: #293241;
-    --b3-tab-custom-background: #19232c;
+    --custom-tab-background: #0b2b37;
+    --custom-tab-hover-background: #76878d38;
+    --custom-tab-border:#0b2b37;
+    --custom-tab-focus-top-border: #046868;
 }
 
 .render-node[data-subtype='graphviz'] .graph > polygon {
@@ -1319,100 +1322,67 @@ div[data-subtype='t'][data-type='NodeList'] {
     background: #2f4150;
 }
 
-
-/* ------------------------------------------------------------------ */
-
-/* 标签页样式 */
-.layout-tab-bar .item {
-    /* padding: 4px 4px 3px 14px; */
-    border: 0px;
-    border: 1px solid #0b2b37;
-    border-top: 1px solid transparent;
-    border-bottom: 0px solid transparent;
-    /* border: 1px solid #b7b8b93f;  */
-    /* border-radius: 7px 7px 0px 0px; */
-    border-radius: 7px 7px 7px 7px;
-    /* margin-right: 2px; */
-    /* transition: all 0.1s ease; */
-    background-color: #0b2b37;
-    box-shadow: 1px 4px 2px 0 var(--b3-theme-background);
-    transition: background-color 0.1s ease-in-out;
-
+.protyle-title__input,
+.layout__wnd--active .protyle-content,
+.layout__wnd--active .protyle-title .protyle-title__input {
+    /* 当前编辑窗口保持主背景色 */
+    background-color: transparent;
 }
 
-/* 选中的标签页 */
-.layout-tab-bar .item--focus {
-    border-radius: 7px 7px 0px 0px; 
-    color: #00ffff79;
-    font-weight: 400;
-    font-size: 15px;
-    background-color: var(--b3-theme-background) !important;
-    /* border-bottom: 2px solid #47707c75; */
-    border-top: 1px solid #0b2b37;
-    border-right: 0px solid #0b2b37;
-    border-left: 0px solid #0b2b37;
-    border-bottom: 0px solid transparent;
-}
-/* 多窗口foucs的标签页 */
-.layout__wnd--active .layout-tab-bar .item--focus {
-    color: var(--b3-menu-highlight-focus-color);
-    font-weight: 600;
-    /* 更改多窗口标签页当前页面底框高亮颜色 */
-    border-top: 2px solid #046868;
-}
-/* 标签页后面的背景 */
+/* ----------------------------标签页、页签样式 Start----------------------------------------- */
+
+
 .layout-tab-bar {
     background-color: #031c25;
-    /* border-radius:10px; */
 }
+
 .b3-dialog__container .layout-tab-bar {
-    background-color: transparent
+    background-color: transparent;
 }
-/* .layout-tab-bar .item:first-child,
-.layout-tab-bar .item--focus:first-child {
-    border-radius: 7px 7px 7px 0px;
-    border-left: 0px solid #b7b8b93f;
-} */
-.layout-tab-bar .item__text{
-    padding: 4px 0px 0px 8px;
+
+.layout-tab-bar .item {
+    border: 1px solid var(--custom-tab-border);
+    border-radius: 7px 7px 7px 7px;
+    background-color: var(--custom-tab-background);
+    box-shadow: transparent;
+    box-shadow: 0px 6px 0px 0 var(--b3-theme-background);
 }
-/* 未保存样式 */
-/* .layout__wnd--active .layout-tab-bar .item--unsave {
-    border-bottom: 2px solid #47707c75;
-} */
 
-/* 由于1.2标签页横向排列不换行，故取消 */
-/* 调整选中标签页文字最大宽度 */
-/* .item--focus .item__text {
-    max-width: 300px;
-} */
+/* 已打开的标签页 */
+.layout-tab-bar .item--focus,
+.layout__wnd--active .layout-tab-bar .item--focus {
+    border-radius: 7px 7px 0px 0px;
+    border: 0px solid transparent;
+    border-top: 2px solid grey;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: var(--b3-theme-surface);
 
-/* .layout-tab-bar .item__text::after {
-    content: ' ';
-    position: absolute;
-    left: 140px;
-    width: 16px;
-    height: 100%;
-    background: linear-gradient(
-90deg, #16232f0f, #272728a3);
-    pointer-events: none;
-} */
+}
+.layout__wnd--active .layout-tab-bar .item--focus>.item__text{
+    color: var(--b3-menu-highlight-focus-color);
+}
 
-/* 标签页按钮 */
-/* .layout-tab-bar .item__close {
-    margin-left: 8px;
-    height: 8px;
-    width: 8px;
-    padding: 4px;
-    border-radius: 10px;
-} */
-/* .layout-tab-bar .item{
-    flex:none;
-} */
+/* 多窗口foucs的标签页 */
+.layout__wnd--active .layout-tab-bar .item--focus,
+.b3-dialog__container .layout-tab-bar .item--focus {
+    font-weight: 600;
+    border-top: 2px solid var(--custom-tab-focus-top-border);
+
+}
+
+
+/* hover页签背景色 */
 .layout-tab-bar .item:hover:not(.item--focus) {
-    background-color: #76878d38;
+    background-color: var(--custom-tab-hover-background);
 }
 
+/* siyuan 1.9.6增加的标签页focus shadow取消 */
+.layout__wnd--active .layout-tab-bar .item--focus {
+    box-shadow: inherit;
+}
+
+/* ----------------------------标签页、页签样式 END----------------------------------------- */
 /* 面包屑 */
 .protyle-breadcrumb {
     /* background-color: var(--b3-tab-custom-background); */
