@@ -817,11 +817,7 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
     padding: 0;
     margin: 0px 0px 0px 0px;
 }
-.protyle-wysiwyg [data-node-id].li>.p {
-    margin-left: 28px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+
 
 .b3-typography ul li.protyle-task::before {
     margin:2px 2px 0px -2px; 
