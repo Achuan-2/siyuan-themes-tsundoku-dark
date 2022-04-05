@@ -1335,7 +1335,6 @@ div[data-subtype='t'][data-type='NodeList'] {
 .b3-dialog__container .layout-tab-bar {
     background-color: transparent;
 }
-
 .layout-tab-bar .item {
     border: 1px solid var(--custom-tab-border);
     border-radius: 7px 7px 7px 7px;
@@ -1349,20 +1348,22 @@ div[data-subtype='t'][data-type='NodeList'] {
 .layout__wnd--active .layout-tab-bar .item--focus {
     border-radius: 7px 7px 0px 0px;
     border: 0px solid transparent;
-    border-top: 2px solid grey;
+    border-top: 2px solid transparent;
     font-weight: 400;
     font-size: 15px;
     background-color: var(--b3-theme-surface);
+    color: var(--b3-menu-highlight-focus-color);
 
 }
-.layout__wnd--active .layout-tab-bar .item--focus>.item__text{
+
+.layout__wnd--active .layout-tab-bar .item--focus>.item__text {
     color: var(--b3-menu-highlight-focus-color);
 }
 
 /* 多窗口foucs的标签页 */
 .layout__wnd--active .layout-tab-bar .item--focus,
 .b3-dialog__container .layout-tab-bar .item--focus {
-    font-weight: 600;
+    /* font-weight: 600; */
     border-top: 2px solid var(--custom-tab-focus-top-border);
 
 }
@@ -1378,6 +1379,10 @@ div[data-subtype='t'][data-type='NodeList'] {
     box-shadow: inherit;
 }
 
+/* 如果页签文字太长避免出现隐藏掉的文字 */
+.layout-tab-bar .item__text {
+    padding: 4px 0px 0px 8px;
+}
 /* ----------------------------标签页、页签样式 END----------------------------------------- */
 /* 面包屑 */
 .protyle-breadcrumb {
