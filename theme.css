@@ -120,13 +120,13 @@
     /* PDF */
     --b3-pdf-sidebar-width: 200px;
     --b3-pdf-offset: 0;
-    --b3-pdf-background1: #f4eba3;
-    --b3-pdf-background2: #9af997;
-    --b3-pdf-background3: #59c6ff;
+    --b3-pdf-background1: #c79d59;
+    --b3-pdf-background2: #5b8c59;
+    --b3-pdf-background3: #2f8cca;
     --b3-pdf-background4: #fd7472;
-    --b3-pdf-background5:  #faad14;
-    --b3-pdf-background6:  #b9b7b7;
-    --b3-pdf-background7: #52d4ca;
+    --b3-pdf-background5:  #7b6843;
+    --b3-pdf-background6:  #9aa4a2;
+    --b3-pdf-background7: #438983;
     /* 动画效果 */
     --b3-transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
 
@@ -1720,7 +1720,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 /* pdf搜索高亮 */
 .textLayer .highlight.selected {
-    background-color: #ffa938b9;
+    background-color: #f7e25ab9;
 }
 
 
@@ -1768,7 +1768,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 /* pdf光标选中文本样式 */
 .pdf__outer ::selection{ 
     /* 颜色不能加透明度，不然有叠加层  */
-    background-color:#a7cfe2;
+    background-color:#4d6e7d;
 }
 /* pdf矩形选框增加border宽度 */
 .pdf__rect.popover__block>div[style*="border: 2px solid var(--b3-pdf-"]{
