@@ -2,11 +2,9 @@
 
 /*整个导图取消缩进*/
 .protyle-wysiwyg *[custom-f="dt"]{
-    --b3-border-daotu: 1px solid #869ba0;
+    --b3-border-daotu: 1px solid #b2c8ce;
 }
-.protyle-wysiwyg *[custom-f~="dt"].list>.li>.protyle-action {
-    display: none;
-}
+
 .protyle-wysiwyg *[custom-f="dt"] .li .list {
     padding: 0px;
     margin: 0px;
@@ -54,13 +52,13 @@
     margin-left: -8px;
     padding: 5px 10px;
     margin-top: 2px;
-    /* background-color: var(--b3-block-daotu); */
+    background-color: #2e516b;
     border-radius: 3px;
     box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
     white-space: nowrap;
 }
 
-.protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="t"]>[data-node-id]>div[spellcheck="false"] {
+.protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="t"]>[data-node-id]:nth-child(2)>div[spellcheck="false"] {
     padding: 5px 10px 5px 32px;
 }
 
@@ -123,7 +121,8 @@
 .protyle-wysiwyg *[custom-f="dt"] .list>.li:first-child:nth-last-child(2)::after {
     border-radius: 0px;
     width: 22px;
-    margin-bottom: -2px;
+    margin-bottom: -1px;
+
 }
 
 /*单子项居中*/
