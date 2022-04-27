@@ -2,8 +2,9 @@
 
 /*整个导图取消缩进*/
 .protyle-wysiwyg *[custom-f="dt"]{
-    --b3-border-daotu: 1px solid #b2c8ce;
+    --b3-border-daotu: 2px solid #3d5063;
 }
+
 
 .protyle-wysiwyg *[custom-f="dt"] .li .list {
     padding: 0px;
@@ -54,7 +55,7 @@
     margin-top: 2px;
     background-color: #2e516b;
     border-radius: 3px;
-    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+    box-shadow: rgba(144, 163, 163, 0.2) 0px 0px 0px 1px, rgba(144, 163, 163, 0.2) 0px 2px 4px;
     white-space: nowrap;
 }
 
@@ -63,8 +64,13 @@
 }
 
 .protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="o"]>[data-node-id]>div[spellcheck="false"] {
+    padding: 5px 10px 5px 10px;
+}
+
+.protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="o"]>[data-node-id]:nth-child(2)>div[spellcheck="false"] {
     padding: 5px 10px 5px 25px;
 }
+
 
 /*去除竖线*/
 .list[custom-f="dt"][data-node-id] .li>:before {
@@ -121,8 +127,7 @@
 .protyle-wysiwyg *[custom-f="dt"] .list>.li:first-child:nth-last-child(2)::after {
     border-radius: 0px;
     width: 22px;
-    margin-bottom: -1px;
-
+    margin-bottom: -2px;
 }
 
 /*单子项居中*/
@@ -160,11 +165,16 @@
 }
 
 /*取消根目录线*/
-div[data-node-index]>[data-type="NodeListItem"]::after,
+/* div[data-node-index]>[data-type="NodeListItem"]::after,
 div[data-node-index]>[data-type="NodeListItem"]::before {
     display: none;
+} */
+
+.protyle-content *[custom-type~=map] [data-node-id].li:first-child:nth-last-child(2)::after{
+    border-radius: 0px;
 }
 .protyle-wysiwyg .list[custom-f="dt"] [data-node-id].li>.protyle-action--task svg {
     opacity: 1 !important;
 }
+
 /*————————————————————————————————————————————————————————————————————————*/
