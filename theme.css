@@ -654,14 +654,15 @@ li[data-type='navigation-file'] .counter {
     background: transparent !important;
 }
 /* 内容中计数 */
-.protyle-wysiwyg .counter,
-.protyle-wysiwyg .protyle-attr--refcount {
+.counter,
+.protyle-attr--refcount,
+.protyle-wysiwyg .protyle-attr--refcount{
     margin-left: 8px;
     /* background-color: rgb(45 58 56 / 11%); */
     /* z-index: 2; */
     line-height: 16px;
     padding: 1px 5.5px 1.5px 5.5px;
-    color: #41b7c4;
+    color: var(--b3-protyle-inline-blockref-color);
     border-radius: 50%;
     font-size: 12px;
     user-select: none;
@@ -700,10 +701,7 @@ li[data-type='navigation-file'] .counter {
     border-radius: 10%;
 } */
 
-.protyle-wysiwyg .counter,
-.protyle-attr--refcount:hover {
-    color: #ef9a9ab9;
-}
+
 
 /* sql查找不到字体颜色*/
 div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
