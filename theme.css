@@ -7,7 +7,7 @@
 /* 导入搜索窗口调大样式 */
 @import url("style/ctrlP.css");
 /* 导入文档属性 */
-@import url("style/doc-attr.css");
+@import url("style/doc_attr.css");
 /* 导入代码块样式 */
 @import url("style/code_block.css");
 /* 导入自定义属性 */
@@ -986,105 +986,6 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 .protyle-task--done:hover  .code-block,
 .protyle-task--done:hover img {
-    opacity: 1 !important;
-}
-
-
-/* -------------------------------代码块样式-------------------------------------- */
-
-
-.protyle-reset .hljs,
-.protyle-wysiwyg .hljs,.b3-typography .hljs {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    padding-left: 16px;
-    /* font-size: 14px; */
-    /* font-size: 77%; */
-    overflow: auto;
-    font-family: var(--b3-font-family-code);
-    /* font-family: mononoki, Consolas; */
-    /* background-size: 20px 20px; */
-    background-image: none !important;
-    /* background: var(--b3-protyle-code-background); */
-    background: var(--b3-protyle-code-background);
-    border-radius: 0px 0px 4px 4px;
-
-}
-
-
-.code-block {
-    position: relative;
-    display: block;
-    border-radius: 4px;
-    background: var(--b3-protyle-code-background);
-    box-shadow: 0px 2px 6px 2px rgb(6 6 6);
-    padding-top: 32px !important;
-
-}
-.code-block::after{
-    content: ' ';
-    position: absolute;
-    background: #fa625c;
-    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
-    border-radius: 50%;
-    top:10px;
-    left: 15px;
-    height: 12px;
-    width: 12px;
-    z-index: 1;
-    
-}
-/*  代码块行数*/
-.protyle-linenumber__rows {
-    margin-top: 32px !important;
-    background-color: var(--b3-protyle-code-background);
-    font-family: var(--b3-font-family-code);
-    opacity: 0.5;
-    width: 45px;
-    left:0px;
-
-}
-
-
-
-/* 代码语言显示 */
-.protyle-icons{
-    background-color: #b1c3c4;
-}
-.code-block .protyle-icons {
-
-    background-color: transparent;
-    border-radius: 4px;
-}
-
-.code-block .protyle-icons .protyle-action__language,.code-block .protyle-icons>span{
-    color: rgba(168, 209, 203, 0.719);
-}
-
-.code-block .protyle-icons {
-    opacity: 1;
-}
-.code-block .protyle-icons>span:hover {
-    color: var(--b3-theme-background);
-    background-color: #cad8dd;
-}
-.code-block .protyle-icons .protyle-action__copy {
-    opacity: 0;
-}
-.code-block:hover .protyle-icons .protyle-action__copy {
-    opacity: 1;
-}
-/* 代码块编辑时不闪 */
-
-
-.code-block:focus-within .protyle-icons .protyle-action__copy{
-    opacity: 0;
-}
-.code-block .protyle-icons .protyle-action__copy:hover{
-    opacity: 1;
-}
-
-.code-block:hover .protyle-icons {
     opacity: 1 !important;
 }
 
