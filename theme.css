@@ -53,7 +53,7 @@
     /* 文字颜色 */
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
-    --b3-theme-on-background: #c9d1d9;
+    --b3-theme-on-background: #ededed;
     --b3-theme-on-surface: #9aa0a6;
     --b3-theme-on-error: #fff;
 
@@ -1605,6 +1605,8 @@ div[data-subtype='t'][data-type='NodeList'] {
 /* 块标提示不被窗口线遮挡 */
 .protyle-gutters {
     z-index: 3;
+    /* 块标移动增加过渡 */
+    transition: all 200ms ease-out;
 }
 /* pdf双链 */
 .protyle-wysiwyg [data-node-id] span[data-type='file-annotation-ref'] {
@@ -1827,6 +1829,15 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     border-radius: 6px;
     padding: 6px 6px 6px;
     min-width: 200px;
+}
+/* 横版斜杠菜单 */
+.b3-menu,.b3-menu .b3-menu__submenu {
+    column-count: 4;
+    column-width: 160px !important;
+    column-gap: 10px;
+    column-rule: 1px solid #13c2c240;
+    min-width: 50vw !important;
+    max-height: 480px !important;
 }
 .b3-menu .b3-menu__submenu {
     margin-left: 10px;
