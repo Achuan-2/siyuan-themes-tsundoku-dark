@@ -1831,9 +1831,7 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     min-width: 200px;
 }
 /* 横版斜杠菜单 */
-/* .b3-menu,.b3-menu .b3-menu__submenu { */
 .b3-menu.b3-list.b3-list--background.hint--menu{
-
     column-count: 4;
     column-width: 160px !important;
     column-gap: 10px;
