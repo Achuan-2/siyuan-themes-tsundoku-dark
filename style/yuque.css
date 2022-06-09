@@ -276,10 +276,6 @@ p[style*="background-color: var(--b3-font-background12);"]{
 
 /* 优化代码块和行内代码 */
 
-.protyle-wysiwyg .bq[style*="background-color: var("] .hljs {
-    background-color: #f6faf8a8 !important;
-
-}
 
 .protyle-wysiwyg .bq[style*="background-color: var("] .code-block {
     box-shadow: 0 0 0 1px #1e25351a;
@@ -287,27 +283,23 @@ p[style*="background-color: var(--b3-font-background12);"]{
 }
 
 
-.bq[style*="background-color: var(--b3-card-error-background);"] .code-block,
-.bq[style*="background-color: var(--b3-card-error-background);"] .protyle-linenumber__rows {
-    background-color: #ffcfcc;
+.bq[style*="background-color: var(--b3-card-error-background);"] .code-block {
+    background-color: var(--b3-card-error-background);
 }
 
 
 
-.bq[style*="background-color: var(--b3-card-warning-background);"] .code-block,
-.bq[style*="background-color: var(--b3-card-warning-background);"] .protyle-linenumber__rows {
-    background-color: #f7e9d0;
+.bq[style*="background-color: var(--b3-card-warning-background);"] .code-block{
+    background-color: var(--b3-card-warning-background);
 }
 
 
-.bq[style*="background-color: var(--b3-card-info-background);"] .code-block,
-.bq[style*="background-color: var(--b3-card-info-background);"] .protyle-linenumber__rows {
-    background-color: #81c7e8;
+.bq[style*="background-color: var(--b3-card-info-background);"] .code-block{
+    background-color: var(--b3-card-info-background);
 }
 
 
 
-.bq[style*="background-color: var(--b3-card-success-background);"] .code-block,
-.bq[style*="background-color: var(--b3-card-success-background);"] .protyle-linenumber__rows {
-    background-color: #bee8b9;
+.bq[style*="background-color: var(--b3-card-success-background);"] .code-block{
+    background-color: var(--b3-card-success-background);
 }

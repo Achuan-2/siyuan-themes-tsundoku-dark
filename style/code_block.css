@@ -27,7 +27,7 @@
     background-image: none !important;
     /* background: var(--b3-protyle-code-background); */
     background-color: #1e2e3ca8 !important;
-    border-radius: 0px 0px 4px 4px;
+    /* border-radius: 0px 0px 4px 4px; */
 
 }
 
@@ -53,7 +53,9 @@
     width: 12px;
     z-index: 1;
 }
-
+.protyle-wysiwyg .code-block[style*="background-color: var("] {
+    box-shadow: none;
+}
 
 .b3-typography .code-block .protyle-action .protyle-icon,
 .protyle-wysiwyg .code-block .protyle-action .protyle-icon {
@@ -94,10 +96,10 @@
 /*  代码块行数*/
 .protyle-linenumber__rows {
     margin-top: 32px !important;
-    background-color: #192836;
+    background-color: #192836aa;
     font-family: var(--b3-font-family-code);
     opacity: 0.5;
-    width: 45px;
+    width: 54px;
     left:0px;
     padding:4px
 
