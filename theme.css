@@ -254,11 +254,11 @@ body{
 .block__icons {
     background-color: #041f29;
 }
-.block__icons span.fn__space,
+/* .block__icons span.fn__space,
 .block__icons div.fn__space{
     display: inline-block;
     flex-shrink: 1 !important;
-}
+} */
 
 /* 搜索项页面名称背景 */
 .spread-search__path {
