@@ -1974,3 +1974,8 @@ body>div.b3-dialog--open>div>div.b3-dialog__container>div:nth-child(3)>div>div.f
     background-color: transparent !important;
 }
 
+
+/* 修复集市的页签栏 */
+.b3-dialog__container .layout-tab-bar {
+    background-color: var(--b3-theme-surface);
+}
