@@ -1128,13 +1128,6 @@ div[data-subtype='t'][data-type='NodeList'] {
     color:var(--b3-theme-on-error);
 }
 /* 消息提示 */
-/* 消息提示 */
-#message .b3-button {
-    color: #fff;
-    background-color: #4db999;
-    border-radius: 16x;
-    padding: 8px 8px;
-}
 .b3-snackbar__content {
     color: #fff;
     background-color: #4db999;
