@@ -240,6 +240,7 @@ body{
     background-color: #101820;
 } */
 /* 主要背景色 */
+.status,
 .dock {
     background-color: #031c25;
 }
