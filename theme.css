@@ -1243,6 +1243,7 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 }
 
+
 .layout__wnd--active .layout-tab-bar .item--focus>.item__text {
     color: var(--b3-menu-highlight-focus-color);
 }
@@ -1795,19 +1796,24 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
     border-bottom: 2px solid var(--b3-theme-on-background);
 }
 
-/* 菜单栏加宽 */
-.b3-menu,.b3-menu .b3-menu__submenu {
-    border-radius: 6px;
-    padding: 6px 6px 6px;
-    min-width: 200px;
+/* 左上方菜单栏加宽 */
+@media screen and (min-width: 768px) {
+
+    .b3-menu,
+    .b3-menu .b3-menu__submenu {
+        border-radius: 6px;
+        padding: 6px 6px 6px;
+        min-width: 200px;
+    }
+
+    .b3-menu .b3-menu__submenu {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 5px 6px 5px;
+    }
 }
 
-.b3-menu .b3-menu__submenu {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 5px 6px 5px;
-}
-
+/* emoji选中背景 */
 .emojis__item--current {
     background: rgba(103, 182, 235, 0.658);
     border-radius: 4px;
