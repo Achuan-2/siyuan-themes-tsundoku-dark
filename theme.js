@@ -383,7 +383,18 @@ function getDocumentTime(tilteElement) {
 	var second = tS.substring(12, 14);
 
 	return (
-		year + "-" + moon + "-" + day + "  " + hour + ":" + minute + ":" + second
+		"Created at " +
+		year +
+		"-" +
+		moon +
+		"-" +
+		day +
+		"  " +
+		hour +
+		":" +
+		minute +
+		":" +
+		second
 	);
 	/*return year+"年"+moon+"月"+day+"日"+hour+"时"+minute+"分"+second+"秒";*/
 }
