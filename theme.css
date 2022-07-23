@@ -369,10 +369,10 @@ body{
 }
 
 /* 标题加粗样式 */
-
+/* 
 .protyle-wysiwyg [data-type="NodeHeading"] strong {
     text-shadow: 1px 1px 1px #efefef;
-}
+} */
 
 .protyle-wysiwyg [data-type="NodeHeading"] strong:not([style]) {
     color: inherit !important;
@@ -1470,12 +1470,12 @@ div[data-subtype='t'][data-type='NodeList'] {
 
 /* ----------optimize-custom-emoji ----Start--------*/
 /* 调整编辑器内的自定义emoji大小 */
-.b3-typography img.emoji, .protyle-wysiwyg img.emoji {
+/* .b3-typography img.emoji, .protyle-wysiwyg img.emoji {
     cursor: auto;
     max-width: 2.5em;
     box-shadow: none !important;
     vertical-align: top;
-}
+} */
 
 /* 取消官方悬浮文档图标的修改提示 */
 .b3-list--files .b3-list-item__icon:hover {
@@ -1936,4 +1936,10 @@ body>div.b3-dialog--open>div>div.b3-dialog__container>div:nth-child(3)>div>div.f
 /* 修复集市的页签栏 */
 .b3-dialog__container .layout-tab-bar {
     background-color: var(--b3-theme-surface);
+}
+/* 聚焦面包屑高亮 */
+.protyle-breadcrumb__item:hover,
+.protyle-breadcrumb__item--active {
+    color: var(--b3-menu-highlight-color);
+    background-color: var(--b3-menu-highlight-background);
 }
