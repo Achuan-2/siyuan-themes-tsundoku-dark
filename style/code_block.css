@@ -1,92 +1,80 @@
-/* -----------------设置代码块最大长度，添加纵向滚动条------------------------------ */
-/* .protyle-wysiwyg:not([id="preview"])  .code-block {
-    overflow-y: auto;
-    max-height: 80vh;
-}
-.protyle-wysiwyg:not([id="preview"])  .code-block::-webkit-scrollbar-thumb{
-    border-left:solid 0px transparent
-}
-.protyle-wysiwyg:not([id="preview"])  .li .code-block:not(:nth-child(2)) {
-    overflow-y: inherit;
-    max-height: inherit;
-} */
-/* -------------------------------代码块样式-------------------------------------- */
-
-
 .protyle-reset .hljs,
-.protyle-wysiwyg .hljs,.b3-typography .hljs {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    padding-left: 16px;
-    /* font-size: 14px; */
-    /* font-size: 77%; */
-    overflow: auto;
+.protyle-wysiwyg .hljs,
+.b3-typography .hljs {
+    padding: 8px 16px 4px 16px !important;
     font-family: var(--b3-font-family-code);
-    /* font-family: mononoki, Consolas; */
-    /* background-size: 20px 20px; */
+    background-size: 20px 20px;
     background-image: none !important;
-    /* background: var(--b3-protyle-code-background); */
-    background-color: #1e2e3ca8 !important;
-    /* border-radius: 0px 0px 4px 4px; */
+    background-color: var(--b3-protyle-code-background) !important;
     border-radius: 0 0px 4px 0;
+    /* background-image: url('../src/paper.png') !important; */
 
 }
-
 
 .code-block {
     position: relative;
     display: block;
     border-radius: 4px;
     background: var(--b3-protyle-code-background);
-    box-shadow: 0px 2px 6px 2px rgb(6 6 6);
-    padding-top: 32px !important;
+    box-shadow: 0 0 0 1px #1e25351a;
+    padding-top: 25px !important;
+    /* background-image: url('../src/paper.png') !important; */
+}
 
+.protyle-wysiwyg[id="preview"] .code-block {
+    box-shadow: 0 0 0 1.5px #1e25351a;
 }
-.code-block::after {
-    content: ' ';
-    position: absolute;
-    background: #fa625c;
-    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
-    border-radius: 50%;
-    top: 10px;
-    left: 15px;
-    height: 12px;
-    width: 12px;
-    z-index: 1;
-}
-.protyle-wysiwyg .code-block[style*="background-color: var("] {
-    box-shadow: none;
-}
+
 
 .b3-typography .code-block .protyle-action .protyle-icon,
 .protyle-wysiwyg .code-block .protyle-action .protyle-icon {
-    background-color: #496369;
+    background-color: var(--b3-tooltips-color);
 }
+
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.li):not([data-type="NodeHeading"]).code-block {
     line-height: 1.625;
     height: 2px;
 }
-/* 功能标签栏 */
-.b3-typography .code-block .protyle-action,
-.protyle-wysiwyg [data-node-id].code-block .protyle-action {
-    left: auto;
-    right: 4px;
-    /* float: right; */
-    /* position: relative; */
-}
 
-/* 间隔 */
-.b3-typography .code-block .protyle-action>span.fn__flex-1,
-.protyle-wysiwyg [data-node-id].code-block .protyle-action>span.fn__flex-1 {
-    flex: 0;
-}
+
 
 /* 语言标签 */
-.b3-typography .code-block .protyle-action .protyle-action__language,
+/* 代码语言显示 */
 .protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
-    margin-left: 0.5em !important;
-    margin-right: 0.5em;
-    margin-top: -1px;
+    opacity: 1;
+}
+
+.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
+    display: flex;
+    font-size: 13px !important;
+    text-transform: uppercase;
+    height: 20px;
+    padding: 0 5px;
+    margin: 3px 0 0 8px;
+    color: #7e888d;
+}
+
+.protyle-wysiwyg .code-block[linenumber="true"] .protyle-action .protyle-action__language {
+    margin: 3px 0 0 68px !important;
+}
+
+.protyle-wysiwyg[contenteditable=true] .code-block .protyle-action .protyle-action__language:hover {
+    background-color: #a1abb161;
+}
+
+.code-block .protyle-action .protyle-action__language::after {
+    content: "";
+    width: 8px;
+    height: 19px;
+    margin-left: 5px;
+    background-color: var(--b3-theme-on-background);
+    -webkit-mask: url("../src/expand_more_black_18dp.svg") no-repeat center;
+    mask: url("../src/expand_more_black_18dp.svg") no-repeat center;
+    opacity: 0;
+}
+
+.code-block .protyle-action .protyle-action__language:hover::after {
+    opacity: 1;
 }
 
 .b3-typography .code-block .protyle-icons,
@@ -94,15 +82,14 @@
     top: 0;
     right: 0;
 }
+
 /*  代码块行数*/
 .protyle-linenumber__rows {
-    margin-top: 32px !important;
-    background-color: #1e2e3ca8;
+    margin-top: 24px !important;
+    background-color: var(--b3-protyle-code-background);
     font-family: var(--b3-font-family-code);
-    /* opacity: 0.5; */
-    /* width: 57px;
-    left: -2px; */
-    padding: 4px;
+    opacity: 0.7;
+    padding: 9px 4px 4px 4px;
     border-radius: 0px 0 0 4px;
 }
 
@@ -113,47 +100,31 @@
 
 
 
-/* 代码语言显示 */
-.protyle-wysiwyg .code-block .protyle-action .protyle-action__language {
-    opacity: 1;
-}
-.protyle-icons{
-    background-color: #b1c3c4;
-}
-.code-block .protyle-icons {
-
-    background-color: transparent;
-    border-radius: 4px;
+/* 按钮颜色 */
+.b3-typography .code-block .protyle-action .protyle-icon,
+.protyle-wysiwyg .code-block .protyle-action .protyle-icon {
+    background-color: #a1abb1;
 }
 
-.code-block .protyle-icons .protyle-action__language,.code-block .protyle-icons>span{
-    color: rgba(168, 209, 203, 0.719);
-}
 
-.code-block .protyle-icons {
-    opacity: 1;
-}
-.code-block .protyle-icons>span:hover {
-    color: var(--b3-theme-background);
-    background-color: #cad8dd;
-}
-.code-block .protyle-icons .protyle-action__copy {
-    opacity: 0;
-}
-.code-block:hover .protyle-icons .protyle-action__copy {
-    opacity: 1;
-}
-/* 代码块编辑时不闪 */
+/* ------代码语言栏居右--------- */
+/* .b3-typography .code-block .protyle-action,
+.protyle-wysiwyg [data-node-id].code-block .protyle-action {
+    left: auto;
+    right: 4px;
+} */
 
 
-.code-block:focus-within .protyle-icons .protyle-action__copy{
-    opacity: 0;
-}
-.code-block .protyle-icons .protyle-action__copy:hover{
-    opacity: 1;
-}
-
-.code-block:hover .protyle-icons {
-    opacity: 1 !important;
-}
-
+/* ---------mac三点--------- */
+/* .code-block::after {
+    content: ' ';
+    position: absolute;
+    background: #fa625c;
+    box-shadow: 23px 0 #fdbc40, 45px 0 #35cd4b;
+    border-radius: 50%;
+    top: 10px;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+    z-index: 1;
+} */

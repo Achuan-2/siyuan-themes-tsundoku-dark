@@ -105,7 +105,7 @@
     --b3-font-color8: #eb5042;
     --b3-font-color9: #899fff;
     --b3-font-color10:#ca98ff;
-    --b3-font-color11: #18fbc6;
+    --b3-font-color11: #d90ec5;
     --b3-font-color12: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
     --b3-font-background1: #ff8f89c9;
@@ -117,8 +117,8 @@
     --b3-font-background7: #f3a82fbd;
     --b3-font-background8: #eb5042d3;
     --b3-font-background9: #5667bb9d;
-    --b3-font-background10: #9164bb83;
-    --b3-font-background11: #00ffe562;
+    --b3-font-background10: #a979d683;
+    --b3-font-background11: #98268b;
     --b3-font-background12: #f5812ece;
     --b3-font-background13: var(--b3-theme-on-background);
     /* PDF */
@@ -174,7 +174,7 @@
     --b3-protyle-search-current-background: #204282;
 
     /* 代码片段背景 */
-    --b3-protyle-code-background: #0f1d2a;
+    --b3-protyle-code-background: #1c2b39;
 
     /* 所见即所得行内元素颜色 */
     --b3-protyle-inline-strong-color: #ffffff;
@@ -572,6 +572,13 @@ strong {
     opacity: 1;
     border-bottom: 1px dashed var(--b3-protyle-inline-blockref-color);
 }
+/* .protyle-wysiwyg [data-node-id] span[data-type='block-ref']::before {
+    content: "[[";
+}
+
+.protyle-wysiwyg [data-node-id] span[data-type='block-ref']::after {
+    content: "]]";
+} */
 .protyle-wysiwyg [data-node-id] span[data-type='block-ref']:hover {
     color: var(--b3-protyle-inline-blockref-hover-color); /*更改鼠标悬浮的颜色*/
     border-bottom: 1px dashed var(--b3-protyle-inline-blockref-hover-color); /*下划线可以去掉*/
@@ -850,137 +857,99 @@ div[data-type='NodeBlockQueryEmbed'] .ft__secondary {
 
 
 /* ---------------------复选框（待办事项）Start------------------------------------------------ */
-
-.protyle-wysiwyg [data-node-id].li > .protyle-action--task svg {
-    /* display: v; */
-    /* visibility: hidden;   */
+.b3-typography .protyle-task input {
     opacity: 0;
 }
-.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after{
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task svg {
+    opacity: 0;
+}
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:after {
     background-color: transparent !important;
     opacity: 0 !important;
 }
-.b3-typography  .protyle-task input {
-    opacity: 0;
-}
-.protyle-wysiwyg .protyle-action--task:before,.b3-typography .protyle-task:before{
+
+/* 复选框样式 */
+.protyle-wysiwyg .protyle-action--task:before,
+.b3-typography .protyle-task:before {
     content: '';
     position: absolute;
     display: inline-block;
     cursor: pointer;
     width: 1em;
     height: 1em;
-    /* top: 6.9em; */
-    /* right: 0.9em; */
     vertical-align: middle;
     text-align: center;
-    border: 0px;
-    border-radius: 0.17em;
-    background-color: #c7ced159;
-    top: 0.63em;
+    border: 1.7px solid #5f6368;
+    border-radius: 1em;
+    top: 0.5em;
     font-size: 0.9em;
 }
-.b3-typography  .protyle-task:before {
+
+.b3-typography .protyle-task:before {
     left: -1.2em;
     top: 0.5em;
 }
+
 /* 复选框选中 */
-/* .protyle-task--done>.protyle-action--task:before */
-.protyle-task--done > .protyle-action--task:before,.b3-typography .protyle-task--done:before{
+.protyle-task--done>.protyle-action--task:before,
+.b3-typography .protyle-task--done:before {
     content: '\2713';
     font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid transparent;
     line-height: 1em;
-    color: #d3ddd7;
-    background-color: #34a1cfbe;
+    color: #8f9091;
+    background-color: transparent;
 }
-/*  鼠标悬停 */
-.protyle-wysiwyg [data-node-id].li > .protyle-action--task:hover:before {
+
+/* 复选框鼠标悬停 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action--task:hover:before {
     content: '\2713';
     font-size: 0.9em;
     vertical-align: middle;
     line-height: 1em;
-    color: #f8f9fa;
-
+    color: #436681;
 }
 
-/* .protyle-task--done > .p */
-.protyle-task--done [data-type="NodeParagraph"]>div:first-child,.protyle-task--done p{
+/* 复选框完成 */
+.protyle-task--done [data-type="NodeParagraph"]>div:first-child,
+.protyle-task--done p {
     /* 完成的待办事项删除线 */
     text-decoration: line-through;
-    /* 字体颜色 */
-    color: #56a4c5c9 !important;
-}
-/* .protyle-task--done:hover [data-type="NodeParagraph"]>[contenteditable="true"],.protyle-task--done:hover p{
-    text-decoration: none;
-    transition: all 0.5s ease-in-out;
-} */
-.protyle-task--done strong,
-.protyle-task--done em,
-.protyle-task--done u{
-    /* text-decoration: line-through; */
-    /* 字体颜色 */
-    color: inherit;
-}
-.protyle-task--done s {
-    color: inherit;
     opacity: 0.5;
+    transition: all 0.5s ease-in-out;
 }
 
 
-/* 完成的待办列表调整透明度 */
-.protyle-task--done [data-type='a'],
-.protyle-task--done a {
-    opacity: 0.8;
-}
-.protyle-task--done [data-type='a']::before{
-    opacity: 0.8;
-}
-.protyle-task--done [data-type='a']:hover {
-    /* 超链接悬浮调整 */
-    opacity: 1.5;
+.protyle-task--done[fold="1"]>.protyle-action--task:before {
+    content: '\2713';
+    background-color: transparent;
+    border: none;
+    color: #476796;
 }
 
-
-/* 完成的待办事项有序列表样式 */
-.protyle-task--done  [data-subtype='o'].li>.protyle-action,
-.protyle-task--done  [data-subtype='o'].li::before,
-.protyle-task--done  .b3-typography ol>li{
-    color: #56a4c5c9;
-}
-/* 完成的待办事项无序列表样式 */
-.protyle-task--done  [data-subtype='u'].li > .protyle-action:before,.b3-typography .protyle-task--done  ul>li::before {
-    color: #56a4c5c9 !important;
-}
-/* 对完成的待办事项内容全部调整透明度，发现一个问题，父级的透明度会被子级继承 */
 div[data-subtype='t'][data-type='NodeList'] {
     position: relative;
-    /* background-color: red; */
 }
 
-.protyle-wysiwyg .protyle-task--done {
-    /* opacity: 0.5; */
-    /* filter:opacity(50%) ; */
-    /* opacity: 0.5; */
+/* 调整透明度 */
+.protyle-task--done {
+
     opacity: 1;
-    /* background: rgba(0,0,0,0.5); */
-    transition: opacity 0.5s ease-in-out;
-}
-.protyle-task--done  .code-block,
-.protyle-task--done  code,
-.protyle-task--done  kbd,
-.protyle-task--done  img{
-    opacity: 0.5;
     transition: opacity 0.5s ease-in-out;
 }
 
-
-.protyle-task--done:hover  .code-block,
-.protyle-task--done:hover img {
-    opacity: 1 !important;
+.protyle-task--done .protyle-task--done {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
-
-
+.protyle-task--done div[data-type="NodeParagraph"],
+.protyle-task--done .protyle-action--task {
+    opacity: 1;
+}
 
 /* -----------------      外观样式 ----------------- */
 
