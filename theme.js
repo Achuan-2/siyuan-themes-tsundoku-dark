@@ -63,10 +63,7 @@ function addSidebarHoverButtonEven(fun) {
 
 /*SidebarHoverButton 按钮点击后执行事件*/
 function sidebarHoverButtonImplementEven() {
-	loadStyle(
-		"/appearance/themes/Tsundoku Dark/customizeStyle/customizeCss.css",
-		"customizeCss"
-	);
+	loadStyle("/appearance/themes/Tsundoku Dark/src/topbar.css", "stylebarCss");
 
 	/**获取区域主体 */
 	var column = document.querySelectorAll("#layouts>div.fn__flex.fn__flex-1")[0];
@@ -108,7 +105,7 @@ function sidebarHoverButtonImplementEven() {
 			sidebarHoverButton.style.backgroundColor =
 				"var(--b3-theme-background-light)";
 			sidebarHoverButton.style.backgroundImage =
-				"url(/appearance/themes/Tsundoku Dark/customizeStyle/sidebar.svg)";
+				"url(/appearance/themes/Tsundoku Dark/src/sidebar.svg)";
 			// console.log(flag);
 		} else {
 			if (bar == "11") {
@@ -129,7 +126,7 @@ function sidebarHoverButtonImplementEven() {
 			flag = true;
 			sidebarHoverButton.style.backgroundColor = "transparent";
 			sidebarHoverButton.style.backgroundImage =
-				"url(/appearance/themes/Tsundoku Dark/customizeStyle/sidebar.svg)";
+				"url(/appearance/themes/Tsundoku Dark/src/sidebar.svg)";
 			// console.log(flag);
 		}
 	};
@@ -263,10 +260,7 @@ function openRightPanel() {
 /**------------------高亮变隐藏按钮-----------------*/
 
 function createHighlightBecomesHidden() {
-	loadStyle(
-		"/appearance/themes/Tsundoku Dark/customizeStyle/conceal-Mark.css",
-		"markCss"
-	);
+	loadStyle("/appearance/themes/Tsundoku Dark/style/mark-hide.css", "markCss");
 
 	highlightBecomesHiddenButton = addinsertCreateElement(
 		HBuiderXToolbar,
@@ -291,24 +285,24 @@ function highlightBecomesHiddenButtonClickEven() {
 
 	if (
 		obj.getAttribute("href") !=
-		"/appearance/themes/Tsundoku Dark/customizeStyle/conceal-Mark.css"
+		"/appearance/themes/Tsundoku Dark/style/mark-hide.css"
 	) {
 		obj.setAttribute(
 			"href",
-			"/appearance/themes/Tsundoku Dark/customizeStyle/conceal-Mark.css"
+			"/appearance/themes/Tsundoku Dark/style/mark-hide.css"
 		);
 		highlightBecomesHiddenButton.style.backgroundColor = "transparent";
 		highlightBecomesHiddenButton.style.backgroundImage =
-			"url(/appearance/themes/Tsundoku Dark/customizeStyle/highlight.svg)";
+			"url(/appearance/themes/Tsundoku Dark/src/highlight.svg)";
 	} else {
 		obj.setAttribute(
 			"href",
-			"/appearance/themes/Tsundoku Dark/customizeStyle/highlight-Mark.css"
+			"/appearance/themes/Tsundoku Dark/style/mark-display.css"
 		);
 		highlightBecomesHiddenButton.style.backgroundColor =
 			"var(--b3-theme-background-light)";
 		highlightBecomesHiddenButton.style.backgroundImage =
-			"url(/appearance/themes/Tsundoku Dark/customizeStyle/highlight.svg)";
+			"url(/appearance/themes/Tsundoku Dark/src/highlight.svg)";
 	}
 }
 
@@ -819,8 +813,8 @@ function Refresh() {
 		createHighlightBecomesHidden(); /*创建高亮变隐藏按钮 */
 
 		loadStyle(
-			"/appearance/themes/Tsundoku Dark/customizeStyle/customizeCss.css",
-			"customizeCss"
+			"/appearance/themes/Tsundoku Dark/style/topbar.css",
+			"stylebareCss"
 		);
 
 		setTimeout(() => ClickMonitor(), 3000); /*各种列表转xx */
