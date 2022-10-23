@@ -58,6 +58,10 @@
     --b3-font-family-graph: mononoki;
     --b3-font-family-emoji: 'Win11 Emoji',"Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
     --b3-font-family-math: KaTeX_Math;
+    /* 顶部工具栏 */
+    --b3-toolbar-background: #031c25;
+    --b3-toolbar-blur-background: #031c25;
+    --b3-toolbar-color: #9aa0a6;
     /* 线条 */
     /* --b3-border-color: #363f49; */
     /* --b3-border-color: rgba(230, 230, 230, .08); */
@@ -102,7 +106,7 @@
     --b3-font-color12: #f5822e;
     --b3-font-color13: var(--b3-theme-background);
     --b3-font-background1: #ff8f89c9;
-    --b3-font-background2: #ffd599c0;
+    --b3-font-background2: #e5aa57c0;
     --b3-font-background3: rgba(54, 171, 248, 0.521);
     --b3-font-background4: #8fe7b277;
     --b3-font-background5: #6f8ca38f;
@@ -235,7 +239,7 @@ body{
     background-color: #031c25;
 }
 .toolbar {
-    background-color: #031c25;
+    background-color: var(--b3-toolbar-background);
 }
 .layout-tab-container {
     background-color: #16232f;
@@ -1785,7 +1789,8 @@ div[style*="background-color: var(--b3-font-background"] [contenteditable="true"
 
 /* 滚动条 */
 ::-webkit-scrollbar-thumb{
-    background-color: #283743;
+    /* background-color: #283743; */
+    /* border:none; */
 }
 /* 已关闭的笔记本样式 */
 .file-tree .b3-list.fn__flex-column.fn__flex-1>.b3-list-item:first-child{
@@ -1892,6 +1897,28 @@ body>div.b3-dialog--open>div>div.b3-dialog__container>div:nth-child(3)>div>div.f
 .protyle-wysiwyg span[data-type~=inline-memo] {
     background-color: var(--b3-card-warning-background);
     border-bottom: 2px solid var(--b3-font-color2);
+}
+
+.b3-typography span[data-type~=inline-memo]::after,
+.protyle-wysiwyg span[data-type~=inline-memo]::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    top: 0em;
+    width: 1em;
+    height: 1em;
+    background-image: url('./src/memo.svg');
+}
+
+.tooltip--memo {
+    border-top: 3px solid #fff001;
+    background-color: #616963;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: var(--b3-theme-on-background);
+    min-width: 100px;
 }
 /* 代码块添加margin bottom */
 .protyle-wysiwyg [data-node-id].li>[data-node-id].code-block {

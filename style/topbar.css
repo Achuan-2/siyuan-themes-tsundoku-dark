@@ -1,16 +1,13 @@
-#HBuiderXToolbar{
-    margin-right: 14px;
-    padding-left: 11px;
-}
+
 
 #sidebarHoverButton{
-    width: 20px;
+    width: 25px;
     height: 100%;
     float: left;
     background-image: url("../src/sidebar.svg");
     background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 120%;
+    background-position: center center;
+    background-size: 100%;
 }
 
 
@@ -18,10 +15,10 @@
     width: 20px;
     height: 100%;
     float: left;
-    margin-left: 10px;
+    margin-left: 5px;
     background-image: url("../src/highlight.svg");
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: center 4px;
     background-size: 100%;
 }
 

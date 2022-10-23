@@ -77,7 +77,7 @@ export var config = {
 			delay: 250, // 延迟时间，单位毫秒
 		},
 		style: {
-			enable: false, // 是否启用自定义样式渲染
+			enable: true, // 是否启用自定义样式渲染
 			save: {
 				enable: true, // 是否启用保存自定义样式
 			},
@@ -640,7 +640,7 @@ export var config = {
 				width: 720, // 窗口宽度
 				height: 480, // 窗口高度
 				frame: true, // 是否显示边缘框
-				fullscreen: false, // 是否全屏显示
+				fullscreen: true, // 是否全屏显示
 				alwaysOnTop: true, // 是否置顶显示
 				autoHideMenuBar: true, // 是否隐藏菜单栏(使用 Alt 显示)
 				// backgroundColor: window.siyuan.config.appearance.mode // 窗口默认背景色

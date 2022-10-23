@@ -10,7 +10,7 @@ div[data-subtype="o"].list {
     --o5-style: counter(o5,lower-roman)".";
 }
 .protyle-wysiwyg [data-subtype="o"].li > .protyle-action:after {
-    margin: -12px 0 0 -12px;
+    margin: -12px 0 0 -12px !important;
     line-height: 20px;
 }
 .list[data-subtype="o"]>.li[data-subtype="o"] .li[data-subtype="o"]>.protyle-action{
