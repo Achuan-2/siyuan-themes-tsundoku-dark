@@ -1,7 +1,10 @@
 <h1 align="center">🌙Tsundoku(dark): A Theme for SiYuan Note</h1>
-
-<p align="center">          
-           <a title="Hits" target="_blank" href="https://github.com/Achuan-2/siyuan-themes-tsundoku"><img src="https://hits.b3log.org/Achuan-2/siyuan-themes-tsundoku.svg" ></a>
+<p align="center">
+         <a title="Hits" target="_blank" href="https://github.com/Achuan-2/siyuan-themes-tsundoku"><img src="https://hits.b3log.org/Achuan-2/siyuan-themes-tsundoku.svg" >
+         </a>
+           <a title="GitHub release (latest by date including pre-releases)" target="_blank" href="https://github.com/Achuan-2/siyuan-themes-tsundoku/releases/latest">
+                 <img src="https://img.shields.io/github/v/release/Achuan-2/siyuan-themes-tsundoku?include_prereleases&style=flat-square" >
+           </a>
            <a href="https://github.com/Achuan-2/siyuan-themes-tsundoku/releases">
                       <https://img.shields.io/github/release/Achuan-2/siyuan-themes-tsundoku.svg" alt="Release">
            </a>
