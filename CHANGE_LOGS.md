@@ -1,12 +1,19 @@
-## v1.4.4/2022.10.24
-- :fire: 舍弃待办列表完成后的删除线样式（个人喜好，这样能对待办列表进行更多处理，不然打了一个勾之后，就很难再添加内容）
+## v1.4.5/2022.11.16
 
+* :bug: 待办列表折叠问题
+* :bug: 修复列表转导图、列表转表格、列表转看板出现错位、列表竖线遮挡的问题
+
+## v1.4.4/2022.10.24
+
+- 🔥 舍弃待办列表完成后的删除线样式（个人喜好，这样能对待办列表进行更多处理，不然打了一个勾之后，就很难再添加内容）
 
 ## v1.4.3/2022.10.23
-- :lipstick:备注添加icon和备注专属tooltip
-- :bug: 适配思源2.4
+
+- 💄备注添加icon和备注专属tooltip
+- 🐛 适配思源2.4
 
 ## v1.4.2/2022.10.03
+
 - 继续完善行内样式
 - 挖空效果修复悬浮显示、导出不显示的功能
 
@@ -17,11 +24,10 @@
 - 💄优化Green主题的导出样式
 - ✨完善从Dark+那里copy打开新窗口并置顶功能
   > ❗突然发现从Dark+主题copy的js代码，可以通过alt+鼠标中键用monaco-editor以markdown样式打开当前块或文档（打开文档需要在文档题头图那块按）
-
-
-
+  >
 
 ## v1.4.0/2022.08.21
+
 - 🐛如果未安装Dark+主题，不能成功加载js
 
 ## v1.3.9/2022.08.20
@@ -32,17 +38,18 @@
 * 💄代码块样式调整，去除mac圆点样式
   ![20220820114308](https://cdn.jsdelivr.net/gh/Achuan-2/PicBed@pic/assets/CHANGE_LOGS/20220820114308.png)
 * 💄任务列表样式：调整为圆形
-    ![20220806094505_2022-08-06](https://cdn.jsdelivr.net/gh/Achuan-2/PicBed@pic/assets/CHANGE_LOGS/20220806094505_2022-08-06.png)
+  ![20220806094505_2022-08-06](https://cdn.jsdelivr.net/gh/Achuan-2/PicBed@pic/assets/CHANGE_LOGS/20220806094505_2022-08-06.png)
 * 💄文字背景色11从青绿色调整紫色
 * 🐛导出优化：Tsundoku Green和Stone主题不导出背景图片，加快导出速度，减小pdf大小
 
+## v1.3.7/2022.07.16
 
-## v1.3.7/2022.07.16 
 - 聚焦面包屑文字高亮
 
 ## v1.3.6/2022.07.02 安卓端适配
-- :bug: 安卓端代码块行号位置错乱
-- :bug: 安卓端菜单过宽，取消主题的加框,原加宽代码如下
+
+- 🐛 安卓端代码块行号位置错乱
+- 🐛 安卓端菜单过宽，取消主题的加框,原加宽代码如下
   ```css
   /* 左上方菜单栏加宽 */
   @media screen and (min-width: 1500px) {
@@ -73,125 +80,130 @@
   ```
 
 ## v1.3.5/2022.06.29
-- :fire:取消主题选中计数功能
-- :fire:取消主题默认字体思源黑体，并删除字体文件
-- :sparkles: 改进了关闭左右侧栏的功能，只开一边侧栏也可以关闭
-- :bento: 添加了几个link icon
-- :bug: 修复手机端主题导出菜单过宽显示不全的问题
+
+- 🔥取消主题选中计数功能
+- 🔥取消主题默认字体思源黑体，并删除字体文件
+- ✨ 改进了关闭左右侧栏的功能，只开一边侧栏也可以关闭
+- 🍱 添加了几个link icon
+- 🐛 修复手机端主题导出菜单过宽显示不全的问题
 
 ## v1.3.4/2022.06.28
+
 - 搬运HBuilderX-Light主题theme.js的关闭左右侧栏、隐藏文本显示功能
 - fix https://github.com/Achuan-2/siyuan-themes-tsundoku-dark/issues/27
 
 # v1.3.3/2022.06.27
+
 - 文件树emoji位置调整
 - 取消斜杆菜单横排样式
 
-
 ## v1.3.2/2020.06.14
-- :bug:对搜索结果页面进行全屏展示的 bughttps://github.com/Achuan-2/siyuan-themes-tsundoku-stone/issues/7
-- :bug:【外观】无序列表中的三级标题左边的竖线，以前是居中的，现在靠上显示了https://github.com/Achuan-2/siyuan-themes-tsundoku-dark/issues/30
+
+- 🐛对搜索结果页面进行全屏展示的 bughttps://github.com/Achuan-2/siyuan-themes-tsundoku-stone/issues/7
+- 🐛【外观】无序列表中的三级标题左边的竖线，以前是居中的，现在靠上显示了https://github.com/Achuan-2/siyuan-themes-tsundoku-dark/issues/30
 
 ## v1.3.1/2022.06.09
 
 1. 折叠标题小三角丢失
 2. 按钮悬浮高亮
 
-    ```css
-    /* 思源官方2.0.x起样式添加了新变量*/
-    --b3-theme-background-light: #c4d2db;
-    ```
+   ```css
+   /* 思源官方2.0.x起样式添加了新变量*/
+   --b3-theme-background-light: #c4d2db;
+   ```
 3. 代码块颜色丢失、优化dark主题的代码样式
 
-    ```css
-    .protyle-wysiwyg .hljs{
-    background改为background-color，并添加!important;
-    }
-    ```
+   ```css
+   .protyle-wysiwyg .hljs{
+   background改为background-color，并添加!important;
+   }
+   ```
 4. 横版斜杠菜单
 
-    ```css
-    /* 横版斜杠菜单 */
-    .b3-menu.b3-list.b3-list--background.hint--menu {
-        column-count: 4;
-        column-width: 160px !important;
-        column-gap: 10px;
-        column-rule: 1px solid #13c2c240;
-        min-width: 50vw !important;
-        max-height: 480px !important;
-    }
-    ```
-5. 块标移动增加过渡 
+   ```css
+   /* 横版斜杠菜单 */
+   .b3-menu.b3-list.b3-list--background.hint--menu {
+       column-count: 4;
+       column-width: 160px !important;
+       column-gap: 10px;
+       column-rule: 1px solid #13c2c240;
+       min-width: 50vw !important;
+       max-height: 480px !important;
+   }
+   ```
+5. 块标移动增加过渡
 
-    ```css
-    .protyle-gutters {
-        z-index: 3;
-        /* 块标移动增加过渡 */
-            transition: all 200ms ease-out;
-    }
-    ```
-6. 页签样式修正：去掉`.layout-tab-bar .item`样式
+   ```css
+   .protyle-gutters {
+       z-index: 3;
+       /* 块标移动增加过渡 */
+           transition: all 200ms ease-out;
+   }
+   ```
+6. 页签样式修正：去掉 `.layout-tab-bar .item`样式
 7. 修复嵌入块和浮窗中列表下的引述块左边的列表竖线错位
 
-    ```css
-    .block__popover .protyle-wysiwyg  [data-node-id].li>.bq,
-    .protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id].li>.bq {
-        left: 0.1em;
-        top: -1px;
-    }
-    ```
+   ```css
+   .block__popover .protyle-wysiwyg  [data-node-id].li>.bq,
+   .protyle-wysiwyg .protyle-wysiwyg__embed [data-node-id].li>.bq {
+       left: 0.1em;
+       top: -1px;
+   }
+   ```
 8. 嵌入块分割
 
-    ```css
-    /* 嵌入块分割 */
-    .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed]>.protyle-wysiwyg__embed {
-        border-top: 3px dashed #0e5d12d6;
-        position: relative;
-    }
-    ```
-
+   ```css
+   /* 嵌入块分割 */
+   .protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed]>.protyle-wysiwyg__embed {
+       border-top: 3px dashed #0e5d12d6;
+       position: relative;
+   }
+   ```
 
 ## v1.3.0/2022.05.04
-- :bug: 适配思源v2.0.4 alpha1
+
+- 🐛 适配思源v2.0.4 alpha1
 
 ## v1.2.9/2022.05.02
-- :bug: 修复代码块样式
-- :bug: 列表下的语雀区块列表竖线错误
-- :lipstick:挖空样式修改为下划线隐藏
-- :lipstick: 内容中的引用计数样式调整
+
+- 🐛 修复代码块样式
+- 🐛 列表下的语雀区块列表竖线错误
+- 💄挖空样式修改为下划线隐藏
+- 💄 内容中的引用计数样式调整
 
 ## v1.2.8/2022.04.27
-- :bug: 修复字体设置不应用于编辑器外部问题
-- :lipstick: h1除第一个标题才分页（同时发现目前思源导出pdf不支持让h1居中）
-- :lipstick: 取消钉住页签的宽度设置，改成默认主题的样式
-- :lipstick: 调整待办列表大小
-- :art: 重构h3竖线样式
+
+- 🐛 修复字体设置不应用于编辑器外部问题
+- 💄 h1除第一个标题才分页（同时发现目前思源导出pdf不支持让h1居中）
+- 💄 取消钉住页签的宽度设置，改成默认主题的样式
+- 💄 调整待办列表大小
+- 🎨 重构h3竖线样式
 
 ## v1.2.7/2022.04.22
-- :sparkles: 搬运notion themes的theme.js
-- :sparkles: 搬运notion themes的列表转脑图、列表转看板
+
+- ✨ 搬运notion themes的theme.js
+- ✨ 搬运notion themes的列表转脑图、列表转看板
 
 ## v1.2.6/2022.04.18
-- :bug: Crtl+P 搜索右上方设置按钮错位问题
+
+- 🐛 Crtl+P 搜索右上方设置按钮错位问题
 
 ## v1.2.5/2022.04.12
 
-- :bug: green 主题渲染彩色字体为白色
-- :lipstick: 调整pdf标注样式
+- 🐛 green 主题渲染彩色字体为白色
+- 💄 调整pdf标注样式
 
 ## v1.2.4/2022.04.08
 
-- :bug: 标题不能加颜色
-
+- 🐛 标题不能加颜色
 
 ## v1.2.3/2022.04.06
-- :lipstick: ctrlP.css完善
 
-
+- 💄 ctrlP.css完善
 
 ## v1.2.2/2022.04.05
-- 🎨 重构无序列表层级样式代码
 
+- 🎨 重构无序列表层级样式代码
 
 ## v1.2.1/2022.04.04
 
@@ -204,20 +216,24 @@
 * 💄 调整滚动条
 
 ## v1.2.0/2022-03-31
+
 - ✨siyuan1.9.6更新后主题折叠样式调整
 - 🐛siyuan1.9.6更新后的窗口分割区分适配
 - 🐛siyuan1.9.6更新后h3标题样式: 由h3:before改成.h3>div:first-child::before
 
 ## v1.1.9 /2022-03-26
+
 - 💄调整自定义属性f:table样式
 - 💄调整green主题和stone主题代码块样式
 
 ## v1.1.8 /2022-03-25
+
 - 💄light主题配色修改：主题色修改为白色，因为light主题就是我用来导出的，之前的灰色会导致思源看着还可以但导出很丑的问题
 - ✨完善自定义有序列表层级样式：取消第一层级的自定义，这样可以从任意序号开始计数，而不是固定为1
 - 🐛待办列表下的有序和无序列表样式修复
 
 ## v1.1.7 /2022-03-24
+
 - 🐛 调整列表下引述块小竖线
 - 💄 f:table取消背景色
 - 💄 列表h1居左
@@ -226,45 +242,52 @@
 - ✨ 参考Dark+ 添加f:scroll，如果表格和代码高度过高，将产生滚动条。（目前只适用于块属性，文档属性等我有需求了再加）
 
 ## v1.1.6/2022-03-18
-* :bug:修复标签页白边问题
-* :sparkles:无序列表自定义层级样式
-* :sparkles: 有序列表自定义层级样式
-* :memo: 列表自定义层级主要参考了siyuan-notion主题，目前的样式如果有序和无序列表混着用，会各自继承之前的层级而不是重新开始，不知道这种设计好不好得适用一段时间
+
+* 🐛修复标签页白边问题
+* ✨无序列表自定义层级样式
+* ✨ 有序列表自定义层级样式
+* 📝 列表自定义层级主要参考了siyuan-notion主题，目前的样式如果有序和无序列表混着用，会各自继承之前的层级而不是重新开始，不知道这种设计好不好得适用一段时间
 
 ## v1.1.5/2022-03-17
-- :bug: h3标题折叠跳动
-- :bento: change qq qun svg
-- :bento: [link icon]update default link icon 
-- :bug: 包含ncbi 关键词的link都会被解析为ncbi网站
+
+- 🐛 h3标题折叠跳动
+- 🍱 change qq qun svg
+- 🍱 [link icon]update default link icon
+- 🐛 包含ncbi 关键词的link都会被解析为ncbi网站
 
 ## v1.1.4/2022-03-14
-- :bug: 修复代码块新样式在引述块中的padding问题
-- :sparkles: 语雀提示区块的表格样式匹配
+
+- 🐛 修复代码块新样式在引述块中的padding问题
+- ✨ 语雀提示区块的表格样式匹配
 
 ## v1.1.3/2022-03-10
-- :lipstick: 完善代码块样式
-- :lipstick: 完善引述块样式
+
+- 💄 完善代码块样式
+- 💄 完善引述块样式
 
 ## v1.1.2/2022-03-09
-- :lipstick: 再次修改引述块样式
-- :sparkles: 参考Zhang light主题，添加自定义属性 f:table,可将列表转化为表格
+
+- 💄 再次修改引述块样式
+- ✨ 参考Zhang light主题，添加自定义属性 f:table,可将列表转化为表格
 
 ## v1.1.1/2022-03-05
-- :sparkles: 自定义有序列表层级样式
-- :bug: 取消主题自定义的标题折叠小三角样式
-- :sparkles: 页签钉住增加宽度
-- :lipstick:取消页签动画
+
+- ✨ 自定义有序列表层级样式
+- 🐛 取消主题自定义的标题折叠小三角样式
+- ✨ 页签钉住增加宽度
+- 💄取消页签动画
 
 ## v1.1.0/2022-02-18
-- :memo: [docs]添加行内备注信息
-- :sparkles: [feature] win10emoji替换为win11emoji
-- :bug: [feature]修复标题加粗文字丢失颜色的问题
-- :bug: [style]修复列表下的引述块使列表竖线产生间距问题
-- :bug: [feature]修复dark主题备注样式
-- :bug: [feature]修复代码块行数超过100数字重叠问题
 
+- 📝 [docs]添加行内备注信息
+- ✨ [feature] win10emoji替换为win11emoji
+- 🐛 [feature]修复标题加粗文字丢失颜色的问题
+- 🐛 [style]修复列表下的引述块使列表竖线产生间距问题
+- 🐛 [feature]修复dark主题备注样式
+- 🐛 [feature]修复代码块行数超过100数字重叠问题
 
 ## v1.0.9/2022-02-05
+
 - 🐛部分缺陷修复
 - 💄调整标签页
 
@@ -281,48 +304,54 @@
 - 🐛修复因为思源v1.7.6 **元素无法focus导致**的：h3空标题光标错位问题、空块提示隐藏失败问题、主题特有挖空块无法翻转问题
 - 🌐 统一四个主题的版本号
 
-
 ## v1.0.7/2022-01-13
+
 - 💄调整标签页样式
 
 ## v1.0.6/2022-01-11
+
 - 💄调整叶子文档的图标
 - 💄修复新建文档的图标
 - 🐛修复文档图标在笔记内的位置问题
 
 ## v1.0.5/2021-12-26
+
 - 🐛修复代码块显示行号不换行时，横向滚动代码，代码会与行号重叠
 - 💄滚动条加圆角
 
 ## v1.0.4/2021-12-19
+
 - 适配思源1.5.5 alpha9
 
 ## v1.0.3/2021-12-16
 
 - 💄引述块优化
 - 💄pdf标注框右边距过大问题
-- ✨语雀提示区块的kbd样式 
-- ✨link icon:添加b站缩写 
+- ✨语雀提示区块的kbd样式
+- ✨link icon:添加b站缩写
 - 💄行内公式字体优化: 由KaTeX_Main改为KaTeX_Math明显字小且正常许多
 - ✨更改默认字体为HarmonyOS_Sans_SC
 - ✨替换文档树一级文档的图标为"U+26AC"
 - ✨分割线样式完善
 
 ## v1.0.2/2021-12-04
+
 - 🐛修复面板高亮颜色的问题
 - 🐛修复emoji面板选中颜色
 - 💄修改引用块:改成豆瓣或者哔哩哔哩那种样式
 - 💄页签修改
 
-
 ## v1.0.1/2021-11-28
-- :sparkles: add note style
 
+- ✨ add note style
 
 ## v1.0.0/2021-11-28
+
 - 💄语雀提示区块样式优化：对行内代码和代码块进行优化
 - 🐛适应目前的索引画面
+
 ## v0.9.9/2021-11-23
+
 - 🐛黑色主题警告颜色修改！
 - 💄区分警告和正常提示色！
 - 💄菜单栏加宽
@@ -352,17 +381,18 @@
 * 💄 块引悬浮固定按钮激活时改变角度
 
 ## v0.9.5/2021-10-20
+
 - 🍱link icon添加
-    - [w3school](https://www.w3school.com.cn/h.asp)
-    - [张鑫旭](https://www.zhangxinxu.com/)
+  - [w3school](https://www.w3school.com.cn/h.asp)
+  - [张鑫旭](https://www.zhangxinxu.com/)
 - 🐛 语雀加粗样式错误
 - 🐛 修复开启代码块行号后，折叠代码后行号依然显示
 - 💄 行内下划线样式加粗
 - 💄 修复表格框线粗线不均（不知道是系统的问题还是什么问题，D大说他自己没问题）
 - 💄 修复语雀提示区块不能导出
 
-
 ## v0.9.4/2021-10-15
+
 * 🐛 V 姐又改列表竖线颜色变量了，造成 green 主题竖线不清楚，补下
 * 💄 修改引述块 blockquote 样式，原来的边框是包裹四周的，和绝大多数的网站和软件渲染样式不一样，所以还是随大流吧。但依然保留引述块加背景色的语雀样式，毕竟我之前给引述块加四周边框也只是为了方便加背景色。这样也让引述块有引述和卡片两种功能
 * 💄 引述块语雀样式加粗样式配置
@@ -370,6 +400,7 @@
 * 💄 列表竖线调细
 
 ## v0.9.3/2021-10-13
+
 - 🐛border取消透明度
 - 🐛文件树背景色又没了，补一下
 - 🐛 前进后退disable颜色更改
@@ -377,10 +408,12 @@
 - 🐛修复特殊块在列表下折叠的问题
 
 ## v0.9.2/2021-10-11
+
 * 🐛 块引固定高度为70%改为最小高度为30
 * 🐛 修复挂件折叠和其他特殊块折叠的问题
 * 💄  调整标题大纲样式：各级标题固定颜色
 * ✨ 优化超级块折叠
+
 ## v0.9.1/2021-10-10
 
 * 🐛 修复引述块中列表缩进问题
@@ -389,7 +422,6 @@
 * 🐛 修复列表内的引述块在嵌套列表缩进问题
 * ✨ 优化超链接换行
 * 💄 取消light主题引述块的box-shadow
-
 
 ## v0.9.0 引入语雀提示块样式/2021-10-08
 
@@ -401,6 +433,7 @@
   * 引述块折叠只显示Blockquote
 
 ## v0.8.9 块折叠显示优化/2021-10-06
+
 * ✨ 块折叠显示优化，折叠块前添加icon
   * 表格折叠优化：只显示表头
   * 代码折叠优化，不显示内容，只显示语言和复制按钮
@@ -411,7 +444,9 @@
   * 🐛已知问题：超级块折叠没有优化，因为技术有限，搞不动
 * 🔥表格取消默认居中
 * ✨块引固定高度为70%
+
 ## v0.8.8/2021-10-04
+
 * 💄 调低空行提示透明度
 * 💄 调整嵌入块颜色
 * 🐛 修复嵌入块的问题
@@ -432,16 +467,14 @@
   * 标签左侧搜索与正文区分
   * dark h1标题颜色
 
-
 ## v0.8.6/2021-09-30
 
 * 💄 pdf矩形选框增加border宽度
 * 🐛修复空列表提示嵌套问题
 
-
 ## v0.8.5/2021-09-27
 
-* ✨ distinguish parent doc and no-child doc, canel the hidden effect of arrow and dot before doc 
+* ✨ distinguish parent doc and no-child doc, canel the hidden effect of arrow and dot before doc
 * 🍱add vscode link icon
 * 💄adjust opacity for link icon in completed task list
 * 💄add background color when mouse hovering new file icon
@@ -451,11 +484,13 @@
   * add Yuque link
 
 ## v0.8.4/2021-09-26
+
 * ✨ change new file icon
 * 🍱 add new link icons
 * 💄 optimize the size of file icons
 
 ## v0.8.3/2021-09-25
+
 * ✨ net hyperlink default icon
 * 🍱 add new link icons
 * 💄 increase kbd font size
@@ -464,8 +499,7 @@
 
 * ✨ add link icon!
 * ✨ add local protocol icon!
-* 🐛 fix deleting problem of tag 
-
+* 🐛 fix deleting problem of tag
 
 ## v0.8.1/2021-09-23
 
@@ -509,13 +543,12 @@
 * 💄 调整pdf双链标注颜色弹窗样式
 * 💄 调整pdf双链样式与块引用区别
 
-
-
 ## v0.7.4 / 2021-09-11
 
 * 💄 标签页样式调整：去掉标签页的border-bottom，去掉第一个标签页的左上border-radius
 
 ## v0.7.3 / 2021-09-07
+
 * 🐛 修复编辑时大纲标题闪烁
 * 💄 文档图标标题上方针对win10 emoji进行大小调整
 * 🐛 修复blockquote内标题的左间距过大问题
@@ -562,7 +595,6 @@
 
 * 调整kbd位置
 * 调整行内代码位置
-
 
 ## v0.6.3/2021-08-16
 
