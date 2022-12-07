@@ -4,8 +4,6 @@
 @import url("style/list2board.css");
 @import url("style/list2map.css");
 @import url("style/list2table.css");
-/* 导入搜索窗口调大样式 */
-@import url("style/ctrlP.css");
 /* 导入文档属性 */
 @import url("style/doc_attr.css");
 /* 导入代码块样式 */
@@ -279,7 +277,7 @@ body{
 
 /* -------------------------------标题样式-------------------------------------- */
 .protyle-wysiwyg [data-node-id].h1,.b3-typography h1{
-    /* text-align: center; */
+    text-align: center;
     border-bottom: 0px solid #c5c7ca !important;
     font-size: 1.75em !important;
     color: #4ef7e0;
