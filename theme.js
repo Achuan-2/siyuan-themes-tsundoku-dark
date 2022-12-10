@@ -272,7 +272,7 @@ function createHighlightBecomesHidden() {
 	);
 	highlightBecomesHiddenButton.setAttribute(
 		"title",
-		"开启后隐藏CTRL+E文本"
+		"开启后隐藏高亮文本"
 	);
 
 	AddEvent(
