@@ -628,7 +628,7 @@ export var config = {
             },
         },
         window: {
-            enable: false, // 窗口功能开关
+            enable: true, // 窗口功能开关
             windowParams: {
                 // 窗口参数
                 width: 720, // 窗口宽度
