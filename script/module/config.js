@@ -2365,7 +2365,7 @@ export var config = {
                     // 标签页菜单项
                     {
                         // 归档所有打开的标签页
-                        enable: true,
+                        enable: false,
                         prefixSeparator: true,
                         suffixSeparator: false,
                         id: 'theme-menu-tabbar-archive',
