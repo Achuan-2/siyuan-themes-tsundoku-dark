@@ -474,7 +474,7 @@ body{
 }
 
 
-
+.b3-typography  table tr td,
 .protyle-wysiwyg table tr td { 
     border:1px solid var(--b3-table-border-color); 
 }
