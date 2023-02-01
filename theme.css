@@ -61,6 +61,7 @@
     --b3-toolbar-background: #031c25;
     --b3-toolbar-blur-background: #031c25;
     --b3-toolbar-color: #9aa0a6;
+    --b3-toolbar-hover: #b6cbd1;
     /* 线条 */
     /* --b3-border-color: #363f49; */
     /* --b3-border-color: rgba(230, 230, 230, .08); */
@@ -1994,9 +1995,12 @@ body>div#action {
     word-break: break-all !important;
 }
 /* 顶栏的思源图标 */
-.toolbar #windowAppIcon{
+/* .toolbar #windowAppIcon{
     color: var(--b3-theme-on-background);
-}
+} */
+.toolbar__text{
+    color: var(--b3-theme-on-background);
+} 
 
 
 /* 表格属性 */
