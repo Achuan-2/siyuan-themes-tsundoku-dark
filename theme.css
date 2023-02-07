@@ -1225,9 +1225,10 @@ div[data-subtype='t'][data-type='NodeList'] {
 }
 
 /* hover页签背景色 */
-.layout-tab-bar .item:hover:not(.item--focus) {
+.layout-tab-bar .item:hover:not(.item--focus):not(.item--readonly) {
     background-color: var(--custom-tab-hover-background);
 }
+
 /* siyuan 1.9.6增加的标签页focus shadow取消 */
 .layout__wnd--active .layout-tab-bar .item--focus {
     box-shadow: inherit;

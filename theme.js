@@ -824,7 +824,7 @@ function Refresh() {
 
         setTimeout(() => ClickMonitor(), 3000); /*各种列表转xx */
 
-        showDocumentCreationDate(); /**为打开文档标题下面显示文档创建日期 */
+        // showDocumentCreationDate(); /**为打开文档标题下面显示文档创建日期 */
 
         console.log('==============>HBuilderX-Light:CSS,JS_已经执行<==============');
     }, 500);
